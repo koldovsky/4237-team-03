@@ -32,3 +32,4 @@ Ivan Stupach
 Nuijen Alex
 Vitalii Yatsura
 Julia Kuznietsova
+Max Skydanchuk
