@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Book Store Website</title>
+    <link
+      rel="shortcut icon"
+      href="img/title-book-image.png"
+      type="image/x-icon"
+    />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>E-Book Store Website</title>
-  <link rel="shortcut icon" href="img/title-book-image.png" type="image/x-icon" />
-  <script src="https://unpkg.com/htmx.org@1.9.10"
-    integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
-    crossorigin="anonymous"></script>
+    <script type="module" src="js/init.js"></script>
+  </head>
 
-  <script type="module" src="js/init.js"></script>
-</head>
-
-<body>
-  <!--Olexandr Yanko-->
-  <header class="header">
-    <nav class="header__nav">
-      <button class="header__burger-menu" type="button">
-        <span class="header__burger-line"></span>
-        <span class="header__burger-line"></span>
-        <span class="header__burger-line"></span>
-      </button>
-      <ul class="header__menu">
-        <li class="header__menu-item">
-          <a href="#new-arrivals" class="header__menu-link">New Arrivals</a>
-        </li>
-        <!-- Temporary comment unlinked sections
+  <body>
+    <!--Olexandr Yanko-->
+    <header class="header">
+      <nav class="header__nav">
+        <button class="header__burger-menu" type="button">
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+        </button>
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a href="#new-arrivals" class="header__menu-link">New Arrivals</a>
+          </li>
+          <!-- Temporary comment unlinked sections
         <li class="header__menu-item">
           <a class="header__menu-link">Trending Now</a>
         </li>
@@ -40,39 +45,54 @@
         <li class="header__menu-item">
           <a class="header__menu-link">Contacts</a>
         </li>
-        -->
-      </ul>
-    </nav>
+        --></ul>
+      </nav>
+    </header>
+    <!--End Olexandr Yanko-->
 
-  </header>
-  <!--End Olexandr Yanko-->
+    <main>
+      <!--Vitalii Yatsura-->
+      <section>
+        <div
+          data-hx-trigger="load"
+          data-hx-swap="outerHTML"
+          data-hx-get="index.featured-author.html"
+        ></div>
+      </section>
+      <!--End Vitalii Yatsura-->
 
-  <main>
-    <!--Vitalii Yatsura-->
-    <section>
-      <div data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.featured-author.html"></div>
-    </section>
-    <!--End Vitalii Yatsura-->
+      <!--Nuijen Alex-->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.trending-now-partial.html"
+      ></section>
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.top-5-this-week-partial.html"
+      ></section>
+      <!--End Nuijen Alex-->
 
-    <!--Nuijen Alex-->
-    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.trending-now-partial.html">
-    </section>
-    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.top-5-this-week-partial.html">
-    </section>
-    <!--End Nuijen Alex-->
+      <!-- Julia Kuznietsova -->
+      <div id="new-arrivals">
+        <section
+          class="new-arrivals"
+          data-hx-trigger="load"
+          data-hx-swap="outerHTML"
+          data-hx-get="index.new-arrivals.partial.html"
+        ></section>
+      </div>
+      <!--End Julia Kuznietsova-->
 
-    <!-- Julia Kuznietsova -->
-    <div id="new-arrivals">
-      <section class="new-arrivals" data-hx-trigger="load" data-hx-swap="outerHTML"
-        data-hx-get="index.new-arrivals.partial.html"></section>
-    </div>
-    <!--End Julia Kuznietsova-->
-
-    <!-- Max Skydanchuk -->
-    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.all-books.partial.html"></section>
-    <!--End Max Skydanchuk-->
-  </main>
-  <footer></footer>
-</body>
-
+      <!-- Max Skydanchuk -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.all-books.partial.html"
+      ></section>
+      <!--End Max Skydanchuk-->
+    </main>
+    <footer></footer>
+  </body>
 </html>
