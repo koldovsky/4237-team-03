@@ -7,8 +7,12 @@ class Book {
     }
 }
 
+//Max Skydanchuk
 export function runApp() {
+
+    //Creating list with all books, and genre for later sorting
     const list = [];
+    
     list.push(new Book("../img/books/ascendant-cover.png", "Ascendant - Michael Kane", 25.00, "Lifestyle"));
     list.push(new Book("../img/books/broken-wings-cover.png", "Broken Wings - Lily Monroe", 22.00, "Lifestyle"));
     list.push(new Book("../img/books/deadly-secrets-cover.png", "Deadly Secrets - Chloe Woods", 22.00, "Lifestyle"));
@@ -41,6 +45,7 @@ export function runApp() {
 
     const parent = document.getElementById("all-books_books");
 
+    //Adding this books to div with id "all-books_books"
     list.forEach(book => {
         const bookDiv = document.createElement("div");
         bookDiv.classList.add("all-books__book");
@@ -66,6 +71,6 @@ export function runApp() {
 
         parent.appendChild(bookDiv);
     });
-    
 }
+//End Max
   

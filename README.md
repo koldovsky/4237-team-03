@@ -34,3 +34,5 @@ Vitalii Yatsura
 Julia Kuznietsova
 Max Skydanchuk
 Diana Shymanska
+Nazarii Venhryn
+Olexandr Yanko
