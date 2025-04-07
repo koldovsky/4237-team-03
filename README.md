@@ -33,3 +33,4 @@ Nuijen Alex
 Vitalii Yatsura
 Julia Kuznietsova
 Max Skydanchuk
+Diana Shymanska
