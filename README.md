@@ -36,3 +36,4 @@ Max Skydanchuk
 Diana Shymanska
 Nazarii Venhryn
 Olexandr Yanko
+Marta Rusanovska
