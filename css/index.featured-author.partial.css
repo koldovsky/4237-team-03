@@ -1,0 +1,71 @@
+/* 🌟 Основний фон блоку */
+.featured-author {
+    background-color: #fdfaf7; /* світлий теплий фон */
+    color: #2c2c2c; /* темно-сірий текст */
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Заголовки */
+  .featured-author__title {
+    font-size: 28px;
+    color: #aa336a; /* насичений рожево-фіолетовий */
+    font-weight: bold;
+  }
+  
+  .featured-author__name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .featured-author__genre {
+    font-style: italic;
+    color: #777;
+  }
+  
+  .featured-author__description {
+    color: #3a3a3a;
+    line-height: 1.6;
+  }
+  
+  /* Кнопка */
+  .featured-author__button {
+    background-color: #aa336a;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .featured-author__button:hover {
+    background-color: #8b2856;
+  }
+  
+  /* Назви книг */
+  .book-card__title {
+    font-size: 16px;
+    color: #222;
+  }
+  
+  .book-card__price {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .book-card__button {
+    background-color: #3344aa;
+    color: #fff;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .book-card__button:hover {
+    background-color: #223388;
+  }
