@@ -30,7 +30,32 @@
     font-weight: bolder;
     font-style: normal;
     font-variation-settings:  "wdth" 100;
-    font-size: 12px;
-    letter-spacing: 0.2*1em;
+    font-size: 15px;
+    letter-spacing: 1px;
     line-height: 1.4;
+}
+.trending-label{
+   text-align: center;
+   margin-left: 300px;
+   margin-bottom:12px;
+}
+.trending-label-name{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    font-variation-settings:  "wdth" 100;
+    font-size: 30px;
+
+    letter-spacing: 1px;
+    line-height: 1.4;
+    margin-left: 315px;
+}
+.trending-line{
+    height: 1px;
+    background-color: #eaeaea; 
+    width: 100%;
+    max-width: 1270px;
+    margin: 20px auto; 
+    opacity: 0.4; 
 }
