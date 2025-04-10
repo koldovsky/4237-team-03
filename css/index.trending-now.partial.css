@@ -2,7 +2,9 @@
 * {
     box-sizing: border-box;
 }
-
+.trending{
+    float: left;
+}
 .books-part{
     display: flex;
     flex-wrap: wrap;
@@ -114,4 +116,12 @@
 .trending-underline {
     text-decoration: none;
     color: #595959;
+}
+.top5{
+    float: right;
+    margin-top: 100px;
+    margin-right: 150px;
+    position: relative;
+    border: 2px #595959 solid ;
+    border-radius: 10px;
 }
