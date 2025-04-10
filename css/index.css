@@ -1,5 +1,9 @@
 @import url(global.css);
 
+/*Olexandr Yanko*/
+@import url(global.header-nav.partial.css);
+/*Olexandr Yanko*/
+
 /*Nuijen Alex*/
 @import url(index.trending-now.partial.css);
 /*End Nuijen Alex*/

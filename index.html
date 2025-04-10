@@ -19,9 +19,18 @@
     <script type="module" src="js/init.js"></script>
     <link rel="stylesheet" href="css/index.css" />
   </head>
-
   <body>
-    <header><a href="about.html">About Us </a><a href="index.html">Main page</a></header>
+    <!--Olexandr Yanko-->
+    <header>
+      <nav
+        class="header__nav"
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="global.header-nav.partial.html"
+      ></nav>
+    </header>
+    <!--Olexandr Yanko-->
+
     <main>
       <!--Venhryn Nazarii-->
       <section>
@@ -32,7 +41,7 @@
         ></div>
       </section>
       <!--End Venhryn Nazarii-->
-      
+
       <!--Vitalii Yatsura-->
       <section>
         <div
