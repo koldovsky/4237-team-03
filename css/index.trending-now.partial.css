@@ -36,7 +36,7 @@
 }
 .trending-label{
    text-align: center;
-   margin-left: 300px;
+   margin-left: 410px;
    margin-bottom:12px;
 }
 .trending-label-name{
@@ -49,7 +49,7 @@
 
     letter-spacing: 1px;
     line-height: 1.4;
-    margin-left: 315px;
+    margin-left: 425px;
 }
 .trending-line{
     height: 1px;
@@ -58,4 +58,60 @@
     max-width: 1270px;
     margin: 20px auto; 
     opacity: 0.4; 
+}
+.trending-items-price{
+    color:#f45350;
+    width: 124px;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    font-variation-settings:  "wdth" 100;
+}
+.badge{
+    color: #eaeaea;
+    width: 68px;
+    height: 30px;
+    border: 5px solid #464C5C;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 1px;
+    background-color: #464C5C;
+    margin-top: 10px;
+    position: absolute;
+}
+.trending-list-element-button {
+    width: 110px;
+    height: 45px;
+    border: 2px solid #595959;
+    border-radius: 25px;
+    text-align: center;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+    color: #595959;
+    background-color: transparent;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.trending-list-element-button:hover {
+    background-color: #595959;
+}
+.trending-list-element-button:hover .trending-underline {
+    color: #ffffff;
+}
+.trending-list-element-button:active {
+    background-color: #dddddd;
+    border-color: #dddddd;
+}
+.trending-underline {
+    text-decoration: none;
+    color: #595959;
 }
