@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+.books-part{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1500px; /* ограничиваем ширину для 4 колонок */
+    margin: 0 auto;
+}
+.books-part img{
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.books-part::after{
+    content:"";
+    width: 350px;
+}
+.trending-label{
+    color:#f45350;
+    width: 124px;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    font-variation-settings:  "wdth" 100;
+    font-size: 12px;
+    letter-spacing: 0.2*1em;
+    line-height: 1.4;
+}
