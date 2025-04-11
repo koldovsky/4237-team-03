@@ -1,3 +1,8 @@
 .header__nav {
   background-color: white;
 }
+
+.center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
