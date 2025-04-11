@@ -1,8 +1,50 @@
-.header__nav {
-  background-color: white;
-}
+.header {
+  .header__info-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
-.center {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+    .header__info-help {
+      color: var(--color-primary);
+      font-weight: bold;
+    }
+
+    .header__info-tel {
+      padding-left: 10px;
+    }
+
+    .header__info-book-count {
+      color: var(--color-primary);
+      font-weight: bold;
+    }
+  }
+
+  .header__menu-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .header__menu-icons {
+      display: grid;
+      grid-template-columns: repeat(4, 45px);
+    }
+
+    ul.hr {
+      margin: 0; /* Обнулюємо значення відступів */
+      padding: 4px; /* Значення полів */
+    }
+    ul.hr li {
+      display: inline; /* Відображати як рядковий елемент */
+      margin-right: 5px; /* Відступ зліва */
+      padding: 3px; /* Поля навколо тексту */
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .header__logo {
+      a {
+        text-decoration: none;
+      }
+    }
+  }
 }
