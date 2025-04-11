@@ -118,10 +118,19 @@
     color: #595959;
 }
 .top5{
-    float: right;
-    margin-top: 100px;
-    margin-right: 150px;
     position: relative;
-    border: 2px #595959 solid ;
+    border: 2px #eaeaea solid  ;
     border-radius: 10px;
+    display: flex;
+    flex-direction:column;
+}
+.top5__title{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    font-size: 35px;
+    word-spacing: 5px;
+}
+.top5__title b{
+    color:#f45350;
 }
