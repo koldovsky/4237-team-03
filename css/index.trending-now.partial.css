@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap');
 
 * {
     box-sizing: border-box;
@@ -12,15 +13,19 @@ body {
     padding: 40px 20px;
 }
 
+.book {
+    max-width: 180px;
+}
 
 .books-part {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+    flex-direction: row;
 }
 
 
@@ -32,7 +37,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 15px;
-    width: 294.33px;
+    width: 363.33px;
     background-color: #fff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
@@ -99,8 +104,9 @@ body {
 
 
 .books-part img {
-    width: 100%;
-    max-width: 169px;
+    width: 169.16px;
+    /* max-width: 169px;*/
+    height: 200px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 10px;
@@ -111,13 +117,13 @@ body {
     color: #ffffff;
     font-size: 12px;
     font-weight: bold;
-    padding: 4px 10px;
+    padding: 6px 10px;
     background-color: #464C5C;
     border-radius: 5px;
     position: absolute;
-    top: 10px;
-    left: 10px;
     z-index: 1;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .badge.bestseller {
@@ -134,14 +140,15 @@ body {
     font-variation-settings: "wdth" 100;
     letter-spacing: 1px;
     line-height: 1.4;
-    text-align: center;
+    text-align: left;
     margin: 0 auto 12px auto;
 }
 
-.trending-label {
+.trending-label p {
     color: #f45350;
     width: 124px;
     font-size: 15px;
+    text-align: left;
 }
 
 .top5__title {
@@ -177,7 +184,27 @@ body {
         width: 100%;
     }
 }
-ul{
-    list-style-type: none; 
+
+ul {
+    list-style-type: none;
     padding-left: 0;
 }
+
+.trending_and_top5 {
+    display: flex;
+    justify-content: center;
+}
+
+.trending-label-name {
+    font-size: 30px;
+    color: #000;
+    word-spacing: -2px;
+}
+.top5__info{
+   display: flex;
+   flex-direction: column;
+}
+.top5__image{
+    float: left;
+}
+/**/
