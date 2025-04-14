@@ -15,6 +15,7 @@ body {
 
 .book {
     max-width: 180px;
+    height: 351.53px;
 }
 
 .books-part {
@@ -44,11 +45,6 @@ body {
     float: right;
 }
 
-.top5:hover {
-    transform: translateY(-5px);
-}
-
-
 .trending-label-name {
     color: #464c5c;
     font-size: 16px;
@@ -62,9 +58,10 @@ body {
 
 .trending-items-price {
     color: #f45350;
-    font-size: 16px;
+    font-size: 21px;
     font-weight: bold;
     margin-bottom: 10px;
+    padding-top:20px ;
 }
 
 .trending-list-element-button {
@@ -149,6 +146,7 @@ body {
     width: 124px;
     font-size: 15px;
     text-align: left;
+    margin-left: 100px;
 }
 
 .top5__title {
@@ -167,9 +165,10 @@ body {
     height: 1px;
     background-color: #eaeaea;
     width: 100%;
-    max-width: 1270px;
+    max-width: 800px;
     margin: 20px auto;
     opacity: 0.4;
+    margin-left:100px;
 }
 
 
@@ -199,6 +198,7 @@ ul {
     font-size: 30px;
     color: #000;
     word-spacing: -2px;
+    margin-left: 100px
 }
 .top5__info{
    display: flex;
@@ -207,4 +207,11 @@ ul {
 .top5__image{
     float: left;
 }
-/**/
+.book p{
+    line-height: 1.5;
+}
+
+.trending-items-price-block{
+    margin: 0px 0px 23px ;
+    margin-top: 25px;
+}
