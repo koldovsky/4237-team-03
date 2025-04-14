@@ -9,8 +9,8 @@
 
 body {
     font-family: "Roboto", sans-serif;
-    background-color: #f9f9f9;
-    padding: 40px 20px;
+ /* background-color: #f9f9f9; please change to #ffffff
+    padding: 40px 20px; apply this property only for your section */
 }
 
 .book {
