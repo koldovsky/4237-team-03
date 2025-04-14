@@ -1,13 +1,24 @@
 .newsletter {
-  padding: 5px;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  width: 100%;
+}
+.newsletter__inner {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.newsletter__subscribed {
+  color: var(--dark-accent-color);
+  margin-top: 25px;
 }
 .newsletter__title {
   font-size: 12px;
-  color: var(--block-title-color);
+  color: var(--dark-accent-color);
 }
 .newsletter__stay-updated {
-  color: var(--dark-accent-color);
+  color: var(--block-title-color);
   font-size: 34px;
+  margin-top: 20px;
 }
 .newsletter__latest-news {
   color: var(--brand-color);
@@ -18,7 +29,10 @@
   height: 40px;
   width: 342px;
   text-align: left;
-  margin-top: 12px;
+  background-color: var(--email-input-background-color);
+  border: none;
+  outline: none;
+  margin-top: 25px;
   margin-bottom: 0px;
   margin-left: 0px;
   margin-right: 0px;
@@ -42,6 +56,8 @@
   width: 342px;
   color: var(--subscribe-button-color);
   background-color: var(--brand-color);
+  border: none;
+  outline: none;
   margin-top: 24px;
   padding-bottom: 11px;
   padding-left: 22px;
@@ -63,4 +79,7 @@
   max-width: 100%;
   height: auto;
   display: block;
+  margin-top: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
