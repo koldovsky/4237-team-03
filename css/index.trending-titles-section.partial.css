@@ -1,6 +1,6 @@
 .trending {
     padding: 60px 20px;
-    background-color: var(--color-background);
+    background-color: var(--subscribe-button-colo);
     color: var(--ui-block-title-color);
 }
 
@@ -38,7 +38,7 @@
     background-position: center;
     border-radius: 20px;
     padding: 40px;
-    color: var(--color-text-secondar);
+    color: var(--block-title-color);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -46,7 +46,7 @@
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--color-text-tertiary);
+    color: var(--dark-accent-color);
     margin-bottom: 10px;
 }
 
@@ -97,7 +97,7 @@
 
 .feature__text {
     font-size: 14px;
-    color: var(--color-text-tertiary);
+    color: var(--dark-accent-color);
     line-height: 1.4;
 }
 
