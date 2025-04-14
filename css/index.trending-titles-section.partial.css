@@ -1,0 +1,119 @@
+.trending {
+    padding: 60px 20px;
+    background-color: var(--color-background);
+    color: var(--ui-block-title-color);
+}
+
+.trending__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.trending__hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.trending__image {
+    flex: 1 1 300px;
+    max-width: 400px;
+}
+
+.trending__image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+}
+
+/* Контейнер з фоном */
+.trending__content {
+    flex: 1 1 400px;
+    background-image: url("https://69vzc.weblium.site/res/67064a58db82533cca240ae0/6711054bbf4b6124f9732a12_optimized_1629.webp");
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    padding: 40px;
+    color: var(--color-text-secondar);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.trending__label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-text-tertiary);
+    margin-bottom: 10px;
+}
+
+.trending__title {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.trending__subtitle {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.trending__description {
+    font-size: 16px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Блок з трьома перевагами */
+.trending__features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.trending__feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature__icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.feature__title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+    text-transform: uppercase;
+}
+
+.feature__text {
+    font-size: 14px;
+    color: var(--color-text-tertiary);
+    line-height: 1.4;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .trending__hero {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .trending__features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trending__feature {
+        max-width: 100%;
+    }
+}
