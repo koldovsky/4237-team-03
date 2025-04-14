@@ -9,7 +9,7 @@
 
 body {
     font-family: "Roboto", sans-serif;
- /* background-color: #f9f9f9; please change to #ffffff
+    /* background-color: #f9f9f9; please change to #ffffff
     padding: 40px 20px; apply this property only for your section */
 }
 
@@ -61,7 +61,7 @@ body {
     font-size: 21px;
     font-weight: bold;
     margin-bottom: 10px;
-    padding-top:20px ;
+    padding-top: 20px;
 }
 
 .trending-list-element-button {
@@ -168,7 +168,7 @@ body {
     max-width: 800px;
     margin: 20px auto;
     opacity: 0.4;
-    margin-left:100px;
+    margin-left: 100px;
 }
 
 
@@ -200,18 +200,37 @@ ul {
     word-spacing: -2px;
     margin-left: 100px
 }
-.top5__info{
-   display: flex;
-   flex-direction: column;
+
+.top5__info {
+    display: flex;
+    flex-direction: column;
 }
-.top5__image{
+
+.top5__image {
     float: left;
 }
-.book p{
+
+.book p {
     line-height: 1.5;
 }
 
-.trending-items-price-block{
-    margin: 0px 0px 23px ;
+.trending-items-price-block {
+    margin: 0px 0px 23px;
     margin-top: 25px;
+}
+
+.top5__book {
+    display: flex;
+    align-items: center;
+}
+.top5__book-title{
+    padding-top: 15px;
+    letter-spacing: 2px;
+}
+.top5__author{
+    padding-top: 3px;
+}
+.top5__rank{
+    color: #f45350;
+    font-weight: bold;
 }
