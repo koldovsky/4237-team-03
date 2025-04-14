@@ -12,6 +12,10 @@
   scroll-behavior: smooth;
   --color-primary: #f45350;
   --ui-block-title-color: #292929;
+  --dark-accent-color: #595959;
+  --block-title-color: #292929;
+  --brand-color: #f45350;
+  --subscribe-button-color: #fff;
 }
 
 /* img {

@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=SUSE:wght@100..800&display=swap");
+
+.new-arrivals__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 65px;
+}
+
+@media (min-width: 800px) {
+  .new-arrivals__header {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.new-arrivals__title {
+  font-family: "SUSE", sans-serif;
+  font-size: 40px;
+  white-space: nowrap;
+}
+
+.new-arrivals__link-to-all-books {
+  color: var(--color-primary);
+  font-family: "Lato", sans-serif;
+  font-size: 16, 5px;
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 20px;
+  width: 117px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.new-arrivals__link-to-all-books:hover {
+  color: white;
+  background-color: #595959;
+  cursor: pointer;
+  border: 1px solid #595959;
+}
+
+.new-arrivals-carousel {
+  font-family: "Lato", sans-serif;
+  width: 100%; /* Адаптивна ширина контейнера */
+  margin: 0 auto; /* Центрування контейнера на сторінці */
+  overflow: hidden;
+}
+
+.new-arrivals-carousel_track {
+  display: flex;
+  transition: transform 0.3s ease-in-out; /* Для плавної анімації (якщо буде JavaScript) */
+}
+
+.new-arrivals-carousel__item {
+  flex: 0 0 100%;
+  align-items: center;
+  text-align: left;
+  font-size: 1.2rem;
+  padding: 45px;
+  width: 100%; /* Займає всю ширину трекера на мобільних */
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+@media (min-width: 460px) {
+  .new-arrivals-carousel__item {
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 700px) {
+  .new-arrivals-carousel__item {
+    flex: 0 0 33.33%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .new-arrivals-carousel__item {
+    flex: 0 0 20%;
+  }
+}
+
+.book-container__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.book-container__name {
+  margin: 8px 0 0;
+  color: #292929;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.book-container__price {
+  color: var(--color-primary);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.book-container__buy {
+  color: #595959;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: white;
+  border: 1px solid #595959;
+  border-radius: 20px;
+  width: 105px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-container__buy:hover {
+  color: #f5f5f5;
+  background-color: #595959;
+}
+
+.new-arrivals-carousel__button {
+  background-color: #494949;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  margin: auto auto;
+}
