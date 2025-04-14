@@ -43,7 +43,6 @@ export function runApp() {
     list.push(new Book("img/books/lily-monroe--whispered-secrets.png", "Whispered Secrets - Lily Monroe", 20.00, "Lifestyle"));
     list.push(new Book("img/books/lily-monroe--shattered-dreams.png", "Shattered Dreams - Lily Monroe", 19.99, "Lifestyle"));
 
-
     const parent = document.getElementById("all-books_books");
 
     //Adding this books to div with id "all-books_books"
@@ -71,6 +70,36 @@ export function runApp() {
         bookDiv.appendChild(button);
 
         parent.appendChild(bookDiv);
+    });
+
+
+    //noUiSlider
+    const slider = document.getElementById("all-books__price-slider");
+    const inputMin = document.querySelector(".all-books__price-input--min");
+    const inputMax = document.querySelector(".all-books__price-input--max");
+
+    noUiSlider.create(slider, {
+        start: [13, 32.5],
+        connect: true,
+        step: 0.5,
+        range: {
+          min: 13,
+          max: 32.5,
+        },
+    });
+
+    slider.noUiSlider.on("update", function (values, handle) {
+        const [min, max] = values;
+        inputMin.value = min;
+        inputMax.value = max;
+    });
+
+    inputMin.addEventListener("change", function () {
+        slider.noUiSlider.set([this.value, null]);
+    });
+
+    inputMax.addEventListener("change", function () {
+        slider.noUiSlider.set([null, this.value]);
     });
 }
 //End Max
