@@ -1,71 +1,182 @@
-/* 🌟 Основний фон блоку */
+/* === FEATURED AUTHOR SECTION === */
+
 .featured-author {
-    background-color: #fdfaf7; /* світлий теплий фон */
-    color: #2c2c2c; /* темно-сірий текст */
-    font-family: 'Segoe UI', sans-serif;
+  padding: 2rem;
+}
+
+.featured-author__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: nowrap;
+}
+
+.featured-author__info {
+  flex: 1 1 30%;
+  max-width: 400px;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 3.5rem;
+}
+
+.featured-author__visual {
+  flex: 2 1 65%;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.featured-author__image {
+  flex: 1 1 50%;
+  max-width: 500px;
+}
+
+.featured-author__image img {
+  border-radius: 1rem;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.featured-author__books {
+  flex: 1 1 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 0;
+}
+
+.featured-author__title {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  line-height: 1.4;
+  text-align: left;
+  color: var(--brand-color);
+}
+
+.featured-author__name {
+  font-family: "SUSE", sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+  color: var(--block-title-color);
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+
+.featured-author__genre {
+  font-family: "SUSE", sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--brand-color);
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+
+.featured-author__description {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--dark-accent-color);
+  text-align: left;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+
+.featured-author__button {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--subscribe-button-color);
+  background-color: var(--brand-color);
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 1rem;
+}
+
+.featured-author__button:hover {
+  background-color: var(--dark-accent-color);
+}
+
+.book-card {
+  background-color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.book-card__image {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-card__title {
+  font-size: 16px;
+  color: var(--block-title-color);
+  font-weight: 600;
+  margin: 0.25rem 0;
+}
+
+.book-card__price {
+  font-weight: bold;
+  color: var(--brand-color);
+  margin: 0.3rem 0;
+}
+
+.book-card__action {
+  font-weight: 500;
+  color: var(--block-title-color);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.book-card__arrow {
+  color: var(--brand-color);
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.book-card__action:hover .book-card__arrow {
+  transform: translateX(3px);
+}
+
+@media (max-width: 992px) {
+  .featured-author__content {
+    flex-wrap: wrap;
   }
-  
-  /* Заголовки */
-  .featured-author__title {
-    font-size: 28px;
-    color: #aa336a; /* насичений рожево-фіолетовий */
-    font-weight: bold;
+  .featured-author__visual {
+    flex-direction: column;
   }
-  
-  .featured-author__name {
-    font-size: 22px;
-    font-weight: 600;
-    color: #444;
+  .featured-author__books {
+    grid-template-columns: 1fr;
   }
-  
-  .featured-author__genre {
-    font-style: italic;
-    color: #777;
+  .featured-author__image,
+  .featured-author__books {
+    width: 100%;
   }
-  
-  .featured-author__description {
-    color: #3a3a3a;
-    line-height: 1.6;
-  }
-  
-  /* Кнопка */
-  .featured-author__button {
-    background-color: #aa336a;
-    color: #fff;
-    font-weight: 500;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-  }
-  
-  .featured-author__button:hover {
-    background-color: #8b2856;
-  }
-  
-  /* Назви книг */
-  .book-card__title {
-    font-size: 16px;
-    color: #222;
-  }
-  
-  .book-card__price {
-    font-weight: bold;
-    color: #555;
-  }
-  
-  .book-card__button {
-    background-color: #3344aa;
-    color: #fff;
-    font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .book-card__button:hover {
-    background-color: #223388;
-  }
+}
