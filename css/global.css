@@ -17,6 +17,11 @@
   --brand-color: #f45350;
   --subscribe-button-color: #fff;
   --email-input-background-color: rgba(41, 41, 41, 0.05);
+  --line-top-treading:#eaeaea;
+  --text-of-boxshadow:rgba(0, 0, 0, 0.05);
+  --main-lebel-name:#464c5c;
+  --element-of-button:#ffffff;
+  --list-button-element:#dddddd;
 }
 
 /* img {

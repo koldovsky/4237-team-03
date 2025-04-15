@@ -32,46 +32,45 @@ body {
 
 .top5 {
     position: relative;
-    border: 2px #eaeaea solid;
+    border: 2px var(--line-top-treading) solid;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 15px;
     width: 363.33px;
-    background-color: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px var(--text-of-boxshadow);
     transition: transform 0.3s ease;
     float: right;
+    background-color: var(--subscribe-button-color);
 }
 
 .trending-label-name {
-    color: #464c5c;
     font-size: 16px;
     font-weight: 500;
     text-align: center;
     margin-top: 12px;
     margin-bottom: 6px;
     min-height: 48px;
+    color: var(--main-lebel-name);
 }
 
 
 .trending-items-price {
-    color: #f45350;
     font-size: 21px;
     font-weight: bold;
     margin-bottom: 10px;
     padding-top: 20px;
+    color: var(--brand-color)
 }
 
 .trending-list-element-button {
     width: 110px;
     height: 45px;
-    border: 2px solid #595959;
+    border: 2px solid var(--dark-accent-color);
     border-radius: 25px;
     text-align: center;
     font-weight: bold;
-    color: #595959;
     background-color: transparent;
     text-decoration: none;
     display: flex;
@@ -79,24 +78,25 @@ body {
     justify-content: center;
     transition: all 0.3s ease;
     cursor: pointer;
+    color: var(--dark-accent-color);
 }
 
 .trending-list-element-button:hover {
-    background-color: #595959;
+    background-color: var(--dark-accent-color);
 }
 
 .trending-list-element-button:hover .trending-underline {
-    color: #ffffff;
+    color: var(--element-of-button);
 }
 
 .trending-list-element-button:active {
-    background-color: #dddddd;
-    border-color: #dddddd;
+    background-color: var(--list-button-element);
+    border-color: var(--list-button-element);
 }
 
 .trending-underline {
     text-decoration: none;
-    color: #595959;
+    color: var(--dark-accent-color);
 }
 
 
@@ -111,11 +111,11 @@ body {
 
 
 .badge {
-    color: #ffffff;
+    color: var(--element-of-button);
     font-size: 12px;
     font-weight: bold;
     padding: 6px 10px;
-    background-color: #464C5C;
+    background-color: var(--main-lebel-name);
     border-radius: 5px;
     position: absolute;
     z-index: 1;
@@ -124,7 +124,7 @@ body {
 }
 
 .badge.bestseller {
-    background-color: #f45350;
+    background-color:var(--brand-color)
 }
 
 
@@ -142,11 +142,11 @@ body {
 }
 
 .trending-label p {
-    color: #f45350;
     width: 124px;
     font-size: 15px;
     text-align: left;
     margin-left: 100px;
+    color: var(--brand-color)
 }
 
 .top5__title {
@@ -157,13 +157,13 @@ body {
 }
 
 .top5__title b {
-    color: #f45350;
+    color: var(--brand-color)
 }
 
 
 .trending-line {
     height: 1px;
-    background-color: #eaeaea;
+    background-color: var(--line-top-treading);
     width: 100%;
     max-width: 800px;
     margin: 20px auto;
@@ -196,7 +196,7 @@ ul {
 
 .trending-label-name {
     font-size: 30px;
-    color: #000;
+    color: var(--block-title-color);
     word-spacing: -2px;
     margin-left: 100px
 }
@@ -223,14 +223,20 @@ ul {
     display: flex;
     align-items: center;
 }
-.top5__book-title{
+
+.top5__book-title {
     padding-top: 15px;
     letter-spacing: 2px;
 }
-.top5__author{
+
+.top5__author {
     padding-top: 3px;
 }
-.top5__rank{
-    color: #f45350;
+
+.top5__rank {
     font-weight: bold;
+    color: var(--brand-color)
+}
+.top5__item{
+   margin-top: 40px;
 }
