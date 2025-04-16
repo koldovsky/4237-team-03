@@ -24,7 +24,10 @@
         <details class="all-books__filter all-books__filter--price">
           <summary class="all-books__filter-title">Price</summary>
 
-          <div id="all-books__price-slider" class="all-books__price-slider"></div>
+          <div
+            id="all-books__price-slider"
+            class="all-books__price-slider"
+          ></div>
 
           <div class="all-books__price-values">
             <input
@@ -47,7 +50,17 @@
         </details>
       </div>
 
-      <div class="all-books__books" id="all-books_books"></div>
+      <div class="all-books__container-with-books">
+        <div class="all-books__books" id="all-books_books">
+          <!--тут додаються усі книги через js-->
+        </div>
+  
+        <div class="all-books__load">
+          <button id="all-books__load-more" class="all-books__load-button">
+            Load More
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </section>

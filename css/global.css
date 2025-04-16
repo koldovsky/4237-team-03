@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=SUSE:wght@100..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@...&family=SUSE:wght@100..800&display=swap");
+
 *,
-*::after,
-*::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*::after,                /* Всі псевдоелементи ::after */
+*::before {              /* Всі псевдоелементи ::before */
+  box-sizing: border-box; /* Враховує padding і border у ширині/висоті */
+  margin: 0;              /* Обнуляє зовнішні відступи */
+  padding: 0;             /* Обнуляє внутрішні відступи */
 }
 
 :root {
@@ -15,6 +15,7 @@
   --dark-accent-color: #595959;
   --block-title-color: #292929;
   --brand-color: #f45350;
+  --carousel-arrow-color: #494949;
   --subscribe-button-color: #fff;
   --email-input-background-color: rgba(41, 41, 41, 0.05);
   --line-top-treading:#eaeaea;
@@ -22,9 +23,27 @@
   --main-lebel-name:#464c5c;
   --element-of-button:#ffffff;
   --list-button-element:#dddddd;
+  --testimonials-james: rgb(244, 251, 243);
+  --testimonials-sarah: rgb(252, 236, 236);
+  --testimonials-kathleen: rgb(255, 248, 242);
+  --testimonials-jadis: rgb(244, 247, 253);
+  --testimonials-author: rgb(244, 83, 80);
+  --testimonials-image: rgb(244, 83, 80);
+  --testimonials-text: rgb(99, 99, 99);
+  --testimonials-arrows: rgb(71, 72, 73);
+  --testimonials-arrows-darker: #292929;
+  --testimonials-title: #292929;
 }
 
-/* img {
-    display: block;
-    width: 100%;
-} */
+img {
+  display: block;   
+  width: 100%;    
+  height: auto;   
+}
+
+body {
+  font-family: "Lato", sans-serif;  /* Основний шрифт для всього сайту. Lato - основний шрифт, sans-serif — резервний, якщо Lato не завантажиться */
+  background-color: #fff;         /* Білий фон сайту — можна змінити, якщо буде темна тема */
+  line-height: 1.6;                 /* Оптимальний міжрядковий інтервал для читабельності */
+  font-size: 16px;                  /* Базовий розмір шрифту */
+}

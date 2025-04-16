@@ -1,0 +1,150 @@
+/* Reading Experience Section - Mobile First Approach */
+
+/* Base Styles */
+.reading-experience {
+  padding: 2rem 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Gallery - Images Grid */
+.reading-experience__gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.reading-experience__image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  
+}
+
+.reading-experience__image:hover {
+  transform: scale(1.02);
+}
+
+/* Quote Section */
+.reading-experience__quote {
+  background-color: #f8f9fa;
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.reading-experience__quote-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #495057;
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.reading-experience__quote-author {
+  font-size: 0.9rem;
+  color: #ff6b6b;
+  font-weight: 600;
+  display: block;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+/* Description/Text Content */
+.reading-experience__description {
+  line-height: 1.6;
+}
+
+.reading-experience__text {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Small tablets (portrait) */
+@media (min-width: 576px) {
+  .reading-experience__gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reading-experience__quote-text {
+    font-size: 1.4rem;
+  }
+}
+
+/* Medium devices (landscape tablets) */
+@media (min-width: 768px) {
+  .reading-experience {
+    padding: 3rem 2rem;
+  }
+
+  .reading-experience__gallery {
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Remove fixed width set in HTML when on larger screens */
+  .reading-experience__image {
+    width: 80%;
+    
+  }
+}
+
+/* Large devices (laptops/desktops) */
+@media (min-width: 992px) {
+  .reading-experience {
+    padding: 4rem 3rem;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas:
+      "gallery gallery"
+      "quote description";
+    gap: 2rem;
+  }
+
+  .reading-experience__gallery {
+    grid-area: gallery;
+    grid-template-columns: repeat(2, 2fr);
+    margin-bottom: 1rem;
+  }
+
+  .reading-experience__quote {
+    grid-area: quote;
+    margin-bottom: 0;
+  }
+
+  .reading-experience__description {
+    grid-area: description;
+  }
+
+  .reading-experience__quote-text {
+    font-size: 1.5rem;
+  }
+}
+
+/* Extra large devices */
+@media (min-width: 1200px) {
+  .reading-experience {
+    padding: 5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .reading-experience__quote-text {
+    font-size: 1.7rem;
+  }
+
+  .reading-experience__text {
+    font-size: 1.1rem;
+  }
+}

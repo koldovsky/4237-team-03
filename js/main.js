@@ -44,32 +44,55 @@ export function runApp() {
     list.push(new Book("img/books/lily-monroe--shattered-dreams.png", "Shattered Dreams - Lily Monroe", 19.99, "Lifestyle"));
 
     const parent = document.getElementById("all-books_books");
+    const loadMoreBtn = document.getElementById("all-books__load-more");
+    const BOOKS_PER_PAGE = 6;
+    let currentPage = 0;
 
-    //Adding this books to div with id "all-books_books"
-    list.forEach(book => {
-        const bookDiv = document.createElement("div");
-        bookDiv.classList.add("all-books__book");
+    function renderBooks() {
+        const start = currentPage * BOOKS_PER_PAGE;
+        const end = start + BOOKS_PER_PAGE;
+        const currentBooks = list.slice(start, end);
 
-        const img = document.createElement("img");
-        img.src = book.image;
-        img.alt = book.name;
+        currentBooks.forEach(book => {
+            const bookDiv = document.createElement("div");
+            bookDiv.classList.add("all-books__book");
 
-        const name = document.createElement("h4");
-        name.textContent = book.name;
+            const img = document.createElement("img");
+            img.src = book.image;
+            img.alt = book.name;
 
-        const price = document.createElement("p");
-        price.textContent = `$${book.price.toFixed(2)}USD`;
+            const name = document.createElement("h4");
+            name.textContent = book.name;
 
-        const button = document.createElement("a");
-        button.href = "#";
-        button.textContent = "Buy Now";
+            const price = document.createElement("p");
+            price.textContent = `$${book.price.toFixed(2)} USD`;
 
-        bookDiv.appendChild(img);
-        bookDiv.appendChild(name);
-        bookDiv.appendChild(price);
-        bookDiv.appendChild(button);
+            const button = document.createElement("a");
+            button.href = "#";
+            button.textContent = "Buy Now";
 
-        parent.appendChild(bookDiv);
+            bookDiv.appendChild(img);
+            bookDiv.appendChild(name);
+            bookDiv.appendChild(price);
+            bookDiv.appendChild(button);
+
+            parent.appendChild(bookDiv);
+        });
+
+        currentPage++;
+
+        // Ховаємо кнопку, якщо всі книги вже показані
+        if (currentPage * BOOKS_PER_PAGE >= list.length) {
+            loadMoreBtn.style.display = "none";
+        }
+    }
+
+    // Показати перші 6 книг
+    renderBooks();
+
+    // Обробка натискання на "Load More"
+    loadMoreBtn.addEventListener("click", () => {
+        renderBooks();
     });
 
 
