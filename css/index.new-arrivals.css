@@ -86,10 +86,14 @@
   }
 }
 
-.book-container__image-wrapper {
+.book-container__image {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.book-container__image-wrapper {
+  width: 200px;
 }
 
 .book-container__name {
