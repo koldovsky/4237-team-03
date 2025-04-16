@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@...&family=SUSE:wght@100..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=SUSE:wght@100..800&display=swap");
+
 *,
 *::after,                /* Всі псевдоелементи ::after */
 *::before {              /* Всі псевдоелементи ::before */
@@ -35,14 +35,13 @@
 }
 
 img {
-  display: block;    /* Робить зображення блочним елементом, що прибирає небажані відступи (пробіли знизу), які бувають у inline-елементів */
-  width: 100%;       /* Зображення займає всю ширину батьківського контейнера — корисно для адаптивного дизайну */
-  height: auto;      /* Автоматично підлаштовує висоту відповідно до ширини, щоб зберегти правильні пропорції зображення */
+  display: block;   
+  width: 100%;    
+  height: auto;   
 }
 
 body {
   font-family: "Lato", sans-serif;  /* Основний шрифт для всього сайту. Lato - основний шрифт, sans-serif — резервний, якщо Lato не завантажиться */
-  color: var(--dark-accent-color);  /* Колір тексту за замовчуванням — зручно керувати через CSS-змінну */
   background-color: #fff;         /* Білий фон сайту — можна змінити, якщо буде темна тема */
   line-height: 1.6;                 /* Оптимальний міжрядковий інтервал для читабельності */
   font-size: 16px;                  /* Базовий розмір шрифту */
