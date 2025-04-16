@@ -42,20 +42,11 @@
 }
 
 .hot-sale__image {
-  height: auto;
+  height: 200px;
+  width: 200px;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
-}
-
-.hot-sale__label {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background-color: #333;
-  color: #fff;
-  font-size: 0.75rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
+  display: inline-block;
 }
 
 .hot-sale__name {
@@ -89,6 +80,6 @@
 }
 
 .hot-sale__item-button:hover {
-color: var(--element-of-button);
-background-color: var(--dark-accent-color);
+  color: var(--element-of-button);
+  background-color: var(--dark-accent-color);
 }
