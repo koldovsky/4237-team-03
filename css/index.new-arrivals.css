@@ -34,10 +34,10 @@
 }
 
 .new-arrivals__link-to-all-books:hover {
-  color: white;
-  background-color: #595959;
+  color: var(--element-of-button);
+  background-color: var(--dark-accent-color);
   cursor: pointer;
-  border: 1px solid #595959;
+  border: 1px solid var(--dark-accent-color);
 }
 
 .new-arrivals-carousel {
@@ -45,6 +45,9 @@
   width: 100%; /* Адаптивна ширина контейнера */
   margin: 0 auto; /* Центрування контейнера на сторінці */
   overflow: hidden;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  gap: 0px;
 }
 
 .new-arrivals-carousel_track {
@@ -57,7 +60,7 @@
   align-items: center;
   text-align: left;
   font-size: 1.2rem;
-  padding: 45px;
+  padding: 40px;
   width: 100%; /* Займає всю ширину трекера на мобільних */
   gap: 1.5rem;
   display: flex;
@@ -83,15 +86,15 @@
   }
 }
 
-.book-container__image {
+.book-container__image-wrapper {
+  height: 100%;
   width: 100%;
-  height: auto;
   object-fit: cover;
 }
 
 .book-container__name {
   margin: 8px 0 0;
-  color: #292929;
+  color: var(--testimonials-title);
   font-family: "Lato", sans-serif;
   font-size: 18px;
   white-space: nowrap;
@@ -104,12 +107,12 @@
 }
 
 .book-container__buy {
-  color: #595959;
+  color: var(--dark-accent-color);
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 15px;
-  background-color: white;
-  border: 1px solid #595959;
+  background-color: var(--element-of-button);
+  border: 1px solid var(--dark-accent-color);
   border-radius: 20px;
   width: 105px;
   padding: 10px;
@@ -118,16 +121,21 @@
 }
 
 .book-container__buy:hover {
-  color: #f5f5f5;
-  background-color: #595959;
+  color: var(--element-of-button);
+  background-color: var(--dark-accent-color);
 }
 
 .new-arrivals-carousel__button {
-  background-color: #494949;
-  color: white;
+  background-color: var(--carousel-arrow-color);
+  color: var(--element-of-button);
   cursor: pointer;
   border-radius: 50%;
   width: 32px;
   height: 32px;
   margin: auto auto;
 }
+
+/* .new-arrivals-carousel__buttons {
+  gap: 5%;
+  display: grid
+} */
