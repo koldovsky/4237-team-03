@@ -22,6 +22,16 @@
   --main-lebel-name:#464c5c;
   --element-of-button:#ffffff;
   --list-button-element:#dddddd;
+  --testimonials-james: rgb(244, 251, 243);
+  --testimonials-sarah: rgb(252, 236, 236);
+  --testimonials-kathleen: rgb(255, 248, 242);
+  --testimonials-jadis: rgb(244, 247, 253);
+  --testimonials-author: rgb(244, 83, 80);
+  --testimonials-image: rgb(244, 83, 80);
+  --testimonials-text: rgb(99, 99, 99);
+  --testimonials-arrows: rgb(71, 72, 73);
+  --testimonials-arrows-darker: #292929;
+  --testimonials-title: #292929;
 }
 
 img {

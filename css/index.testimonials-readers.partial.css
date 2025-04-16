@@ -60,7 +60,6 @@
     aspect-ratio: 1 / 1;
     padding: 20px;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     text-align: center;
     width: 300px; 
@@ -134,3 +133,4 @@
     width: 16px;
     height: 16px;
   }
+
