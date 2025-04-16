@@ -1,36 +1,55 @@
+<!-- Max Skydanchuk -->
 <section class="all-books">
-    <h2>All Books</h2>
-  <div class="all-books__options">
-    <h3>Filters</h3>
+  <div class="all-books__wrapper">
+    <div class="all-books__top">
+      <h2 class="all-books__header">All Books</h2>
+      <hr class="all-books__divider" />
+    </div>
 
-    <details class="all-books__filter all-books__filter--category">
-      <summary class="all-books__filter-title">Category</summary>
-      <ul class="all-books__filter-list">
-        <li class="all-books__filter-item">All</li>
-        <li class="all-books__filter-item">Featured Author</li>
-        <li class="all-books__filter-item">Fiction</li>
-        <li class="all-books__filter-item"><strong>Non-Fiction</strong></li>
-        <li class="all-books__filter-item">Lifestyle</li>
-      </ul>
-    </details>
+    <div class="all-books__container">
+      <div class="all-books__options">
+        <h3 class="all-books__filters-title">Filters</h3>
+        <hr class="all-books__divider" />
+        <details class="all-books__filter all-books__filter--category">
+          <summary class="all-books__filter-title">Category</summary>
+          <ul class="all-books__filter-list">
+            <li class="all-books__filter-item">All</li>
+            <li class="all-books__filter-item">Featured Author</li>
+            <li class="all-books__filter-item">Fiction</li>
+            <li class="all-books__filter-item">Non-Fiction</li>
+            <li class="all-books__filter-item">Lifestyle</li>
+          </ul>
+        </details>
+        <hr class="all-books__divider" />
+        <details class="all-books__filter all-books__filter--price">
+          <summary class="all-books__filter-title">Price</summary>
 
-    <details class="all-books__filter all-books__filter--price">
-      <summary class="all-books__filter-title">Price</summary>
-      <input
-        type="range"
-        class="all-books__price-range"
-        min="13"
-        max="32"
-        step="0.5"
-        value="13"
-      />
-      <div class="all-books__price-values">
-        <span class="all-books__price-value">13.00</span>
-        <span class="all-books__price-value">32.50</span>
+          <div id="all-books__price-slider" class="all-books__price-slider"></div>
+
+          <div class="all-books__price-values">
+            <input
+              type="number"
+              class="all-books__price-input all-books__price-input--min"
+              min="13"
+              max="32.5"
+              step="0.5"
+              value="13"
+            />
+            <input
+              type="number"
+              class="all-books__price-input all-books__price-input--max"
+              min="13"
+              max="32.5"
+              step="0.5"
+              value="32.5"
+            />
+          </div>
+        </details>
       </div>
-    </details>
-  </div>
 
-  <div class="all-books__books" id="all-books_books" style="display:flex;">
+      <div class="all-books__books" id="all-books_books"></div>
+    </div>
   </div>
 </section>
+
+<!--End Max Skydanchuk-->

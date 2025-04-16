@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    /* background-color: #f9f9f9; please change to #ffffff
+    padding: 40px 20px; apply this property only for your section */
+}
+
+.book {
+    max-width: 180px;
+    height: 351.53px;
+}
+
+.books-part {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+    flex-direction: row;
+}
+
+
+.top5 {
+    position: relative;
+    border: 2px var(--line-top-treading) solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    width: 363.33px;
+    box-shadow: 0 4px 12px var(--text-of-boxshadow);
+    transition: transform 0.3s ease;
+    float: right;
+    background-color: var(--subscribe-button-color);
+}
+
+.trending-label-name {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    min-height: 48px;
+    color: var(--main-lebel-name);
+}
+
+
+.trending-items-price {
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    color: var(--brand-color)
+}
+
+.trending-list-element-button {
+    width: 110px;
+    height: 45px;
+    border: 2px solid var(--dark-accent-color);
+    border-radius: 25px;
+    text-align: center;
+    font-weight: bold;
+    background-color: transparent;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: var(--dark-accent-color);
+}
+
+.trending-list-element-button:hover {
+    background-color: var(--dark-accent-color);
+}
+
+.trending-list-element-button:hover .trending-underline {
+    color: var(--element-of-button);
+}
+
+.trending-list-element-button:active {
+    background-color: var(--list-button-element);
+    border-color: var(--list-button-element);
+}
+
+.trending-underline {
+    text-decoration: none;
+    color: var(--dark-accent-color);
+}
+
+
+.books-part img {
+    width: 169.16px;
+    /* max-width: 169px;*/
+    height: 200px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.badge {
+    color: var(--element-of-button);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 10px;
+    background-color: var(--main-lebel-name);
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.badge.bestseller {
+    background-color:var(--brand-color)
+}
+
+
+.trending-label,
+.trending-label-name {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    text-align: left;
+    margin: 0 auto 12px auto;
+}
+
+.trending-label p {
+    width: 124px;
+    font-size: 15px;
+    text-align: left;
+    margin-left: 100px;
+    color: var(--brand-color)
+}
+
+.top5__title {
+    text-align: center;
+    padding-top: 40px;
+    font-size: 35px;
+    word-spacing: 5px;
+}
+
+.top5__title b {
+    color: var(--brand-color)
+}
+
+
+.trending-line {
+    height: 1px;
+    background-color: var(--line-top-treading);
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    opacity: 0.4;
+    margin-left: 100px;
+}
+
+
+@media (max-width: 768px) {
+    .top5 {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .top5 {
+        width: 100%;
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.trending_and_top5 {
+    display: flex;
+    justify-content: center;
+}
+
+.trending-label-name {
+    font-size: 30px;
+    color: var(--block-title-color);
+    word-spacing: -2px;
+    margin-left: 100px
+}
+
+.top5__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.top5__image {
+    float: left;
+}
+
+.book p {
+    line-height: 1.5;
+}
+
+.trending-items-price-block {
+    margin: 0px 0px 23px;
+    margin-top: 25px;
+}
+
+.top5__book {
+    display: flex;
+    align-items: center;
+}
+
+.top5__book-title {
+    padding-top: 15px;
+    letter-spacing: 2px;
+}
+
+.top5__author {
+    padding-top: 3px;
+}
+
+.top5__rank {
+    font-weight: bold;
+    color: var(--brand-color)
+}
+.top5__item{
+   margin-top: 40px;
+}

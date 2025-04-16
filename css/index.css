@@ -1,0 +1,37 @@
+@import url(global.css);
+
+/*Olexandr Yanko*/
+@import url(global.header-nav.partial.css);
+/*Olexandr Yanko*/
+
+/*Nuijen Alex*/
+@import url(index.trending-now.partial.css);
+/*End Nuijen Alex*/
+
+/*Max Skydanchuk*/
+@import url(index.all-books.partial.css);
+/*End Max Skydanchuk*/
+
+/*Vitalii Yatsura*/
+@import url("index.featured-author.partial.css");
+/*End Vitalii Yatsura*/
+
+/* Nazarii Venhryn */
+@import url(index.trending-titles-section.partial.css);
+/* End Nazarii Venhryn */
+
+/*Julia Kuznietsova*/
+@import url("index.new-arrivals.css");
+/*End Julia Kuznietsova*/
+
+/*Andrii Sobko*/
+@import url("index.hot-sale.partial.css");
+/*End Andrii Sobko*/
+
+/*Marta Rusanovska*/
+@import url(index.newsletter.css);
+/*End Marta Rusanovska*/
+
+/*Ivan Stupach*/
+@import url(about.reading-expirience.css);
+/*End Ivan Stupach*/

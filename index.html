@@ -17,33 +17,61 @@
     ></script>
 
     <script type="module" src="js/init.js"></script>
-    <link rel="stylesheet" href="CSS/main.css">
-  </head>
+    <link rel="stylesheet" href="css/index.css" />
 
+    <!--noUiSlider-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+  </head>
   <body>
-    <header></header>
+    <!--Olexandr Yanko-->
+    <header>
+      <nav
+        class="header__nav"
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="global.header-nav.partial.html"
+      ></nav>
+    </header>
+    <!--Olexandr Yanko-->
+
     <main>
+      <!--Venhryn Nazarii-->
+      <section>
+        <div
+          data-hx-trigger="load"
+          data-hx-swap="outerHTML"
+          data-hx-get="index.trending-titles-section.partial.html"
+        ></div>
+      </section>
+      <!--End Venhryn Nazarii-->
+
       <!--Vitalii Yatsura-->
       <section>
         <div
           data-hx-trigger="load"
           data-hx-swap="outerHTML"
-          data-hx-get="index.featured-author.html"
+          data-hx-get="index.featured-author.partial.html"
         ></div>
       </section>
       <!--End Vitalii Yatsura-->
 
       <!--Nuijen Alex-->
-      <section
-      data-hx-trigger="load"
-      data-hx-swap="outerHTML"
-      data-hx-get="index.trending-now-partial.html">
-      </section>
-      <section
-      data-hx-trigger="load"
-      data-hx-swap="outerHTML"
-      data-hx-get="index.top-5-this-week-partial.html">
-      </section>
+      <div class="trending_and_top5">
+        <section
+          data-hx-trigger="load"
+          data-hx-swap="outerHTML"
+          data-hx-get="index.trending-now.partial.html"
+        ></section>
+        <section
+          data-hx-trigger="load"
+          data-hx-swap="outerHTML"
+          data-hx-get="index.top-5-this-week.partial.html"
+        ></section>
+      </div>
       <!--End Nuijen Alex-->
 
       <!-- Julia Kuznietsova -->
@@ -67,9 +95,33 @@
       <section
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
-        data-hx-get="index.testimonials-readers.partial.html">
-      </section>
+        data-hx-get="index.testimonials-readers.partial.html"
+      ></section>
       <!--End Diana Shymanska-->
+
+      <!-- Marta Rusanovska -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.newsletter.partial.html"
+      ></section>
+      <!--End Marta Rusanovska-->
+
+      <!--Andrii Sobko-->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.hot-sale.partial.html"
+      ></section>
+      <!--End Andrii Sobko-->
+
+      <!-- Marta Rusanovska -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.coming-soon.partial.html"
+      ></section>
+      <!--End Marta Rusanovska-->
     </main>
     <footer></footer>
   </body>
