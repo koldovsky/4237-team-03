@@ -26,6 +26,11 @@ function greet (name, owner) {
     if (name === owner) {return 'Hello boss'} else {return 'Hello guest'};
   }
 
+
+function greet (name, owner) {
+  return name === owner ? 'Hello boss' : 'Hello guest';
+}
+
 // Task 5
 // Keep Hydrated 
 // https://www.codewars.com/kata/keep-hydrated-1/train/javascript
@@ -43,3 +48,8 @@ function lovefunc(flower1, flower2){
       return false;
     }
   }
+
+
+function lovefunc(flower1, flower2){
+  return (flower1 % 2 === 0) != (flower2 % 2 === 0);
+}
