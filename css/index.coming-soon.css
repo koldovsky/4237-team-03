@@ -1,0 +1,31 @@
+.coming-soon{
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+.coming-soon-item{
+    padding-top: 402.648px;
+    .coming-soon__image coming-soon__image--shattered-dreams{
+        font-size: 16px;
+        font-weight: 400;
+        height: 383.984px;
+        line-height: 25.6px;
+        width: 278.25px;
+        min-width: 100%;
+    }
+    .coming-soon__image coming-soon__image--lily-monroe{
+        font-size: 16px;
+        font-weight: 400;
+        height: 221.328px;
+        line-height: 25.6px;
+        width: 111.953px;
+        min-width: 100%;
+        text-transform: uppercase;
+    }
+}
+.coming-soon__title{
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 2.4px;
+    line-height: 16.8px;
+    color: var(--dark-accent-color);
+}
