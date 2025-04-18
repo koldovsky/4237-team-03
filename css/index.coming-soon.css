@@ -1,31 +1,91 @@
-.coming-soon{
-    padding-top: 90px;
-    padding-bottom: 90px;
+.coming-soon {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
-.coming-soon-item{
-    padding-top: 402.648px;
-    .coming-soon__image coming-soon__image--shattered-dreams{
-        font-size: 16px;
-        font-weight: 400;
-        height: 383.984px;
-        line-height: 25.6px;
-        width: 278.25px;
-        min-width: 100%;
-    }
-    .coming-soon__image coming-soon__image--lily-monroe{
-        font-size: 16px;
-        font-weight: 400;
-        height: 221.328px;
-        line-height: 25.6px;
-        width: 111.953px;
-        min-width: 100%;
-        text-transform: uppercase;
-    }
+
+.coming-soon__images {
+  aspect-ratio: 7 / 5;
+  position: relative;
+  width: 100%;
 }
-.coming-soon__title{
-    font-size: 12px;
-    font-weight: 900;
-    letter-spacing: 2.4px;
-    line-height: 16.8px;
-    color: var(--dark-accent-color);
+
+.coming-soon__title {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2.4px;
+  line-height: 16.8px;
+  color: var(--dark-accent-color);
+}
+
+.coming-soon__image--shattered-dreams {
+  display: block;
+  width: 95%;
+  display: block;
+  object-fit: cover;
+  min-width: 0;
+  height: auto;
+}
+
+.coming-soon__image--lily-monroe {
+  min-width: 0;
+  width: 35%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  object-fit: contain;
+}
+.coming-soon__title {
+  font-size: 12px;
+  letter-spacing: 2.4px;
+  line-height: 16.8px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+.coming-soon__book-title {
+  margin-top: 20px;
+  font-size: 34px;
+  letter-spacing: normal;
+  line-height: 40.8px;
+  text-align: left;
+  text-decoration-style: solid;
+  font-weight: 600;
+}
+.coming-soon__book-author {
+  font-size: 28px;
+  color: var(--testimonials-author);
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 33.6px;
+  text-align: left;
+}
+.coming-soon__book-description {
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 25.6px;
+  text-align: left;
+  color: var(--coming-soon__book-description-color);
+}
+.coming-soon__pre-order {
+  color: var(--testimonials-author);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 25.6px;
+  text-align: left;
+  text-decoration: underline;
+  font-style: italic;
+}
+.coming-soon__be-the-first {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 25.6px;
+  text-align: left;
+  color: var(--coming-soon__book-description-color);
 }
