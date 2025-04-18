@@ -23,11 +23,6 @@ function move (position, roll) {
 // Personalized Message
 // https://www.codewars.com/kata/grasshopper-personalized-message/train/javascript
 function greet (name, owner) {
-    if (name === owner) {return 'Hello boss'} else {return 'Hello guest'};
-  }
-
-
-function greet (name, owner) {
   return name === owner ? 'Hello boss' : 'Hello guest';
 }
 
@@ -48,7 +43,6 @@ function lovefunc(flower1, flower2){
       return false;
     }
   }
-
 
 function lovefunc(flower1, flower2){
   return (flower1 % 2 === 0) != (flower2 % 2 === 0);
