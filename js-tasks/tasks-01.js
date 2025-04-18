@@ -40,10 +40,3 @@ function litres(time) {
 function lovefunc(flower1, flower2){
   return (flower1 % 2 === 0) != (flower2 % 2 === 0);
 }
-
-//Task 7
-// Nuijen Alex
-
-function greet (name, owner) {
-  return name === owner ? 'Hello boss' : 'Hello guest';
-}
