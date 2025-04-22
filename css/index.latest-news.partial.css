@@ -28,13 +28,20 @@
 }
 
 .news-left {
-  flex: 1 1 50%; /* Пропорції скориговані для балансу */
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-news-item {
+  margin-bottom: 20px;
 }
 
 .main-book-image {
   width: 100%;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .news-featured {
@@ -44,13 +51,19 @@
 }
 
 .featured-thumb {
-  width: 150px;
+  width: 100px;
   border-radius: 15px;
+  height: auto;
 }
 
 .news-title {
   color: #d53e3e;
   margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.news-description {
+  margin-bottom: 10px;
 }
 
 .btn-learn-more {
@@ -61,10 +74,11 @@
   border-radius: 25px;
   text-decoration: none;
   color: #d53e3e;
+  font-size: 14px;
 }
 
 .news-right {
-  flex: 1 1 50%; /* Вирівняно з .news-left */
+  flex: 1 1 50%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -72,24 +86,25 @@
 
 .news-item {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   align-items: center;
 }
 
 .news-item img {
-  width: 80px; /* Збільшено розмір */
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .news-item h4 {
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .news-item p {
   margin: 5px 0 0 0;
-  font-size: 14px;
+  font-size: 12px;
   color: #555;
 }
 
@@ -98,10 +113,25 @@
   .news-content-wrap {
     flex-direction: column;
   }
-  .news-left, .news-right {
+  .news-left,
+  .news-right {
     flex: 1 1 100%;
   }
-  .main-book-image, .featured-thumb {
-    width: 100%; /* Зображення займуть всю ширину */
+  .news-featured {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .featured-thumb {
+    width: 80px;
+  }
+  .main-book-image {
+    margin-bottom: 15px;
+  }
+  .news-item {
+    flex-direction: row;
+    align-items: center;
+  }
+  .news-item img {
+    margin-right: 15px;
   }
 }
