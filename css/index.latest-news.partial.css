@@ -28,7 +28,7 @@
 }
 
 .news-left {
-  flex: 1 1 50%;
+  flex: 1 1 50%; /* Пропорції скориговані для балансу */
 }
 
 .main-book-image {
@@ -64,7 +64,7 @@
 }
 
 .news-right {
-  flex: 1 1 40%;
+  flex: 1 1 50%; /* Вирівняно з .news-left */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -77,8 +77,8 @@
 }
 
 .news-item img {
-  width: 60px;
-  height: 60px;
+  width: 80px; /* Збільшено розмір */
+  height: 80px;
   border-radius: 50%;
 }
 
@@ -91,4 +91,17 @@
   margin: 5px 0 0 0;
   font-size: 14px;
   color: #555;
+}
+
+/* Адаптивний дизайн */
+@media (max-width: 768px) {
+  .news-content-wrap {
+    flex-direction: column;
+  }
+  .news-left, .news-right {
+    flex: 1 1 100%;
+  }
+  .main-book-image, .featured-thumb {
+    width: 100%; /* Зображення займуть всю ширину */
+  }
 }
