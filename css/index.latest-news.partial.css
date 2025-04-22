@@ -39,30 +39,28 @@
 }
 
 .news-left {
-  flex: 2;
-  min-width: 300px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 20px;
+  min-width: 300px;
+  flex: 2;
 }
 
 .main-news-item {
 }
 
 .main-book-image {
-  display: block;
-  width: 100%;
+  width: 50%;
   height: 350px;
-  border-radius: 10px;
-  margin-bottom: 15px;
   object-fit: cover;
-  object-position: center;
+  border-radius: 10px;
 }
 
 .news-featured {
+  flex: 1;
   display: flex;
-  gap: 20px;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .featured-thumb {
