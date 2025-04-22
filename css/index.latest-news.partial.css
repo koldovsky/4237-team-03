@@ -3,7 +3,7 @@
    ================== */
 
 .latest-news {
-   padding: 50px 20px !important;
+  padding: 50px 20px;
 }
 
 .container {
@@ -177,3 +177,5 @@
   .main-book-image {
     height: 250px;
   }
+
+}
