@@ -282,71 +282,86 @@ function renderBooks() {
 
   currentPage++;
 
-  // Ховаємо кнопку, якщо всі книги вже показані
+  // ховаємо кнопку якщо всі книги вже показані
   if (currentPage * BOOKS_PER_PAGE >= list.length) {
     loadMoreBtn.style.display = "none";
   }
 }
 
-// Показати перші 6 книг
+// показати перші 6 книг
 renderBooks();
 
-// Обробка натискання на "Load More"
+// обробка натискання на "Load More"
 loadMoreBtn.addEventListener("click", () => {
   renderBooks();
 });
 
-//noUiSlider
-const slider = document.getElementById("all-books__price-slider");
-const inputMin = document.querySelector(".all-books__price-input--min");
-const inputMax = document.querySelector(".all-books__price-input--max");
+function initializePriceFilter(container) {
+  const slider = container.querySelector(".all-books__price-slider");
+  const inputMin = container.querySelector(".all-books__price-input--min");
+  const inputMax = container.querySelector(".all-books__price-input--max");
 
-noUiSlider.create(slider, {
-  start: [13, 32.5],
-  connect: true,
-  step: 0.5,
-  range: {
-    min: 13,
-    max: 32.5,
-  },
-});
+  noUiSlider.create(slider, {
+    start: [13, 32.5],
+    connect: true,
+    step: 0.5,
+    range: {
+      min: 13,
+      max: 32.5,
+    },
+  });
 
-slider.noUiSlider.on("update", function (values, handle) {
-  const [min, max] = values;
-  inputMin.value = min;
-  inputMax.value = max;
-});
+  slider.noUiSlider.on("update", function (values, handle) {
+    const [min, max] = values;
+    inputMin.value = min;
+    inputMax.value = max;
+  });
 
-inputMin.addEventListener("change", function () {
-  slider.noUiSlider.set([this.value, null]);
-});
+  inputMin.addEventListener("change", function () {
+    slider.noUiSlider.set([this.value, null]);
+  });
 
-inputMax.addEventListener("change", function () {
-  slider.noUiSlider.set([null, this.value]);
-});
+  inputMax.addEventListener("change", function () {
+    slider.noUiSlider.set([null, this.value]);
+  });
+}
 
-document.getElementById("all-books__filters-button").addEventListener("click", () => {
+document
+  .getElementById("all-books__filters-button")
+  .addEventListener("click", () => {
     const modal = document.getElementById("all-books__filters-modal");
     const modalContent = document.querySelector(".all-books__modal-content");
     const options = document.querySelector(".all-books__options");
+    const footer = modalContent.querySelector(".all-books__modal-footer");
     modal.style.display = "block";
-  
-    modalContent.innerHTML = '<button class="all-books__modal-close" id="close-filters-modal">✖</button>';
-  
+
+    if (modalContent.querySelector(".all-books__options")) {
+      return; // якщо вже є опції то просто виходимо
+    }
+
+    // якщо нема, тобто при першому кліку, то клонуємо опції
     const optionsClone = options.cloneNode(true);
     optionsClone.style.display = "block";
-    modalContent.appendChild(optionsClone);
-  
-    const closeButton = modalContent.querySelector("#close-filters-modal");
-    if (closeButton) {
-      closeButton.addEventListener("click", closeModal);
-    } else {
-      console.warn("Close modal button not found");
+
+    // видаляємо старий слайдер з клонованого контейнера і додаємо новий пустий
+    const oldSlider = optionsClone.querySelector(".all-books__price-slider");
+    if (oldSlider) {
+      const newSlider = document.createElement("div");
+      newSlider.className = "all-books__price-slider";
+      oldSlider.replaceWith(newSlider);
     }
+
+    modalContent.insertBefore(optionsClone, footer);
+
+    // тепер ініціалізуємо новий слайдер всередині модального вікна
+    initializePriceFilter(modalContent);
   });
-  
-  function closeModal() {
-    document.getElementById("all-books__filters-modal").style.display = "none";
-  }
+
+// а це для оригіналу на сторінці ініціалізація
+initializePriceFilter(document);
+
+document.getElementById("close-filters-modal").addEventListener("click", () => {
+  document.getElementById("all-books__filters-modal").style.display = "none";
+});
 
 //End Max

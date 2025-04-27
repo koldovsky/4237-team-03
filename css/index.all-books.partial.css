@@ -58,6 +58,11 @@
         display: none;
         cursor: pointer;
 
+        .all-books__filters-button-label {
+          font-weight: 600;
+          margin-left: 8px;
+        }
+
         @media screen and (max-width: 990px) {
           display: flex;
         }
@@ -184,10 +189,58 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: 1000;
     background-color: white;
+
+    .all-books__modal-content {
+      padding: 18px;
+
+      .all-books__modal-button-close {
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        font-size: 30px;
+        background-color: transparent;
+        border: none;
+      }
+
+      .all-books__options {
+        width: 100%;
+      }
+
+      .all-books__modal-footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Тінь з верхнього боку */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 18px;
+
+        .all-books__modal-button-apply {
+          background-color: var(--color-primary);
+          color: var(--subscribe-button-color);
+          border: none;
+          border-radius: 15px;
+          height: 35px;
+          width: 140px;
+        }
+
+        .all-books__modal-button-clear {
+          background: transparent;
+          border: none;
+          text-decoration: underline;
+          font-weight: 600;
+          font-size: 16px;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
 
