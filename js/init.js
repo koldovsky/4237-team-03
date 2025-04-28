@@ -1,5 +1,5 @@
 function init() {
-  import("./main.js");
+  import("./index.all-books.js");
 }
 
 const totalPartials = document.querySelectorAll(
