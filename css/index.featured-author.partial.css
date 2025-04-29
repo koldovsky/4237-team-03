@@ -1,212 +1,170 @@
 /* === FEATURED AUTHOR SECTION === */
 
-.featured-author__content {
-  display: flex; 
-  /* justify-content: space-between; */
-  /* align-items: flex-start; */
-  gap: 1rem;
-  /* flex-wrap: nowrap; */
-  max-width: 1200px;
-  margin: 0 auto; 
+/* Контейнер */
+.featured-author__content{
+  display:flex;
+  gap:1rem;
+  max-width:1200px;
+  margin:0 auto;
+  flex-wrap:nowrap;            /* desktop */
 }
 
-.featured-author__info {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  flex: 0 0 300px;
-  max-width: 300px;
-  margin-left: auto;
-  margin-top: 1rem;
-  text-align: right;
-  margin: 0 auto; 
-  width: fit-content;
+/* Ліва колонка — текст */
+.featured-author__info{
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+  max-width:300px;
+  margin-left:auto;            /* під’їжджає праворуч на десктопі */
+  text-align:right;
 }
 
-.featured-author__visual {
-  flex: 1 1 auto;
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-  justify-content: space-between;
+/* Центр + книги */
+.featured-author__visual{
+  display:flex;
+  gap:1rem;
+  align-items:flex-start;
+  flex:1 1 auto;
 }
 
-.featured-author__image {
-  flex: 0 0 460px;
-  gap: 1rem;
-  max-width: 460px;
-  margin: 0 auto; 
-  align-items: stretch;  
+/* Фото */
+.featured-author__image{
+  max-width:620px;
+}
+.featured-author__image img{
+  border-radius:1rem;
+  width:100%;
+  height:auto;
+  display:block;
 }
 
-.featured-author__image img {
-  border-radius: 1rem;
-  display: block;
-  width: 100%;
-  height: auto;
+/* Книжки */
+.featured-author__books{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1rem;
+  max-width:420px;
+  justify-content: center;
+}
+
+/* ---- Картка книги ---- */
+.book-card{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  text-align:center;
+  border-radius:.75rem;
+  max-width:400px;
+  justify-content: center; 
+}
+.book-card__image{width:100%;}
+.book-card__title{
+  margin:.3rem 0;
+  font-size:16px;
+  font-weight:600;
+  color:var(--block-title-color);
+}
+.book-card__price{
+  /* margin:.3rem 0; */
+  font-weight:bold;
+  color:var(--brand-color);
+}
+.book-card__action{
+
+  align-items:center;
+  /* gap:.3rem; */
+  /* font-size:.95rem; */
+  font-weight:600;
+  color:var(--block-title-color);
+  cursor:pointer;
+  /* text-decoration:none;   */
+}
+.book-card__arrow{
+  color:var(--brand-color);
+  font-weight:bold;
+   transition:transform .2s ease;
+}
+.book-card__action:hover .book-card__arrow{
+  transform:translateX(3px);
+}
+.book-card__action:hover {
+  text-decoration: underline;
+}
+
+/* ---- Типографіка + кнопка ---- */
+.featured-author__title{
+  font:600 12px/1.4 "Lato",sans-serif;
+  text-transform:uppercase;
+  letter-spacing:2.4px;
+  color:var(--brand-color);
+}
+.featured-author__name{
+  font:600 46px/1.2 "SUSE",sans-serif;
+  color:var(--block-title-color);
+}
+.featured-author__genre{
+  font:600 34px "SUSE",sans-serif;
+  color:var(--brand-color);
+}
+.featured-author__description{
+  font:400 16px/1.6 "Lato",sans-serif;
+  color:var(--dark-accent-color);
+}
+.featured-author__button{
+  padding:10px 24px;
+  border:none;
+  border-radius:25px;
+  cursor:pointer;
+  text-decoration:none;
+  font:700 16px/1.2 "Lato",sans-serif;
+  color:var(--subscribe-button-color);
+  background:var(--brand-color);
+  margin-left:auto;
+  transition:background-color .3s ease;
+}
+.featured-author__button:hover{
+  background-color:var(--dark-accent-color);
   
 }
 
-.featured-author__books {
-  flex: 0 0 420px;
-  max-width: 420px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin-top: 0;
-  align-items: stretch;
-  margin: 0 auto; 
-  
-}
-
-.featured-author__title {
-  font-family: "Lato", sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2.4px;
-  line-height: 1.4;
-  color: var(--brand-color);
-}
-
-.featured-author__name {
-  font-family: "SUSE", sans-serif;
-  font-size: 34px;
-  font-weight: 600;
-  line-height: 1.2;
-  color: var(--block-title-color);
-  overflow-wrap: break-word;
-  -webkit-font-smoothing: antialiased;
-}
-
-.featured-author__genre {
-  font-family: "SUSE", sans-serif;
-  font-size: 34px;
-  font-weight: 600;
-  /* line-height: 1.2; */
-  color: var(--brand-color);
-  overflow-wrap: break-word;
-  -webkit-font-smoothing: antialiased;
-}
-
-.featured-author__description {
-  font-family: "Lato", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--dark-accent-color);
-  overflow-wrap: break-word;
-  -webkit-font-smoothing: antialiased;
-  text-align: right;
-
-
-  width: fit-content;
-}
-
-.featured-author__button {
-  padding: 10px 24px;
-  font: 700 16px/1.2 "Lato", sans-serif;
-  color: var(--subscribe-button-color);
-  background-color: var(--brand-color);
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  text-decoration: none;
-  width: fit-content;
-  margin-left: auto;
-  margin-top: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.featured-author__button:hover {
-  background-color: var(--dark-accent-color);
-}
-
-/* === КАРТКИ КНИГ === */
-
-.book-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  text-align: center;
-  border-radius: 0.75rem;
-  position: relative;
-}
-
-.book-card__image {
-  width: 100%;
-}
-
-.book-card__title {
-  font-size: 16px;
-  color: var(--block-title-color);
-  font-weight: 600;
-  margin: 0.3rem 0;
-}
-
-.book-card__price {
-  font-weight: bold;
-  color: var(--brand-color);
-  margin: 0.3rem 0;
-}
-
-.book-card__action {
-  font-weight: 600;
-  color: var(--block-title-color);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-size: 0.95rem;
-  cursor: pointer;
-}
-
-.book-card__arrow {
-  color: var(--brand-color);
-  font-weight: bold;
-  transition: transform 0.2s ease;
-}
-
-.book-card__action:hover .book-card__arrow {
-  transform: translateX(3px);
-}
-
-/* === МЕДІА ЗАПИТ === */
-
-@media (max-width: 992px) {
-  .featured-author__content {
-    align-items: center;
-    flex-wrap: wrap;
+/* === Мобільна версія ≤ 992px === */
+@media(max-width:992px){
+  .featured-author__content{flex-wrap:wrap;
+    flex-direction: row; 
+    align-items: flex-start; 
+  }        /* перехід у стовпчик */
+  .featured-author__visual{
+    display: flex; 
+    flex-direction:column;
+    align-items: center; 
   }
 
-  .featured-author__visual {
-    flex-direction: column;
+  .featured-author__books{
+    grid-template-columns:1fr;                     /* одна книжка рядком */
+    max-width:100%;
+    justify-content: center;
+  }
+  .featured-author__info{
+    margin:1rem auto 0;
+     display: flex;
+    text-align:left;
+    max-width:420px;
+  }
+  .featured-author__description{text-align:left;}
+  .featured-author__button{
+    margin-left:0;
+    margin-right:auto;
   }
 
-  .featured-author__books {
-    grid-template-columns: 1fr;
-    max-width: 420px;
-    justify-content: flex-start;
+  /* Фото врівень із текстом */
+  .featured-author__image{
+    max-width:460px;
+    width: 100%;  
+    display: block;
+    margin: 0 auto;        
   }
-
-  .featured-author__image,
-  .featured-author__books,
-  .featured-author__info {
-    width: 100%;
-  }
-
-  .featured-author__info {
-    margin: 1rem auto 0 auto;
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .featured-author__description {
-    text-align: left;
-  }
-
-  .featured-author__button {
-    margin-left: 0;
-    margin-right: auto;
+  .featured-author__image img{
+    width: 100%;           
+    height: auto;
   }
 }
