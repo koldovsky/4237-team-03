@@ -1,5 +1,9 @@
 /* === FEATURED AUTHOR SECTION === */
 
+.featured-author {
+    margin: 3rem 0; 
+}
+
 /* Контейнер */
 .featured-author__content {
   display: flex;
@@ -29,7 +33,7 @@
 
 /* Фото */
 .featured-author__image {
-  max-width: 620px;
+  max-width: 720px;
 }
 .featured-author__image img {
   border-radius: 1rem;
@@ -152,6 +156,10 @@
 
 /* === Мобільна версія ≤ 992px === */
 @media (max-width: 992px) {
+  .featured-author {
+    margin: 3rem 0; 
+}
+
   .featured-author__content {
     flex-wrap: wrap;
     flex-direction: row;
@@ -164,7 +172,7 @@
   }
 
   .featured-author__books {
-    grid-template-columns: 1fr; /* одна книжка рядком */
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     max-width: 100%;
     justify-content: center;
   }
