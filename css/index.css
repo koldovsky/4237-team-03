@@ -30,6 +30,7 @@
 
 /*Marta Rusanovska*/
 @import url(index.newsletter.css);
+@import url(index.coming-soon.css);
 /*End Marta Rusanovska*/
 
 /*Ivan Stupach*/
@@ -39,3 +40,7 @@
 /*Diana Shymanska*/
 @import url(index.testimonials-readers.partial.css);
 /*Diana Shymanska*/
+
+/*Roman Kriukovskikh*/
+@import url(index.latest-news.partial.css);
+/*Roman Kriukovskikh*/
