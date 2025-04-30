@@ -1,14 +1,26 @@
 .coming-soon {
-  padding-top: 90px;
+  padding-top: 490px; /* 90px */
   padding-bottom: 90px;
   padding-left: 24px;
   padding-right: 24px;
 }
 
+.coming-soon__item {
+  flex-direction: column;
+  display: flex;
+}
+
 .coming-soon__images {
   aspect-ratio: 7 / 5;
   position: relative;
-  width: 100%;
+  width: 90%;
+  flex: 1;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.coming-soon__block {
+  flex: 1;
 }
 
 .coming-soon__title {
@@ -21,7 +33,7 @@
 
 .coming-soon__image--shattered-dreams {
   display: block;
-  width: 95%;
+  width: 85%;
   display: block;
   object-fit: cover;
   min-width: 0;
@@ -36,6 +48,33 @@
   right: 0;
   height: auto;
   object-fit: contain;
+  border: solid;
+}
+.coming-soon__countdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+.coming-soon__countdown-item {
+  flex: 1;
+  text-align: center;
+  padding: 0 10px;
+}
+.coming-soon__countdown-number {
+  font-size: 36px;
+}
+
+.coming-soon__countdown-text {
+  font-size: 18px;
+  color: var(--dark-accent-color);
+}
+
+.coming-soon__countdown-separator {
+  align-self: stretch;
+  background-color: var(--dark-accent-color);
+  width: 1px;
 }
 .coming-soon__title {
   font-size: 12px;
@@ -88,4 +127,10 @@
   line-height: 25.6px;
   text-align: left;
   color: var(--coming-soon__book-description-color);
+}
+
+@media (min-width: 800px) {
+  .coming-soon__item {
+    flex-direction: row;
+  }
 }

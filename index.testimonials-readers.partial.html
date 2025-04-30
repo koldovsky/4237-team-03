@@ -36,109 +36,21 @@
         </div>
       </div>
 
-      <div id="testimonials__carousel" class="carousel slide">
-        <div class="carousel-inner">
-          <!-- Slide 1 -->
-          <div class="carousel-item active">
-            <div class="row">
-              <div class="col-md-4 testimonials__card-wrap">
-                <div class="testimonials__card card-1">
-                  <img src="img/testimonials/james.webp" alt="James M." />
-                  <em class="testimonials__text">
-                    “I’ve been using this site for over a year, and I love how
-                    easy it is to browse and buy eBooks. The selection is
-                    vast, and I always find something new to read. Highly
-                    recommended!”
-                  </em>
-                  <p class="testimonials__author">— James M.</p>
-                </div>
-              </div>
-
-              <div class="col-md-4 d-none d-md-block testimonials__card-wrap">
-                <div class="testimonials__card card-2">
-                  <img src="img/testimonials/sara.webp" alt="Sarah K." />
-                  <em class="testimonials__text">
-                    “The user experience here is fantastic. I love how easy it
-                    is to find exactly what I'm looking for, plus the
-                    recommendations have helped me discover some amazing new
-                    authors!”
-                  </em>
-                  <p class="testimonials__author">— Sarah K.</p>
-                </div>
-              </div>
-
-              <div class="col-md-4 d-none d-md-block testimonials__card-wrap">
-                <div class="testimonials__card card-3">
-                  <img src="img/testimonials/kathleen.webp" alt="Kathleen J." />
-                  <em class="testimonials__text">
-                    “I've been a book lover for years, and this site is now my
-                    go-to! The selection is impressive, especially for romance
-                    and thriller fans like me. I always find something fresh
-                    and exciting!”
-                  </em>
-                  <p class="testimonials__author">— Kathleen J.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-md-4 testimonials__card-wrap">
-                <div class="testimonials__card card-4">
-                  <img src="img/testimonials/jadis.webp" alt="Jadis E." />
-                  <em class="testimonials__text">
-                    “So many eBooks for affordable prices! I appreciate that
-                    they feature both bestselling authors and new talent,
-                    making every visit a chance to find something cool.”
-                  </em>
-                  <p class="testimonials__author">— Jadis E.</p>
-                </div>
-              </div>
-              <div
-                class="col-md-4 d-none d-md-block testimonials__card-wrap"
-              ></div>
-              <div
-                class="col-md-4 d-none d-md-block testimonials__card-wrap"
-              ></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Controls -->
-        <!-- Left -->
+      <div class="testimonials__carousel">
         <button
-          class="carousel-control-prev testimonials__control"
-          type="button"
-          data-bs-target="#testimonials__carousel"
-          data-bs-slide="prev"
+          class="testimonials__btn testimonials__btn--prev"
+          onclick="moveCarousel(-1)"
         >
-          <div class="arrow-circle">
-            <svg class="arrow-svg" width="24" height="24" viewBox="0 0 24 24">
-              <path
-                fill="#ffffff"
-                d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-              />
-            </svg>
-          </div>
+          ‹
         </button>
-
-        <!-- Right -->
+        <div class="testimonials__track" id="carouselTrack">
+          <!-- JS will insert cards here -->
+        </div>
         <button
-          class="carousel-control-next testimonials__control"
-          type="button"
-          data-bs-target="#testimonials__carousel"
-          data-bs-slide="next"
+          class="testimonials__btn testimonials__btn--next"
+          onclick="moveCarousel(1)"
         >
-          <div class="arrow-circle">
-            <svg class="arrow-svg" width="24" height="24" viewBox="0 0 24 24">
-              <path
-                fill="#ffffff"
-                d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"
-              />
-            </svg>
-          </div>
+          ›
         </button>
       </div>
     </div>
