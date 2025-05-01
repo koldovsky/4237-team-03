@@ -8,241 +8,22 @@ class Book {
   }
 }
 
-//Creating list with all books, and genre for later sorting
+//Створення списка через фетч всіх книг
 const list = [];
 
-list.push(
-  new Book(
-    "img/books/michael-kane--ascendant.png",
-    "Ascendant - Michael Kane",
-    25.0,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/lily-monroe--broken-wings.png",
-    "Broken Wings - Lily Monroe",
-    22.0,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/chloe-woods--deadly-secrets.png",
-    "Deadly Secrets - Chloe Woods",
-    22.0,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/jasper-lane--digital-ghosts.png",
-    "Digital Ghosts - Jasper Lane",
-    26.45,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/lily-monroe--fallen-stars.png",
-    "Fallen Stars - Lily Monroe",
-    16.5,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/chloe-woods--fatal-promise.png",
-    "Fatal Promise - Chloe Woods",
-    21.0,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/chloe-woods--hidden-truth.png",
-    "Hidden Truth - Chloe Woods",
-    23.0,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/jasper-lane--hollow-veil.png",
-    "Hollow Veil - Jasper Lane",
-    32.5,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/iris-west--melody.png",
-    "Melody - Iris West",
-    35.1,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/lily-monroe--midnight-shadows.png",
-    "Midnight Shadows - Lily Monroe",
-    20.9,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/nathan-cole--mirage.png",
-    "Mirage - Nathan Cole",
-    21.0,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/liam-hayes--phantom.png",
-    "Phantom - Liam Hayes",
-    22.45,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/damon-cross--rebirth.png",
-    "Rebirth - Damon Cross",
-    23.5,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/emilia-fox--resonance.png",
-    "Resonance - Emilia Fox",
-    19.5,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/oliver-reid--shadow-queen.png",
-    "Shadow Queen - Oliver Reid",
-    21.99,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/noah-black--silent-waves.png",
-    "Silent Waves - Noah Black",
-    23.55,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/naomi-woods--specter.png",
-    "Specter - Naomi Woods",
-    29.0,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/sophie-lark--starlight.png",
-    "Starlight - Sophie Lark",
-    32.55,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/lara-miles--stars-of-andromeda.png",
-    "Stars of Andromeda - Lara Miles",
-    29.99,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/chloe-woods--stolen-hearts.png",
-    "Stolen Hearts - Chloe Woods",
-    21.0,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/alex-draven--the-quantum-prison.png",
-    "The Quantum Prison - Alex Draven",
-    17.0,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/lila-gray--the-shadow.png",
-    "The Shadow - Lila Gray",
-    13.0,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/amelia-pierce--the-thief-of-time.png",
-    "The Thief of Time - Amelia Pierce",
-    18.0,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/oliver-reid--the-wild-hunt.png",
-    "The Wild Hunt - Oliver Reid",
-    10.0,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/edgar-hale--thorn-of-the-frost-king.png",
-    "Thorn of The Frost King - Edgar Hale",
-    29.45,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/marina-holt--tides.png",
-    "Tides - Marina Holt",
-    25.22,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/rebecca-cole--unseen-eyes.png",
-    "Unseen Eyes - Rebecca Cole",
-    27.0,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/lily-monroe--whispered-secrets.png",
-    "Whispered Secrets - Lily Monroe",
-    20.0,
-    "Lifestyle"
-  )
-);
-list.push(
-  new Book(
-    "img/books/lily-monroe--shattered-dreams.png",
-    "Shattered Dreams - Lily Monroe",
-    19.99,
-    "Lifestyle"
-  )
-);
+async function init() {
+  const response = await fetch("js/books.json");
+  const booksData = await response.json();
+
+  for (const book of booksData) {
+    list.push(new Book(book.image, book.name, book.price, book.genre));
+  }
+
+  // показати перші 6 книг
+  renderBooks();
+}
+
+init();
 
 const parent = document.getElementById("all-books_books");
 const loadMoreBtn = document.getElementById("all-books__load-more");
@@ -287,9 +68,6 @@ function renderBooks() {
     loadMoreBtn.style.display = "none";
   }
 }
-
-// показати перші 6 книг
-renderBooks();
 
 // обробка натискання на "Load More"
 loadMoreBtn.addEventListener("click", () => {

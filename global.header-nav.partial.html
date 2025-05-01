@@ -3,46 +3,67 @@
   <div class="header__info-bar">
     <!-- block 1-->
     <div>
-      <p>
+      <p style="margin-bottom: 0px;">
         <span class="header__info-help">Can we help you?</span>
         <span class="header__info-tel"
           ><a href="tel:+12345678900"
-            ><span><u>+1 (234) 567 89 00</u></span></a
+            ><span
+              ><u style="color: var(--dark-accent-color)"
+                >+1 (234) 567 89 00</u
+              ></span
+            ></a
           ></span
         >
       </p>
     </div>
     <!-- block 2-->
     <div>
-      <form action="#">
-        <input type="text" name="value" placeholder="Search products" />
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          data-component="store-search-form-trigger"
-        >
-          <path
-            d="M10.5 4C9.21442 4 7.95772 4.38122 6.8888 5.09545C5.81988 5.80968 4.98676 6.82484 4.49479 8.01256C4.00282 9.20028 3.87409 10.5072 4.1249 11.7681C4.3757 13.029 4.99477 14.1872 5.90381 15.0962C6.81285 16.0052 7.97104 16.6243 9.23192 16.8751C10.4928 17.1259 11.7997 16.9972 12.9874 16.5052C14.1752 16.0132 15.1903 15.1801 15.9046 14.1112C16.6188 13.0423 17 11.7856 17 10.5C16.9999 8.77613 16.315 7.12289 15.0961 5.90393C13.8771 4.68496 12.2239 4.00011 10.5 4V4Z"
-            stroke="#000"
-            stroke-width="1.5"
-            stroke-miterlimit="10"
-          ></path>
-          <path
-            d="M15.5 15.5L20 20"
-            stroke="#000"
-            stroke-width="1.5"
-            stroke-miterlimit="10"
-            stroke-linecap="round"
-          ></path>
-        </svg>
-      </form>
+      <div
+        style="
+          background-color: #ffffff;
+          border: 1px solid #b4b4b4;
+          border-radius: 20px;
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+        "
+      >
+        <form action="#">
+          <input
+            type="text"
+            style="border: none; color: #b4b4b4;"
+            name="value"
+            placeholder="Search products"
+          />
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            data-component="store-search-form-trigger"
+          >
+            <path
+              d="M10.5 4C9.21442 4 7.95772 4.38122 6.8888 5.09545C5.81988 5.80968 4.98676 6.82484 4.49479 8.01256C4.00282 9.20028 3.87409 10.5072 4.1249 11.7681C4.3757 13.029 4.99477 14.1872 5.90381 15.0962C6.81285 16.0052 7.97104 16.6243 9.23192 16.8751C10.4928 17.1259 11.7997 16.9972 12.9874 16.5052C14.1752 16.0132 15.1903 15.1801 15.9046 14.1112C16.6188 13.0423 17 11.7856 17 10.5C16.9999 8.77613 16.315 7.12289 15.0961 5.90393C13.8771 4.68496 12.2239 4.00011 10.5 4V4Z"
+              stroke="#000"
+              stroke-width="1.5"
+              stroke-miterlimit="10"
+            ></path>
+            <path
+              d="M15.5 15.5L20 20"
+              stroke="#000"
+              stroke-width="1.5"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+            ></path>
+          </svg>
+        </form>
+      </div>
     </div>
     <!-- block 3-->
     <div>
-      <p>
+      <p style="margin-bottom: 0px;">
         <span>Get your <u>discount</u> on</span>
         <span class="header__info-book-count">10,000 books</span>
       </p>
@@ -53,7 +74,7 @@
     <!-- block logo-->
     <div class="header__logo">
       <a href="#"
-        ><p style="font-size: 32px;">
+        ><p style="font-size: 32px; font-weight: 600">
           <span>Book<span style="color: orange">.</span>Land</span>
         </p></a
       >
@@ -61,17 +82,9 @@
     <!-- block menu-->
     <div>
       <nav class="header__nav">
-        <button class="header__burger-menu" type="button">
-          <span class="header__burger-line"></span>
-          <span class="header__burger-line"></span>
-          <span class="header__burger-line"></span>
-        </button>
-
         <ul class="header__menu hr" data-proofer-ignore>
           <li class="header__menu-item">
-            <a href="#new-arrivals" class="header__menu-link"
-              >New Arrivals</a
-            >
+            <a href="#new-arrivals" class="header__menu-link">New Arrivals</a>
           </li>
           <li class="header__menu-item">
             <a href="#trending" class="header__menu-link">Trending Now</a>
@@ -91,9 +104,15 @@
     <!-- block icons-->
     <div class="header__menu-icons">
       <!-- instagram-->
-      <div style="width: 30px; height: 30px">
+      <div
+        style="
+          width: 30px;
+          height: 30px;
+          fill: var(--color-primary);
+          border-radius: 5px;
+        "
+      >
         <a
-          style="color: red"
           rel="noopener noreferrer"
           target="_blank"
           href="https://instagram.com/"
@@ -137,7 +156,14 @@
         >
       </div>
       <!-- youtube-->
-      <div style="width: 30px; height: 30px; color: red">
+      <div
+        style="
+          width: 30px;
+          height: 30px;
+          fill: var(--color-primary);
+          border-radius: 5px;
+        "
+      >
         <a
           rel="noopener noreferrer"
           target="_blank"
@@ -168,7 +194,14 @@
         >
       </div>
       <!-- twitter-->
-      <div style="width: 30px; height: 30px; color: red">
+      <div
+        style="
+          width: 30px;
+          height: 30px;
+          fill: var(--color-primary);
+          border-radius: 5px;
+        "
+      >
         <a
           rel="noopener noreferrer"
           target="_blank"
@@ -199,7 +232,14 @@
         >
       </div>
       <!-- facebook-->
-      <div style="width: 30px; height: 30px; color: red">
+      <div
+        style="
+          width: 30px;
+          height: 30px;
+          fill: var(--color-primary);
+          border-radius: 5px;
+        "
+      >
         <a
           rel="noopener noreferrer"
           target="_blank"
@@ -231,5 +271,75 @@
       </div>
     </div>
   </div>
-  <div class="main__banner"></div>
+  <div class="main__banner">
+    <div class="header-background"></div>
+    <div class="header-container">
+      <div class="header-content">
+        <div class="header-block">
+          <div>
+            <p style="padding-left: 30px; padding-top: 30px">
+              <span
+                style="
+                  color: var(--color-primary);
+                  font: size 12px;
+                  font-weight: 900;
+                "
+                >Book.Land</span
+              >
+            </p>
+            <h2 style="padding-left: 30px; font-size: 74px; font-weight: 600">
+              Stories That Move You
+            </h2>
+            <p style="padding: 30px">
+              <span
+                ><span style="font-weight: bold">Huge Library:</span>
+                <span style="color: var(--dark-accent-color)"
+                  ><em
+                    >Looking for a particular book? We most likely have it! Our
+                    library consists of 100,000+ eBooks of different genres.</em
+                  ></span
+                >
+                ></span
+              >
+            </p>
+            <p style="padding-left: 30px">
+              <span
+                ><span style="font-weight: bold">Instant Downloads: </span
+                ><span style="color: var(--dark-accent-color)"
+                  ><em
+                    >No waiting! Download your chosen eBooks immediately and
+                    start reading on any device.</em
+                  ></span
+                ></span
+              >
+            </p>
+            <div style="padding: 30px">
+              <div
+                style="
+                  display: grid;
+                  justify-items: center;
+                  align-items: center;
+                  background-color: var(--color-primary);
+                  color: var(--element-of-button);
+                  border-radius: 10px;
+                  width: 130px;
+                  height: 50px;
+                "
+              >
+                <span
+                  style="
+                    color: var(--element-of-button);
+                    font-size: 17px;
+                    font-weight: 700;
+                  "
+                  >Shop Now</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-block-2"></div>
+      </div>
+    </div>
+  </div>
 </div>
