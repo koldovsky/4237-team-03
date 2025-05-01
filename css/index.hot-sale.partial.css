@@ -12,7 +12,7 @@
 
 .hot-sale__title {
   color: var(--block-title-color);
-  font-family: 'SUSE', sans-serif;
+  font-family: "SUSE", sans-serif;
   font-size: 46px;
 }
 
@@ -20,7 +20,7 @@
   border: 1px solid var(--color-primary);
   background-color: var(--color-primary);
   color: var(--element-of-button);
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 16.5px;
   cursor: pointer;
   padding: 0.75rem 1.5rem;
@@ -34,7 +34,19 @@
   border: 1px solid var(--dark-accent-color);
 }
 
+.hot-sale__items-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
 .hot-sale__item {
+  flex: 0 0 auto;
+  width: 180px;
+}
+
+.hot-sale__book {
   flex: 0 0 200px;
   padding: 1rem;
   border-radius: 1rem;
@@ -51,22 +63,22 @@
 }
 
 .hot-sale__name {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: var(--block-title-color);
   font-size: 18px;
-  margin: 24px 0px 0px;
+  margin: 24px 0px 0px 0px;
 }
 
 .hot-sale__price-old {
   text-decoration: line-through;
   color: var(--block-title-color);
   font-size: 18px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   margin: 0px 16px 0px 0px;
 }
 
 .hot-sale__price-new {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 20px;
   font-weight: bold;
   color: var(--brand-color);
@@ -80,7 +92,7 @@
   cursor: pointer;
   border-radius: 1.5rem;
   font-weight: 600;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 15px;
   color: var(--dark-accent-color);
 }
@@ -89,3 +101,54 @@
   color: var(--element-of-button);
   background-color: var(--dark-accent-color);
 }
+
+/* Контейнер каруселі */
+.hot-sale__carousel-slide {
+  position: relative;
+  padding: 0 2rem;
+}
+
+/* Стрілки Bootstrap */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  opacity: 1;
+  z-index: 10;
+}
+
+/* Без овалів */
+.carousel-control-prev,
+.carousel-control-next {
+  border-radius: 0;
+  padding: 0;
+}
+
+/* Позиція стрілок */
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+/* Іконки */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: invert(0.5);
+  background-color: transparent;
+}
+
+
+
