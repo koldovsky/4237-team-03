@@ -105,13 +105,11 @@
   background-color: var(--dark-accent-color);
 }
 
-/* Контейнер каруселі */
 .hot-sale__carousel-slide {
   position: relative;
   padding: 0 2rem;
 }
 
-/* Стрілки Bootstrap */
 .carousel-control-prev,
 .carousel-control-next {
   position: absolute;
@@ -126,14 +124,12 @@
   z-index: 10;
 }
 
-/* Без овалів */
 .carousel-control-prev,
 .carousel-control-next {
   border-radius: 0;
   padding: 0;
 }
 
-/* Позиція стрілок */
 .carousel-control-prev {
   left: 0;
 }
@@ -142,7 +138,6 @@
   right: 0;
 }
 
-/* Іконки */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   width: 100%;
