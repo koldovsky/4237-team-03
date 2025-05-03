@@ -74,7 +74,10 @@
   color: var(--block-title-color);
   font-size: 18px;
   font-family: "Lato", sans-serif;
-  margin: 0px 16px 0px 0px;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .hot-sale__price-new {
@@ -85,7 +88,7 @@
 }
 
 .hot-sale__item-button {
-  margin-top: 1rem;
+  margin-top: 0,5rem;
   padding: 0.5rem 1rem;
   border: 1px solid var(--dark-accent-color);
   background: transparent;
@@ -149,6 +152,3 @@
   filter: invert(0.5);
   background-color: transparent;
 }
-
-
-
