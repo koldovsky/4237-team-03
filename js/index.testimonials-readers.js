@@ -107,3 +107,10 @@ function updateCarouselPosition() {
 // Ініціалізація
 updateCardWidths();
 window.addEventListener("resize", updateCardWidths);
+
+document
+  .querySelector(".testimonials__btn--prev")
+  .addEventListener("click", () => moveCarousel(-1));
+document
+  .querySelector(".testimonials__btn--next")
+  .addEventListener("click", () => moveCarousel(1));
