@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@...&family=SUSE:wght@100..800&display=swap");
 
 *,
-*::after,                /* Всі псевдоелементи ::after */
+*::after,        
 *::before {
-  /* Всі псевдоелементи ::before */
   box-sizing: border-box; /* Враховує padding і border у ширині/висоті */
   margin: 0; /* Обнуляє зовнішні відступи */
   padding: 0; /* Обнуляє внутрішні відступи */
