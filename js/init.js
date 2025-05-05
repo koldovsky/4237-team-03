@@ -1,6 +1,7 @@
 function init() {
   import("./index.all-books.js");
   import("./index.testimonials-readers.js");
+  import("./countdown.js")
 }
 
 const totalPartials = document.querySelectorAll(
