@@ -1,95 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Book Store Website</title>
+    <link
+      rel="shortcut icon"
+      href="img/title-book-image.png"
+      type="image/x-icon"
+    />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>E-Book Store Website</title>
-  <link rel="shortcut icon" href="img/title-book-image.png" type="image/x-icon" />
-  <script src="https://unpkg.com/htmx.org@1.9.10"
-    integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
-    crossorigin="anonymous"></script>
+    <script type="module" src="js/init.js"></script>
+    <link rel="stylesheet" href="css/index.css" />
 
-  <script type="module" src="js/init.js"></script>
-  <link rel="stylesheet" href="css/index.css" />
-
-  <!--noUiSlider-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
-
-  <!--Andrii Sobko-->
-  <link <link rel="stylesheet" href="https://example.com/fonts/suse-font.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!--End Andrii Sobko-->
-</head>
-
-<body>
-  <!--Olexandr Yanko-->
-  <header>
-    <nav class="header__nav" data-hx-trigger="load" data-hx-swap="outerHTML"
-      data-hx-get="global.header-nav.partial.html"></nav>
-  </header>
-  <!--Olexandr Yanko-->
-
-  <main>
-    <!--Venhryn Nazarii-->
-    <section>
-      <div data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.trending-titles-section.partial.html">
-      </div>
-    </section>
-    <!--End Venhryn Nazarii-->
-
-    <!--Vitalii Yatsura-->
-    <section>
-      <div data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.featured-author.partial.html"></div>
-    </section>
-    <!--End Vitalii Yatsura-->
-
-    <!--Nuijen Alex-->
-    <div class="trending_and_top5">
-      <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.trending-now.partial.html"></section>
-      <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.top-5-this-week.partial.html">
-      </section>
-    </div>
-    <!--End Nuijen Alex-->
-
-    <!-- Julia Kuznietsova -->
-    <section class="new-arrivals" data-hx-trigger="load" data-hx-swap="outerHTML"
-      data-hx-get="index.new-arrivals.partial.html"></section>
-    <!--End Julia Kuznietsova-->
-
-    <!-- Max Skydanchuk -->
-    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.all-books.partial.html"></section>
-    <!--End Max Skydanchuk-->
-
-    <!-- Diana Shymanska -->
-    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.testimonials-readers.partial.html">
-    </section>
-    <!--End Diana Shymanska-->
-
-    <!-- Roman Kriukovskykh -->
-    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.latest-news.partial.html"></section>
-    <!--End Roman Kriukovskykh-->
-
-    <!-- Marta Rusanovska -->
-    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.newsletter.partial.html"></section>
-    <!--End Marta Rusanovska-->
+    <!--noUiSlider-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
 
     <!--Andrii Sobko-->
-    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.hot-sale.partial.html"></section>
+    <link
+      <link
+      rel="stylesheet"
+      href="https://example.com/fonts/suse-font.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!--End Andrii Sobko-->
+  </head>
 
-    <!-- Marta Rusanovska -->
-    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.coming-soon.partial.html"></section>
-    <!--End Marta Rusanovska-->
-  </main>
-  <!-- Mykhailo Moroz -->
-  <footer>
-    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.footer.partial.html"></section>
-  </footer>
-  <!-- End Mykhailo Moroz -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  <body>
+    <!--Olexandr Yanko-->
+    <header>
+      <nav
+        class="header__nav"
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="global.header-nav.partial.html"
+      ></nav>
+    </header>
+    <!--Olexandr Yanko-->
 
+    <main>
+      <!--Venhryn Nazarii-->
+      <section>
+        <div
+          data-hx-trigger="load"
+          data-hx-swap="outerHTML"
+          data-hx-get="index.trending-titles-section.partial.html"
+        ></div>
+      </section>
+      <!--End Venhryn Nazarii-->
+
+      <!--Vitalii Yatsura-->
+      <section>
+        <div
+          data-hx-trigger="load"
+          data-hx-swap="outerHTML"
+          data-hx-get="index.featured-author.partial.html"
+        ></div>
+      </section>
+      <!--End Vitalii Yatsura-->
+
+      <!--Nuijen Alex-->
+      <div class="trending_and_top5">
+        <section
+          data-hx-trigger="load"
+          data-hx-swap="outerHTML"
+          data-hx-get="index.trending-now.partial.html"
+        ></section>
+        <section
+          data-hx-trigger="load"
+          data-hx-swap="outerHTML"
+          data-hx-get="index.top-5-this-week.partial.html"
+        ></section>
+      </div>
+      <!--End Nuijen Alex-->
+
+      <!-- Julia Kuznietsova -->
+      <section
+        class="new-arrivals"
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.new-arrivals.partial.html"
+      ></section>
+      <!--End Julia Kuznietsova-->
+
+      <!-- Max Skydanchuk -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.all-books.partial.html"
+      ></section>
+      <!--End Max Skydanchuk-->
+
+      <!-- Diana Shymanska -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.testimonials-readers.partial.html"
+      ></section>
+      <!--End Diana Shymanska-->
+
+      <!-- Roman Kriukovskykh -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.latest-news.partial.html"
+      ></section>
+      <!--End Roman Kriukovskykh-->
+
+      <!-- Marta Rusanovska -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.newsletter.partial.html"
+      ></section>
+      <!--End Marta Rusanovska-->
+
+      <!--Andrii Sobko-->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.hot-sale.partial.html"
+      ></section>
+      <!--End Andrii Sobko-->
+
+      <!-- Marta Rusanovska -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.coming-soon.partial.html"
+      ></section>
+      <!--End Marta Rusanovska-->
+    </main>
+    <!-- Mykhailo Moroz -->
+    <footer>
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="global.footer.partial.html"
+      ></section>
+    </footer>
+    <!-- End Mykhailo Moroz -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

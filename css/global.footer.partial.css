@@ -1,26 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=SUSE:wght@100..800&display=swap');
-
-:root {
-  scroll-behavior: smooth;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-
-
-body {
-  font-family: 'Lato', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #fff;
-  background-color: #1e1e1e;
-}
+/* Ти не можеш напряму звертатися до тегів сторінки, це треба переробити
 
 h1,
 h2,
@@ -37,7 +15,7 @@ p {
 
 p + p {
   margin-top: 1rem;
-}
+} */
 
 /* ==================== Footer ==================== */
 .footer {
@@ -173,8 +151,8 @@ p + p {
 
 /* ----- Need Help Column ----- */
 .footer__need-help {
-  text-align: right;      /* вирівнюємо контент усередині колонки */
-  justify-self: end;      /* притискаємо саму колонку до правого краю grid */
+  text-align: right; /* вирівнюємо контент усередині колонки */
+  justify-self: end; /* притискаємо саму колонку до правого краю grid */
 }
 
 .footer__phone-number {
@@ -197,7 +175,6 @@ p + p {
   text-decoration: underline;
   transition: color 0.3s ease;
 }
-
 
 /* ----- Bottom bar ----- */
 .footer__bottom {
@@ -232,7 +209,7 @@ p + p {
     grid-column: 1 / -1; /* перша колонка на всю ширину */
   }
 
-  .footer__phone-number{
+  .footer__phone-number {
     font-weight: 900;
     font-size: 20px;
   }
@@ -244,7 +221,6 @@ p + p {
 }
 
 .footer__navigation,
-.footer__navigation-shop{
-    margin-top: 1.25rem;   /* регулюй за потреби */
+.footer__navigation-shop {
+  margin-top: 1.25rem; /* регулюй за потреби */
 }
-
