@@ -3,7 +3,7 @@
   <div class="header__info-bar">
     <!-- block 1-->
     <div>
-      <p style="margin-bottom: 0px;">
+      <p style="margin-bottom: 0px">
         <span class="header__info-help">Can we help you?</span>
         <span class="header__info-tel"
           ><a href="tel:+12345678900"
@@ -32,7 +32,7 @@
         <form action="#">
           <input
             type="text"
-            style="border: none; color: #b4b4b4;"
+            style="border: none; color: #b4b4b4"
             name="value"
             placeholder="Search products"
           />
@@ -63,7 +63,7 @@
     </div>
     <!-- block 3-->
     <div>
-      <p style="margin-bottom: 0px;">
+      <p style="margin-bottom: 0px">
         <span>Get your <u>discount</u> on</span>
         <span class="header__info-book-count">10,000 books</span>
       </p>
@@ -73,33 +73,87 @@
   <div class="header__menu-bar">
     <!-- block logo-->
     <div class="header__logo">
-      <a href="index.html"
+      <a href="#"
         ><p style="font-size: 32px; font-weight: 600">
-          <span>Book<span style="color: orange">.</span>Land</span>
+          <span
+            >Book<span style="color: var(--color-primary)">.</span>Land</span
+          >
         </p></a
       >
     </div>
     <!-- block menu-->
-    <div>
-      <nav class="header__nav">
-        <ul class="header__menu hr" data-proofer-ignore>
-          <li class="header__menu-item">
-            <a href="#new-arrivals" class="header__menu-link">New Arrivals</a>
-          </li>
-          <li class="header__menu-item">
-            <a href="#trending" class="header__menu-link">Trending Now</a>
-          </li>
-          <li class="header__menu-item">
-            <a href="#hot-sale" class="header__menu-link">Hot Sale</a>
-          </li>
-          <li class="header__menu-item">
-            <a href="about" class="header__menu-link">About Us</a>
-          </li>
-          <li class="header__menu-item">
-            <a href="contacts.html" class="header__menu-link">Contacts</a>
-          </li>
-        </ul>
-      </nav>
+    <div class="menu">
+      <div class="links" id="navLinks" data-proofer-ignore>
+        <a href="#new-arrivals" class="header__menu-link">New Arrivals</a>
+        <a href="#trending" class="header__menu-link">Trending Now</a>
+        <a href="#hot-sale" class="header__menu-link">Hot Sale</a>
+        <a href="about" class="header__menu-link">About Us</a>
+        <a href="#" class="header__menu-link">Contacts</a>
+      </div>
+    </div>
+    <div class="burger-icon">
+      <span class="burger" onclick="openDialog()">☰</span>
+    </div>
+    <div class="burger-dialog">
+      <div class="fullscreen-dialog" id="dialog">
+        <div
+          style="padding: 30px; display: flex; justify-content: space-between"
+        >
+          <div class="header__logo">
+            <a href="#"
+              ><p style="font-size: 32px; font-weight: 600">
+                <span
+                  >Book<span style="color: var(--color-primary)">.</span
+                  >Land</span
+                >
+              </p></a
+            >
+          </div>
+          <div>
+            <span
+              style="cursor: pointer; font-size: 40px"
+              onclick="closeDialog()"
+              >&times;</span
+            >
+          </div>
+        </div>
+        <div class="burger-menu-list">
+          <div class="column" data-proofer-ignore>
+            <div class="item">
+              <a href="#new-arrivals" onclick="closeDialog()">New Arrivals</a>
+            </div>
+            <div class="item">
+              <a href="#trending" onclick="closeDialog()">Trending Now</a>
+            </div>
+            <div class="item">
+              <a href="#hot-sale" onclick="closeDialog()">Hot Sale</a>
+            </div>
+            <div class="item">
+              <a href="about" onclick="closeDialog()">About Us</a>
+            </div>
+            <div class="item">
+              <a href="#" onclick="closeDialog()">Contacts</a>
+            </div>
+            <div class="item">
+              <span style="color: var(--color-primary); font-weight: bold"
+                >Can we help you?</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function openDialog() {
+          document.getElementById("dialog").classList.add("active");
+          document.body.classList.add("no-scroll");
+        }
+
+        function closeDialog() {
+          document.getElementById("dialog").classList.remove("active");
+          document.body.classList.remove("no-scroll");
+        }
+      </script>
     </div>
     <!-- block icons-->
     <div class="header__menu-icons">
