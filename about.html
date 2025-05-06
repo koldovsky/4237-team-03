@@ -1,64 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-book Store Website</title>
-    <link
-      rel="shortcut icon"
-      href="img/title-book-image.png"
-      type="image/x-icon"
-    />
-    <script
-      src="https://unpkg.com/htmx.org@1.9.10"
-      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
-      crossorigin="anonymous"
-    ></script>
-    <!-- закоментував помилку відсутності фалу -->
-    <!-- <link rel="stylesheet" href="styles/style.css" />-->
-    <link rel="stylesheet" href="css/index.css" />
-  </head>
-  <body>
-    <!--Olexandr Yanko-->
-    <header>
-      <nav
-        class="header__nav"
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="global.header-nav.partial.html"
-      ></nav>
-    </header>
-    <!--Olexandr Yanko-->
 
-    <main class="main">
-      <section
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="about.hero.partial.html"
-      ></section>
-      <!-- Andrii Valiaiev -->
-      <section
-              data-hx-trigger="load"
-              data-hx-swap="outerHTML"
-              data-hx-get="index.about-us.partial.html"
-      ></section>
-      <!--End Andrii Valiaiev -->
-      <!--Stupach Ivan-->
-      <section
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="about.reading-experience.html"
-      ></section>
-      <!--Stupach Ivan-->
-    </main>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-book Store Website</title>
+  <link rel="shortcut icon" href="img/title-book-image.png" type="image/x-icon" />
+  <script src="https://unpkg.com/htmx.org@1.9.10"
+    integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+    crossorigin="anonymous"></script>
+  <!-- закоментував помилку відсутності фалу -->
+  <!-- <link rel="stylesheet" href="styles/style.css" />-->
+  <link rel="stylesheet" href="css/index.css" />
+</head>
 
-    <footer class="footer">
-      <section
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="global.footer.partial.html"
-      ></section>
-    </footer>
-  </body>
+<body>
+  <!--Olexandr Yanko-->
+  <header>
+    <nav class="header__nav" data-hx-trigger="load" data-hx-swap="outerHTML"
+      data-hx-get="global.header-nav.partial.html"></nav>
+  </header>
+  <!--Olexandr Yanko-->
+
+  <main class="main">
+    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="about.hero.partial.html"></section>
+    <!-- Andrii Valiaiev -->
+    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.about-us.partial.html"></section>
+    <!--End Andrii Valiaiev -->
+    <!--Stupach Ivan-->
+    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="about.reading-experience.html"></section>
+    <!--Stupach Ivan-->
+  </main>
+  <!-- Mykhailo Moroz -->
+  <footer class="footer">
+    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.footer.partial.html"></section>
+  </footer>
+  <!-- End Mykhailo Moroz -->
+</body>
+
 </html>
