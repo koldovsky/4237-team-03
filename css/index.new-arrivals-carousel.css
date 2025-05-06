@@ -1,0 +1,15 @@
+.new-arrivals-carousel {
+  display: grid;
+  grid-template-columns: 100px 1 fr 100px;
+
+  .new-arrivals-carousel__slides {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  img {
+    width: 100%;
+  }
+}

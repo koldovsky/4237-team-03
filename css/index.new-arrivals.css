@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   gap: 65px;
+  margin: 30px;
 }
 
 @media (min-width: 800px) {
