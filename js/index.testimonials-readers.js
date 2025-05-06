@@ -2,22 +2,22 @@ const testimonials = [
   {
     text: "“I’ve been using this site for over a year, and I love how easy it is to browse and buy eBooks. The selection is vast, and I always find something new to read. Highly recommended!”",
     name: "James M.",
-    img: "../img/testimonials/james.webp",
+    img: "img/testimonials/james.webp",
   },
   {
     text: "“The user experience here is fantastic. I love how easy it is to find exactly what I'm looking for, plus the recommendations have helped me discover some amazing new authors!”",
     name: "Sarah K.",
-    img: "../img/testimonials/sara.webp",
+    img: "img/testimonials/sara.webp",
   },
   {
     text: "“I've been a book lover for years, and this site is now my go-to! The selection is impressive, especially for romance and thriller fans like me. I always find something fresh and exciting!”",
     name: "Kathleen J.",
-    img: "../img/testimonials/kathleen.webp",
+    img: "img/testimonials/kathleen.webp",
   },
   {
     text: "“So many eBooks for affordable prices! I appreciate that they feature both bestselling authors and new talent, making every visit a chance to find something cool.”",
     name: "Jadis E.",
-    img: "../img/testimonials/jadis.webp",
+    img: "img/testimonials/jadis.webp",
   },
 ];
 
