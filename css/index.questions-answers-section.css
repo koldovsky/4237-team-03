@@ -1,6 +1,8 @@
 .questions-answers {
     padding: 2rem;
     background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
   }
   
   .questions-answers__container {
@@ -8,6 +10,7 @@
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
+    max-width: 1200px;
   }
   
   .questions-answers__item {

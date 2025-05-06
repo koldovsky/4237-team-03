@@ -12,7 +12,7 @@ class Book {
 const list = [];
 
 async function init() {
-  const response = await fetch("js/books.json");
+  const response = await fetch("api/books.json");
   const booksData = await response.json();
 
   for (const book of booksData) {
