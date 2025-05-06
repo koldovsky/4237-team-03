@@ -1,6 +1,7 @@
 .hot-sale {
   padding: 32px;
   background-color: #fff;
+  position: relative;
 }
 
 .hot-sale__header {
@@ -47,10 +48,10 @@
 }
 
 .hot-sale__book {
-  flex: 0 0 200px;
+  flex: 0 0 20%;
+  box-sizing: border-box;
   padding: 1rem;
-  border-radius: 1rem;
-  position: relative;
+  /* position: relative; */
   text-align: center;
 }
 
@@ -60,6 +61,7 @@
   border-radius: 0.5rem;
   margin-bottom: 1rem;
   display: inline-block;
+  object-fit: cover;
 }
 
 .hot-sale__name {
@@ -88,7 +90,7 @@
 }
 
 .hot-sale__item-button {
-  margin-top: 0,5rem;
+  margin-top: 0, 5rem;
   padding: 0.5rem 1rem;
   border: 1px solid var(--dark-accent-color);
   background: transparent;
@@ -146,4 +148,78 @@
   background-repeat: no-repeat;
   filter: invert(0.5);
   background-color: transparent;
+}
+
+.hot-sale__carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.hot-sale__track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.hot-sale__book {
+  flex: 0 0 20%;
+  width: 200px;
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .hot-sale__book {
+    flex: 0 0 25%;
+  }
+}
+
+@media (max-width: 992px) {
+  .hot-sale__book {
+    flex: 0 0 33.33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hot-sale__book {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hot-sale__book {
+    flex: 0 0 100%;
+  }
+}
+
+.hot-sale__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: #444;
+  font-size: 2rem;
+  z-index: 10;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  transition: color 0.3s;
+}
+
+.hot-sale__btn:hover {
+  color: black;
+}
+
+.hot-sale__btn--prev {
+  left: 0;
+}
+
+.hot-sale__btn--next {
+  right: 0;
 }
