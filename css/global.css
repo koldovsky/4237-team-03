@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@...&family=SUSE:wght@100..800&display=swap");
 
 *,
-*::after,        
+*::after,
 *::before {
   box-sizing: border-box; /* Враховує padding і border у ширині/висоті */
   margin: 0; /* Обнуляє зовнішні відступи */
@@ -34,6 +34,8 @@
   --testimonials-arrows: rgb(71, 72, 73);
   --testimonials-arrows-darker: #292929;
   --testimonials-title: #292929;
+  --input-focus-money: #419bf6;
+  --border-color: #000000;
 }
 
 img {
