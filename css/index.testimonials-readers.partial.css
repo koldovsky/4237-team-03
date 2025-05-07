@@ -79,26 +79,22 @@
 
 .testimonials__card {
   flex: 0 0 auto;
-  width: 100%; /* За замовчуванням — 1 в ряд */
+  width: 100%; 
   box-sizing: border-box;
   padding: 1rem;
 }
 
-/* Планшети (2 в ряд) */
 @media (min-width: 768px) and (max-width: 991px) {
   .testimonials__card {
     width: 50%;
   }
 }
 
-/* Десктопи (3 в ряд) */
 @media (min-width: 992px) {
   .testimonials__card {
     width: 33.3333%;
   }
 }
-
-
 
 .testimonials__img {
   width: 100px;
@@ -118,13 +114,23 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--testimonials-arrows);
   border: none;
-  color: white;
+  color: var(--white);
   font-size: 2rem;
   z-index: 10;
-  padding: 0 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.testimonials__btn:hover {
+  background: var(--testimonials-arrows-darker);
 }
 
 .testimonials__btn--prev {
@@ -135,6 +141,7 @@
   right: 0;
 }
 
+
 .testimonials__inner {
   display: flex;
   flex-direction: column;
@@ -144,4 +151,22 @@
   border-radius: 1rem;
   padding: 2rem;
   height: 100%;
+}
+
+.testimonials--james {
+  background-color: var(--testimonials-james);
+}
+.testimonials--sarah {
+  background-color: var(--testimonials-sarah);
+}
+.testimonials--kathleen {
+  background-color: var(--testimonials-kathleen);
+}
+.testimonials--jadis {
+  background-color: var(--testimonials-jadis);
+}
+
+.testimonials__inner p {
+  font-style: italic;
+  color: var(--testimonials-text)
 }

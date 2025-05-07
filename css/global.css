@@ -32,7 +32,7 @@
   --testimonials-author: rgb(244, 83, 80);
   --testimonials-image: rgb(244, 83, 80);
   --testimonials-text: rgb(99, 99, 99);
-  --testimonials-arrows: rgb(71, 72, 73);
+  --testimonials-arrows: rgba(71, 72, 73, 0.3);
   --testimonials-arrows-darker: #292929;
   --testimonials-title: #292929;
   --input-focus-money: #419bf6;
