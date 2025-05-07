@@ -4,118 +4,106 @@
     <a href="hot-sale-page.html" target="_blank" class="hot-sale__view-all-button">View all</a>
   </div>
 
-  <div
-    id="hot-sale__carousel-item"
-    class="carousel slide hot-sale__carousel-slide"
-  >
-    <div class="hot-sale__carousel-inner">
-      <div class="carousel-item active">
-        <div class="hot-sale__items-wrapper">
-          <article class="hot-sale__book">
-            <img
-              src="img/hot-sale/the-thief-of-time.png"
-              class="hot-sale__image"
-              alt="the-thief-of-time"
-            />
-            <h3 class="hot-sale__name">The Thief of Time - Amelia Pierce</h3>
-            <p class="hot-sale__price-old">$26.00USD</p>
-            <p class="hot-sale__price-new">$10.00USD</p>
-            <button class="hot-sale__item-button">Buy now</button>
-          </article>
-          <article class="hot-sale__book">
-            <img
-              src="img/hot-sale/thorn-of-the-frost-king.png"
-              class="hot-sale__image"
-              alt="thorn-of-the-frost-king"
-            />
-            <h3 class="hot-sale__name">Thorn of the Frost King - Edgar Hale</h3>
-            <p class="hot-sale__price-old">$31.00USD</p>
-            <p class="hot-sale__price-new">$29.45USD</p>
-            <button class="hot-sale__item-button">Buy now</button>
-          </article>
-          <article class="hot-sale__book">
-            <img
-              src="img/hot-sale/whispered-secrets.png"
-              class="hot-sale__image"
-              alt="whispered-secrets"
-            />
-            <h3 class="hot-sale__name">Whispered Secrets - Lily Monroe</h3>
-            <p class="hot-sale__price-old">$25.50USD</p>
-            <p class="hot-sale__price-new">$20.00USD</p>
-            <button class="hot-sale__item-button">Buy now</button>
-          </article>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="hot-sale__items-wrapper">
-          <article class="hot-sale__book">
-            <img
-              src="img/hot-sale/midnight-shadows.png"
-              class="hot-sale__image"
-              alt="midnight-shadows"
-            />
-            <h3 class="hot-sale__name">Midnight Shadows - Lily Monroe</h3>
-            <p class="hot-sale__price-old">$22.00USD</p>
-            <p class="hot-sale__price-new">$20.90USD</p>
-            <button class="hot-sale__item-button">Buy now</button>
-          </article>
-          <article class="hot-sale__book">
-            <img
-              src="img/hot-sale/the-wild-hunt.png"
-              class="hot-sale__image"
-              alt="the-wild-hunt"
-            />
-            <h3 class="hot-sale__name">The Wild Hunt - Oliver Reid</h3>
-            <p class="hot-sale__price-old">$26.00USD</p>
-            <p class="hot-sale__price-new">$10.00USD</p>
-            <button class="hot-sale__item-button">Buy now</button>
-          </article>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="hot-sale__items-wrapper">
-          <article class="hot-sale__book">
-            <img
-              src="img/hot-sale/melody.png"
-              class="hot-sale__image"
-              alt="melody"
-            />
-            <h3 class="hot-sale__name">Melody - Iris West</h3>
-            <p class="hot-sale__price-old">$39.00USD</p>
-            <p class="hot-sale__price-new">$35.10USD</p>
-            <button class="hot-sale__item-button">Buy now</button>
-          </article>
-          <article class="hot-sale__book">
-            <img
-              src="img/hot-sale/tides.png"
-              class="hot-sale__image"
-              alt="tides"
-            />
-            <h3 class="hot-sale__name">Tides - Marina Holt</h3>
-            <p class="hot-sale__price-old">$26.00USD</p>
-            <p class="hot-sale__price-new">$25.22USD</p>
-            <button class="hot-sale__item-button">Buy now</button>
-          </article>
-        </div>
-      </div>
-    </div>
-    <button
-      class="carousel-control-prev hot-sale__carousel-control hot-sale__carousel-control--prev"
-      type="button"
-      data-bs-target="#hot-sale__carousel-item"
-      data-bs-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button
-      class="carousel-control-next hot-sale__carousel-control hot-sale__carousel-control--next"
-      type="button"
-      data-bs-target="#hot-sale__carousel-item"
-      data-bs-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+  <div class="hot-sale__carousel">
+    <button class="hot-sale__btn hot-sale__btn--prev">‹</button>
+    <div class="hot-sale__track" id="hotSaleTrack"></div>
+    <button class="hot-sale__btn hot-sale__btn--next">›</button>
   </div>
 </section>
+
+<script>
+  const hotSaleItems = [
+    {
+      name: "The Thief of Time - Amelia Pierce",
+      old: "$26.00USD",
+      price: "$10.00USD",
+      img: "img/hot-sale/the-thief-of-time.png",
+    },
+    {
+      name: "Thorn of the Frost King - Edgar Hale",
+      old: "$31.00USD",
+      price: "$29.45USD",
+      img: "img/hot-sale/thorn-of-the-frost-king.png",
+    },
+    {
+      name: "Whispered Secrets - Lily Monroe",
+      old: "$25.50USD",
+      price: "$20.00USD",
+      img: "img/hot-sale/whispered-secrets.png",
+    },
+    {
+      name: "Midnight Shadows - Lily Monroe",
+      old: "$22.00USD",
+      price: "$20.90USD",
+      img: "img/hot-sale/midnight-shadows.png",
+    },
+    {
+      name: "The Wild Hunt - Oliver Reid",
+      old: "$26.00USD",
+      price: "$10.00USD",
+      img: "img/hot-sale/the-wild-hunt.png",
+    },
+    {
+      name: "Melody - Iris West",
+      old: "$39.00USD",
+      price: "$35.10USD",
+      img: "img/hot-sale/melody.png",
+    },
+    {
+      name: "Tides - Marina Holt",
+      old: "$26.00USD",
+      price: "$25.22USD",
+      img: "img/hot-sale/tides.png",
+    },
+  ];
+
+  const track = document.getElementById("hotSaleTrack");
+
+  function createBook(item) {
+    return `
+      <article class="hot-sale__book">
+        <img src="${item.img}" alt="${item.name}" class="hot-sale__image" />
+        <h3 class="hot-sale__name">${item.name}</h3>
+        <p class="hot-sale__price-old">${item.old}</p>
+        <p class="hot-sale__price-new">${item.price}</p>
+        <button class="hot-sale__item-button">Buy now</button>
+      </article>
+    `;
+  }
+
+  hotSaleItems.forEach((item) => {
+    track.innerHTML += createBook(item);
+  });
+
+  let pos = 0;
+  let visible = 3;
+  let percent = 100 / visible;
+
+  function updatePos() {
+    track.style.transform = `translateX(-${pos * percent}%)`;
+  }
+
+  document.querySelector(".hot-sale__btn--next").onclick = () => {
+    if (pos < hotSaleItems.length - visible) pos++;
+    else pos = 0;
+    updatePos();
+  };
+
+  document.querySelector(".hot-sale__btn--prev").onclick = () => {
+    if (pos > 0) pos--;
+    else pos = hotSaleItems.length - visible;
+    updatePos();
+  };
+
+  window.addEventListener("resize", () => {
+  if (window.innerWidth < 576) visible = 1;
+  else if (window.innerWidth < 768) visible = 2;
+  else if (window.innerWidth < 992) visible = 3;
+  else if (window.innerWidth < 1200) visible = 4;
+  else visible = 5;
+  percent = 100 / visible;
+  updatePos();
+});
+
+  window.dispatchEvent(new Event("resize"));
+</script>
