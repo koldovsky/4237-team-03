@@ -5,9 +5,9 @@
   </div>
 
   <div class="hot-sale__carousel">
-    <button class="hot-sale__btn hot-sale__btn--prev">‹</button>
+    <button class="hot-sale__btn hot-sale__btn--prev">&#10094;</button>
     <div class="hot-sale__track" id="hotSaleTrack"></div>
-    <button class="hot-sale__btn hot-sale__btn--next">›</button>
+    <button class="hot-sale__btn hot-sale__btn--next">&#10095;</button>
   </div>
 </section>
 
@@ -58,6 +58,9 @@
   ];
 
   const track = document.getElementById("hotSaleTrack");
+  let pos = 0;
+  let visible = 3;
+  let percent = 100 / visible;
 
   function createBook(item) {
     return `
@@ -71,39 +74,62 @@
     `;
   }
 
-  hotSaleItems.forEach((item) => {
-    track.innerHTML += createBook(item);
-  });
+  function updateVisibleBasedOnWidth() {
+    if (window.innerWidth < 576) visible = 1;
+    else if (window.innerWidth < 768) visible = 2;
+    else if (window.innerWidth < 992) visible = 3;
+    else if (window.innerWidth < 1200) visible = 4;
+    else visible = 5;
 
-  let pos = 0;
-  let visible = 3;
-  let percent = 100 / visible;
+    document.documentElement.style.setProperty('--hot-sale-visible', visible);
+    percent = 100 / visible;
+  }
 
-  function updatePos() {
+  function renderCarousel() {
+    updateVisibleBasedOnWidth();
+
+    const headClones = hotSaleItems.slice(-visible);
+    const tailClones = hotSaleItems.slice(0, visible);
+    const extended = [...headClones, ...hotSaleItems, ...tailClones];
+
+    track.innerHTML = "";
+    extended.forEach(item => {
+      track.innerHTML += createBook(item);
+    });
+
+    pos = visible;
+    updatePos(true);
+  }
+
+  function updatePos(noTransition = false) {
+    track.style.transition = noTransition ? "none" : "transform 0.4s ease";
     track.style.transform = `translateX(-${pos * percent}%)`;
   }
 
   document.querySelector(".hot-sale__btn--next").onclick = () => {
-    if (pos < hotSaleItems.length - visible) pos++;
-    else pos = 0;
+    pos++;
     updatePos();
+
+    if (pos === hotSaleItems.length + visible) {
+      setTimeout(() => {
+        pos = visible;
+        updatePos(true);
+      }, 400);
+    }
   };
 
   document.querySelector(".hot-sale__btn--prev").onclick = () => {
-    if (pos > 0) pos--;
-    else pos = hotSaleItems.length - visible;
+    pos--;
     updatePos();
+
+    if (pos === 0) {
+      setTimeout(() => {
+        pos = hotSaleItems.length;
+        updatePos(true);
+      }, 400);
+    }
   };
 
-  window.addEventListener("resize", () => {
-  if (window.innerWidth < 576) visible = 1;
-  else if (window.innerWidth < 768) visible = 2;
-  else if (window.innerWidth < 992) visible = 3;
-  else if (window.innerWidth < 1200) visible = 4;
-  else visible = 5;
-  percent = 100 / visible;
-  updatePos();
-});
-
+  window.addEventListener("resize", renderCarousel);
   window.dispatchEvent(new Event("resize"));
 </script>
