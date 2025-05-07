@@ -70,38 +70,42 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.testimonials__card {
-  padding: 20px;
-  box-sizing: border-box;
-  flex: 0 0 100%;
+#carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
 
-@media (min-width: 768px) {
+
+.testimonials__card {
+  flex: 0 0 auto;
+  width: 100%; /* За замовчуванням — 1 в ряд */
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+/* Планшети (2 в ряд) */
+@media (min-width: 768px) and (max-width: 991px) {
   .testimonials__card {
-    flex: 0 0 50%;
+    width: 50%;
   }
 }
 
+/* Десктопи (3 в ряд) */
 @media (min-width: 992px) {
   .testimonials__card {
-    flex: 0 0 33.3333%;
+    width: 33.3333%;
   }
 }
 
-.testimonials__inner {
-  background: #f8f9fa;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  height: 100%;
-}
+
 
 .testimonials__img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
-  margin-bottom: 10px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
 }
 
 .testimonials__name {
@@ -129,4 +133,15 @@
 
 .testimonials__btn--next {
   right: 0;
+}
+
+.testimonials__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+  background: #f9f9f9;
+  border-radius: 1rem;
+  padding: 2rem;
+  height: 100%;
 }
