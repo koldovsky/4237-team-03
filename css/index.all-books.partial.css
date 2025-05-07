@@ -95,7 +95,7 @@
           }
 
           .all-books__book {
-            position:relative;
+            position: relative;
             min-width: 0;
             height: auto;
             display: flex;
@@ -404,6 +404,40 @@
       }
     }
   }
+}
+
+.price-filter-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  gap: 10px;
+  font-weight:600;
+}
+
+.price-filter-tag-container {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: white;
+  border-radius: 13px;
+  padding: 3px 9px;
+}
+
+.price-filter-tag__close {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.price-filter-tag__clear {
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 13px;
+  color: #000;
 }
 
 /*End Max Skydanchuk*/

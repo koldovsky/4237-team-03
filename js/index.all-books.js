@@ -13,17 +13,20 @@ class Book {
 const list = [];
 let filteredList = []; // список книг для фільтрації
 
+let minPrice = 0;
+let maxPrice = 0;
+
 async function init() {
   const response = await fetch("api/books.json");
   const booksData = await response.json();
 
   for (const book of booksData) {
-    list.push(new Book(book.image, book.name, book.price, book.genre, book.status));
+    list.push(
+      new Book(book.image, book.name, book.price, book.genre, book.status)
+    );
   }
 
-  filteredList = [...list];
-
-  renderBooks();
+  applyGenreFilter("All");
 }
 
 init();
@@ -34,7 +37,6 @@ const BOOKS_PER_PAGE = 6;
 let currentPage = 0;
 let activeGenre = "All";
 
-
 function updateActiveGenreUI() {
   document.querySelectorAll(".all-books__filter-item").forEach((item) => {
     const genre = item.textContent.trim();
@@ -43,6 +45,31 @@ function updateActiveGenreUI() {
     } else {
       item.classList.remove("active");
     }
+  });
+}
+
+function updatePriceRange() {
+  if (filteredList.length === 0) return;
+
+  const prices = filteredList.map((book) => book.price);
+  minPrice = Math.min(...prices);
+  maxPrice = Math.max(...prices);
+
+  document.querySelectorAll(".all-books__price-slider").forEach((slider) => {
+    slider.noUiSlider.updateOptions({
+      range: {
+        min: minPrice,
+        max: maxPrice,
+      },
+      start: [minPrice, maxPrice],
+    });
+  });
+
+  document.querySelectorAll(".all-books__price-input--min").forEach((input) => {
+    input.value = minPrice.toFixed(2);
+  });
+  document.querySelectorAll(".all-books__price-input--max").forEach((input) => {
+    input.value = maxPrice.toFixed(2);
   });
 }
 
@@ -56,9 +83,11 @@ function applyGenreFilter(genre) {
     filteredList = list.filter((book) => book.genre === genre);
   }
 
-  updateActiveGenreUI(); // оновлюються всі фільтрииииии і ті що на головному екрані і ті що в модальному
+  updatePriceRange(); // оновлюємо ціну відповідно до жанру
 
+  updateActiveGenreUI(); //оновлюємо всі активні фільтри
   parent.innerHTML = "";
+  currentPage = 0;
   loadMoreBtn.style.display = "block";
   renderBooks();
 }
@@ -77,9 +106,20 @@ function setupGenreFilters(container) {
 setupGenreFilters(document); // для головного блоку з фільтрами, бо для блоку в модальному вікні буде інакше
 
 function renderBooks() {
+  const min = parseFloat(
+    document.querySelector(".all-books__price-input--min").value
+  );
+  const max = parseFloat(
+    document.querySelector(".all-books__price-input--max").value
+  );
+
+  const priceFiltered = filteredList.filter(
+    (book) => book.price >= min && book.price <= max
+  );
+
   const start = currentPage * BOOKS_PER_PAGE;
   const end = start + BOOKS_PER_PAGE;
-  const currentBooks = filteredList.slice(start, end);
+  const currentBooks = priceFiltered.slice(start, end);
 
   currentBooks.forEach((book) => {
     const bookDiv = document.createElement("div");
@@ -117,8 +157,10 @@ function renderBooks() {
 
   currentPage++;
 
-  if (currentPage * BOOKS_PER_PAGE >= filteredList.length) {
+  if (currentPage * BOOKS_PER_PAGE >= priceFiltered.length) {
     loadMoreBtn.style.display = "none";
+  } else {
+    loadMoreBtn.style.display = "block";
   }
 }
 
@@ -127,25 +169,57 @@ loadMoreBtn.addEventListener("click", () => {
   renderBooks();
 });
 
-function initializePriceFilter(container) {
+function onPriceChange(values) {
+  const [min, max] = values.map(parseFloat);
+
+  // Якщо значення слайдера не змінені — не показуємо фільтр тег
+  if (min === minPrice && max === maxPrice) {
+    const existingTag = document.querySelector(".price-filter-tag");
+    if (existingTag) existingTag.remove(); // якщо був — видаляємо
+  } else {
+    const container = document.querySelector(
+      ".all-books__container-with-books"
+    );
+    const existingTag = container.querySelector(".price-filter-tag");
+    if (existingTag) existingTag.remove(); // оновити тег, якщо був
+    const priceTag = createPriceTagElement(min, max);
+    container.insertBefore(priceTag, parent);
+  }
+
+  // Перерендерити
+  document.querySelector(".all-books__price-input--min").value = min;
+  document.querySelector(".all-books__price-input--max").value = max;
+
+  currentPage = 0;
+  parent.innerHTML = "";
+  renderBooks();
+}
+
+function initializePriceFilter(container, isModal = false) {
   const slider = container.querySelector(".all-books__price-slider");
   const inputMin = container.querySelector(".all-books__price-input--min");
   const inputMax = container.querySelector(".all-books__price-input--max");
 
   noUiSlider.create(slider, {
-    start: [13, 32.5],
+    start: [10, 35.1],
     connect: true,
-    step: 0.5,
+    step: 0.25,
     range: {
-      min: 13,
-      max: 32.5,
+      min: 10,
+      max: 35.1,
     },
   });
 
-  slider.noUiSlider.on("update", function (values, handle) {
-    const [min, max] = values;
+  slider.noUiSlider.on("update", (values) => {
+    const [min, max] = values.map(parseFloat);
     inputMin.value = min;
     inputMax.value = max;
+
+    if (!isModal) {
+      onPriceChange(values);
+    } else {
+      updateModalApplyButtonState(min, max);
+    }
   });
 
   inputMin.addEventListener("change", function () {
@@ -185,8 +259,24 @@ document
     modalContent.insertBefore(optionsClone, footer);
 
     // тепер ініціалізуємо новий слайдер всередині модального вікна та фільтри
-    initializePriceFilter(modalContent);
+    initializePriceFilter(modalContent, true);
     setupGenreFilters(modalContent);
+
+    document.querySelector(".all-books__modal-button-apply").textContent = "Apply filters: 0";
+
+    const modalSliderElement = modalContent.querySelector(
+      ".all-books__price-slider"
+    );
+    const modalSlider = modalSliderElement.noUiSlider;
+    if (modalSlider) {
+      modalSlider.updateOptions({
+        range: {
+          min: minPrice,
+          max: maxPrice,
+        },
+        start: [minPrice, maxPrice], 
+      });
+    }
   });
 
 // а це для оригіналу на сторінці ініціалізація
@@ -195,5 +285,87 @@ initializePriceFilter(document);
 document.getElementById("close-filters-modal").addEventListener("click", () => {
   document.getElementById("all-books__filters-modal").style.display = "none";
 });
+
+function resetPriceFilter() {
+  const sliders = document.querySelectorAll(".all-books__price-slider");
+  sliders.forEach((slider) => {
+    if (slider.noUiSlider) {
+      slider.noUiSlider.set([minPrice, maxPrice]);
+    }
+  });
+
+  // Приховати price-tag
+  const existingTag = document.querySelector(".price-filter-tag");
+  if (existingTag) existingTag.remove();
+
+  // Перерендерити книги
+  currentPage = 0;
+  parent.innerHTML = "";
+  renderBooks();
+}
+
+function createPriceTagElement(min, max) {
+  const tagContainer = document.createElement("div");
+  tagContainer.className = "price-filter-tag";
+
+  tagContainer.innerHTML = `
+    <div class="price-filter-tag-container">
+      <span>Price: ${min.toFixed(2)} - ${max.toFixed(2)}</span>
+      <button class="price-filter-tag__close" title="Clear filter">×</button>
+    </div>
+    <a href="#" class="price-filter-tag__clear">Clear all</a>
+  `;
+
+  // обробники натискань
+  tagContainer
+    .querySelector(".price-filter-tag__close")
+    .addEventListener("click", resetPriceFilter);
+  tagContainer
+    .querySelector(".price-filter-tag__clear")
+    .addEventListener("click", (e) => {
+      e.preventDefault();
+      resetPriceFilter();
+    });
+
+  return tagContainer;
+}
+
+function updateModalApplyButtonState(min, max) {
+  const applyBtn = document.querySelector(".all-books__modal-button-apply");
+  if (!applyBtn) return;
+
+  const isChanged = min !== minPrice || max !== maxPrice;
+  applyBtn.textContent = `Apply filters: ${isChanged ? 1 : 0}`;
+}
+
+document
+  .querySelector(".all-books__modal-button-apply")
+  .addEventListener("click", () => {
+    const modal = document.querySelector(".all-books__modal-content");
+    const inputMin = modal.querySelector(".all-books__price-input--min");
+    const inputMax = modal.querySelector(".all-books__price-input--max");
+    const min = parseFloat(inputMin.value);
+    const max = parseFloat(inputMax.value);
+
+    onPriceChange([min, max]); // тепер застосовується лише після Apply
+    document.getElementById("all-books__filters-modal").style.display = "none";
+  });
+
+document
+  .querySelector(".all-books__modal-button-clear")
+  .addEventListener("click", () => {
+    const modal = document.querySelector(".all-books__modal-content");
+    const slider = modal.querySelector(".all-books__price-slider");
+
+    if (slider && slider.noUiSlider) {
+      slider.noUiSlider.set([minPrice, maxPrice]);
+    }
+
+    // також можемо очистити поля вручну
+    modal.querySelector(".all-books__price-input--min").value =
+      minPrice.toFixed(2);
+    modal.querySelector(".all-books__price-input--max").value =
+      maxPrice.toFixed(2);
+  });
 
 //End Max
