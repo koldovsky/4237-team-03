@@ -11,6 +11,7 @@
 :root {
   scroll-behavior: smooth;
   --color-primary: #f45350;
+  --color-primary-dark:  #c00f0c; /* darker */
   --ui-block-title-color: #292929;
   --dark-accent-color: #595959;
   --block-title-color: #292929;
@@ -36,6 +37,10 @@
   --testimonials-title: #292929;
   --input-focus-money: #419bf6;
   --border-color: #000000;
+  --background-footer: #1e1e1e;
+  --footer-grey-text: #bbbbbb;
+  --white: #ffffff;
+  --footer-midgrey: #999;
 }
 
 img {

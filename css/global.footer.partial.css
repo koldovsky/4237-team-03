@@ -19,7 +19,7 @@ p + p {
 
 /* ==================== Footer ==================== */
 .footer {
-  background-color: #1e1e1e;
+  background-color: var(--background-footer);
   padding-top: 4rem;
   padding-bottom: 2rem;
 }
@@ -93,12 +93,12 @@ p + p {
 .footer__social-link svg {
   width: 32px;
   height: 32px;
-  fill: #f44;
+  fill: var(--color-primary);
   transition: fill 0.3s ease;
 }
 
 .footer__social-link:hover svg {
-  fill: #cc3a3a;
+  fill: var(--color-primary-dark);
 }
 
 /* ----- Titles ----- */
@@ -110,7 +110,7 @@ p + p {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 1rem;
-  color: #ffffff;
+  color: var(--white);
 }
 
 /* ----- Navigation lists ----- */
@@ -140,13 +140,13 @@ p + p {
 .footer__nav-link {
   font-size: 16px;
   font-weight: 400;
-  color: #bbbbbb;
+  color: var(--footer-grey-text);
   transition: color 0.2s ease;
   text-decoration: none;
 }
 
 .footer__nav-link:hover {
-  color: #f44;
+  color: var(--color-primary);
 }
 
 /* ----- Need Help Column ----- */
@@ -156,36 +156,36 @@ p + p {
 }
 
 .footer__phone-number {
-  font-size: 32px;
-  font-weight: 700;
-  color: #f04d4d;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
 .footer__schedule {
   font-size: 16px;
-  color: #cccccc;
+  color: var(--footer-grey-text);
   margin: 1rem 0;
 }
 
 .footer__email-link {
   font-weight: 900;
   font-size: 16px;
-  color: #ffffff;
+  color: var(--white);
   text-decoration: underline;
   transition: color 0.3s ease;
 }
 
 /* ----- Bottom bar ----- */
 .footer__bottom {
-  border-top: 1px solid #444;
+  border-top: 1px solid #444; 
   margin-top: 3rem;
   padding-top: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
-  color: #999;
+  color: var(--footer-midgrey);
   max-width: 1250px;
   margin-left: auto;
   margin-right: auto;
@@ -195,7 +195,7 @@ p + p {
 
 .footer__bottom small {
   font-size: 14px;
-  color: #999;
+  color: var(--footer-midgrey);
   font-weight: bolder;
 }
 
@@ -209,10 +209,6 @@ p + p {
     grid-column: 1 / -1; /* перша колонка на всю ширину */
   }
 
-  .footer__phone-number {
-    font-weight: 900;
-    font-size: 20px;
-  }
 
   .footer__need-help {
     justify-self: start; /* на вузьких екранах повертаємо в загальний потік */
