@@ -21,6 +21,7 @@
 /* End Nazarii Venhryn */
 
 /*Julia Kuznietsova*/
+@import url("index.new-arrivals-carousel.css");
 @import url("index.new-arrivals.css");
 /*End Julia Kuznietsova*/
 
@@ -30,4 +31,29 @@
 
 /*Marta Rusanovska*/
 @import url(index.newsletter.css);
+@import url(index.coming-soon.css);
 /*End Marta Rusanovska*/
+
+/*Ivan Stupach*/
+@import url(about.reading-expirience.css);
+/*End Ivan Stupach*/
+
+/*Diana Shymanska*/
+@import url(index.testimonials-readers.partial.css);
+/*Diana Shymanska*/
+
+/*Roman Kriukovskikh*/
+@import url(index.latest-news.partial.css);
+/*Roman Kriukovskikh*/
+
+/*Yaroslav Demian*/
+@import url(index.questions-answers-section.css);
+/*Yaroslav Demian*/
+
+/*Mykhailo Moroz*/
+@import url(global.footer.partial.css);
+/*Mykhailo Moroz*/
+
+/*Bohdan Serdiuk*/
+@import "index.authors.css";
+/*Bohdan Serdiuk*/

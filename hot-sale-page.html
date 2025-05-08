@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hot Sale</title>
+    <link rel="stylesheet" href="css/index.hot-sale-page.css" />
+    <link rel="stylesheet" href="css/global.header-nav.partial.css" />
+    <link rel="stylesheet" href="css/global.footer.partial.css" />
+    <link rel="stylesheet" href="css/footer-overrides.css" />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav
+        data-hx-trigger="load"
+        data-hx-get="global.header-nav.partial.html"
+        data-hx-swap="outerHTML"
+      ></nav>
+    </header>
+
+    <main class="hot-sale-page">
+      <section class="hot-sale-page__title">
+        <h1 class="hot-sale-page__heading">Products</h1>
+      </section>
+
+      <section class="hot-sale-page__grid">
+        <article class="hot-sale-page__book">
+          <img
+            src="img/hot-sale/the-thief-of-time.png"
+            alt="The Thief of Time"
+            class="hot-sale-page__image"
+          />
+          <h2 class="hot-sale-page__name">The Thief of Time - Amelia Pierce</h2>
+          <div class="hot-sale-page__prices">
+            <p class="hot-sale-page__price-old">$26.00USD</p>
+            <p class="hot-sale-page__price-new">$10.00USD</p>
+          </div>
+          <button class="hot-sale-page__button">Buy now</button>
+        </article>
+        <article class="hot-sale-page__book">
+          <img
+            src="img/hot-sale/thorn-of-the-frost-king.png"
+            class="hot-sale-page__image"
+            alt="thorn-of-the-frost-king"
+          />
+          <h3 class="hot-sale-page__name">
+            Thorn of the Frost King - Edgar Hale
+          </h3>
+          <div class="hot-sale-page__prices">
+            <p class="hot-sale-page__price-old">$31.00USD</p>
+            <p class="hot-sale-page__price-new">$29.45USD</p>
+          </div>
+          <button class="hot-sale-page__button">Buy now</button>
+        </article>
+        <article class="hot-sale-page__book">
+          <img
+            src="img/hot-sale/whispered-secrets.png"
+            class="hot-sale-page__image"
+            alt="whispered-secrets"
+          />
+          <h3 class="hot-sale-page__name">Whispered Secrets - Lily Monroe</h3>
+          <div class="hot-sale-page__prices">
+            <p class="hot-sale-page__price-old">$25.50USD</p>
+            <p class="hot-sale-page__price-new">$20.00USD</p>
+          </div>
+          <button class="hot-sale-page__button">Buy now</button>
+        </article>
+        <article class="hot-sale-page__book">
+          <img
+            src="img/hot-sale/midnight-shadows.png"
+            class="hot-sale-page__image"
+            alt="midnight-shadows"
+          />
+          <h3 class="hot-sale-page__name">Midnight Shadows - Lily Monroe</h3>
+          <div class="hot-sale-page__prices">
+            <p class="hot-sale-page__price-old">$22.00USD</p>
+            <p class="hot-sale-page__price-new">$20.90USD</p>
+          </div>
+          <button class="hot-sale-page__button">Buy now</button>
+        </article>
+        <article class="hot-sale-page__book">
+          <img
+            src="img/hot-sale/the-wild-hunt.png"
+            class="hot-sale-page__image"
+            alt="the-wild-hunt"
+          />
+          <h3 class="hot-sale-page__name">The Wild Hunt - Oliver Reid</h3>
+          <div class="hot-sale-page__prices">
+            <p class="hot-sale-page__price-old">$26.00USD</p>
+            <p class="hot-sale-page__price-new">$10.00USD</p>
+          </div>
+          <button class="hot-sale-page__button">Buy now</button>
+        </article>
+        <article class="hot-sale-page__book">
+          <img
+            src="img/hot-sale/melody.png"
+            class="hot-sale-page__image"
+            alt="melody"
+          />
+          <h3 class="hot-sale-page__name">Melody - Iris West</h3>
+          <div class="hot-sale-page__prices">
+            <p class="hot-sale-page__price-old">$39.00USD</p>
+            <p class="hot-sale-page__price-new">$35.10USD</p>
+          </div>
+          <button class="hot-sale-page__button">Buy now</button>
+        </article>
+        <article class="hot-sale-page__book">
+          <img
+            src="img/hot-sale/tides.png"
+            class="hot-sale-page__image"
+            alt="tides"
+          />
+          <h3 class="hot-sale-page__name">Tides - Marina Holt</h3>
+          <div class="hot-sale-page__prices">
+            <p class="hot-sale-page__price-old">$26.00USD</p>
+            <p class="hot-sale-page__price-new">$25.22USD</p>
+          </div>
+          <button class="hot-sale-page__button">Buy now</button>
+        </article>
+      </section>
+    </main>
+
+    <footer
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="global.footer.partial.html"
+    ></footer>
+  </body>
+</html>

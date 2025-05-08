@@ -1,0 +1,205 @@
+[
+  {
+    "image": "img/books/michael-kane--ascendant.png",
+    "name": "Ascendant - Michael Kane",
+    "price": 25.0,
+    "genre": "Lifestyle",
+    "status": "New"
+  },
+  {
+    "image": "img/books/lily-monroe--broken-wings.png",
+    "name": "Broken Wings - Lily Monroe",
+    "price": 22.0,
+    "genre": "Lifestyle",
+    "status": "-"
+  },
+  {
+    "image": "img/books/chloe-woods--deadly-secrets.png",
+    "name": "Deadly Secrets - Chloe Woods",
+    "price": 22.0,
+    "genre": "Featured Author",
+    "status": "Bestseller"
+  },
+  {
+    "image": "img/books/jasper-lane--digital-ghosts.png",
+    "name": "Digital Ghosts - Jasper Lane",
+    "price": 26.45,
+    "genre": "Non-Fiction",
+    "status": "Limited"
+  },
+  {
+    "image": "img/books/lily-monroe--fallen-stars.png",
+    "name": "Fallen Stars - Lily Monroe",
+    "price": 16.5,
+    "genre": "Lifestyle",
+    "status": "New"
+  },
+  {
+    "image": "img/books/chloe-woods--fatal-promise.png",
+    "name": "Fatal Promise - Chloe Woods",
+    "price": 21.0,
+    "genre": "Featured Author",
+    "status": "-"
+  },
+  {
+    "image": "img/books/chloe-woods--hidden-truth.png",
+    "name": "Hidden Truth - Chloe Woods",
+    "price": 23.0,
+    "genre": "Featured Author",
+    "status": "-"
+  },
+  {
+    "image": "img/books/jasper-lane--hollow-veil.png",
+    "name": "Hollow Veil - Jasper Lane",
+    "price": 32.5,
+    "genre": "Non-Fiction",
+    "status": "-"
+  },
+  {
+    "image": "img/books/iris-west--melody.png",
+    "name": "Melody - Iris West",
+    "price": 35.1,
+    "genre": "Fiction",
+    "status": "Sale"
+  },
+  {
+    "image": "img/books/lily-monroe--midnight-shadows.png",
+    "name": "Midnight Shadows - Lily Monroe",
+    "price": 20.9,
+    "genre": "Fiction",
+    "status": "Sale"
+  },
+  {
+    "image": "img/books/nathan-cole--mirage.png",
+    "name": "Mirage - Nathan Cole",
+    "price": 21.0,
+    "genre": "Lifestyle",
+    "status": "-"
+  },
+  {
+    "image": "img/books/liam-hayes--phantom.png",
+    "name": "Phantom - Liam Hayes",
+    "price": 22.45,
+    "genre": "Lifestyle",
+    "status": "New"
+  },
+  {
+    "image": "img/books/damon-cross--rebirth.png",
+    "name": "Rebirth - Damon Cross",
+    "price": 23.5,
+    "genre": "Non-Fiction",
+    "status": "-"
+  },
+  {
+    "image": "img/books/emilia-fox--resonance.png",
+    "name": "Resonance - Emilia Fox",
+    "price": 19.5,
+    "genre": "Lifestyle",
+    "status": "-"
+  },
+  {
+    "image": "img/books/oliver-reid--shadow-queen.png",
+    "name": "Shadow Queen - Oliver Reid",
+    "price": 21.99,
+    "genre": "Non-Fiction",
+    "status": "-"
+  },
+  {
+    "image": "img/books/noah-black--silent-waves.png",
+    "name": "Silent Waves - Noah Black",
+    "price": 23.55,
+    "genre": "Lifestyle",
+    "status": "-"
+  },
+  {
+    "image": "img/books/naomi-woods--specter.png",
+    "name": "Specter - Naomi Woods",
+    "price": 29.0,
+    "genre": "Lifestyle",
+    "status": "-"
+  },
+  {
+    "image": "img/books/sophie-lark--starlight.png",
+    "name": "Starlight - Sophie Lark",
+    "price": 32.55,
+    "genre": "Lifestyle",
+    "status": "-"
+  },
+  {
+    "image": "img/books/lara-miles--stars-of-andromeda.png",
+    "name": "Stars of Andromeda - Lara Miles",
+    "price": 29.99,
+    "genre": "Non-Fiction",
+    "status": "-"
+  },
+  {
+    "image": "img/books/chloe-woods--stolen-hearts.png",
+    "name": "Stolen Hearts - Chloe Woods",
+    "price": 21.0,
+    "genre": "Featured Author",
+    "status": "-"
+  },
+  {
+    "image": "img/books/alex-draven--the-quantum-prison.png",
+    "name": "The Quantum Prison - Alex Draven",
+    "price": 17.0,
+    "genre": "Non-Fiction",
+    "status": "-"
+  },
+  {
+    "image": "img/books/lila-gray--the-shadow.png",
+    "name": "The Shadow - Lila Gray",
+    "price": 13.0,
+    "genre": "Non-Fiction",
+    "status": "-"
+  },
+  {
+    "image": "img/books/amelia-pierce--the-thief-of-time.png",
+    "name": "The Thief of Time - Amelia Pierce",
+    "price": 18.0,
+    "genre": "Lifestyle",
+    "status": "-"
+  },
+  {
+    "image": "img/books/oliver-reid--the-wild-hunt.png",
+    "name": "The Wild Hunt - Oliver Reid",
+    "price": 10.0,
+    "genre": "Fiction",
+    "status": "-"
+  },
+  {
+    "image": "img/books/edgar-hale--thorn-of-the-frost-king.png",
+    "name": "Thorn of The Frost King - Edgar Hale",
+    "price": 29.45,
+    "genre": "Fiction",
+    "status": "-"
+  },
+  {
+    "image": "img/books/marina-holt--tides.png",
+    "name": "Tides - Marina Holt",
+    "price": 25.22,
+    "genre": "Fiction",
+    "status": "-"
+  },
+  {
+    "image": "img/books/rebecca-cole--unseen-eyes.png",
+    "name": "Unseen Eyes - Rebecca Cole",
+    "price": 27.0,
+    "genre": "Non-Fiction",
+    "status": "Bestseller"
+  },
+  {
+    "image": "img/books/lily-monroe--whispered-secrets.png",
+    "name": "Whispered Secrets - Lily Monroe",
+    "price": 20.0,
+    "genre": "Fiction",
+    "status": "-"
+  },
+  {
+    "image": "img/books/lily-monroe--shattered-dreams.png",
+    "name": "Shattered Dreams - Lily Monroe",
+    "price": 19.99,
+    "genre": "Lifestyle",
+    "status": "-"
+  }
+]

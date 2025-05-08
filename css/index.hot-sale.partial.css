@@ -1,0 +1,143 @@
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+.hot-sale {
+  padding: 32px;
+  background-color: #fff;
+  position: relative;
+}
+
+.hot-sale__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.hot-sale__title {
+  color: var(--block-title-color);
+  font-family: "SUSE", sans-serif;
+  font-size: 46px;
+}
+
+.hot-sale__view-all-button {
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--element-of-button);
+  font-family: "Lato", sans-serif;
+  font-size: 16.5px;
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hot-sale__view-all-button:hover {
+  background-color: var(--dark-accent-color);
+  border: 1px solid var(--dark-accent-color);
+}
+
+.hot-sale__carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.hot-sale__track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.hot-sale__book {
+  flex: 0 0 calc(100% / var(--hot-sale-visible, 5));
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.hot-sale__image {
+  height: 200px;
+  width: 100%;
+  max-width: 200px;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  object-fit: cover;
+}
+
+.hot-sale__name {
+  font-family: "Lato", sans-serif;
+  color: var(--block-title-color);
+  font-size: 18px;
+  margin: 24px 0 0 0;
+}
+
+.hot-sale__price-old {
+  text-decoration: line-through;
+  color: var(--block-title-color);
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  margin: 12px 0 6px 0;
+}
+
+.hot-sale__price-new {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--brand-color);
+}
+
+.hot-sale__item-button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--dark-accent-color);
+  background: transparent;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  font-weight: 600;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  color: var(--dark-accent-color);
+}
+
+.hot-sale__item-button:hover {
+  color: var(--element-of-button);
+  background-color: var(--dark-accent-color);
+}
+
+.hot-sale__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: #444;
+  font-size: 2rem;
+  z-index: 10;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  transition: color 0.3s;
+}
+
+.hot-sale__btn:hover {
+  color: black;
+}
+
+.hot-sale__btn--prev {
+  left: 0;
+}
+
+.hot-sale__btn--next {
+  right: 0;
+}

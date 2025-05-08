@@ -1,28 +1,31 @@
 /*Max Skydanchuk*/
 
 .all-books {
-  height: 1500px;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 70px 4%;
 
   .all-books__wrapper {
     width: 1200px;
 
     .all-books__top {
       height: 60px;
-      margin: 0 0 25px 0;
+      padding: 20px 0;
+      margin: 0 0 30px 0;
       display: flex;
       gap: 25px;
       flex-direction: row;
       align-items: center;
 
       .all-books__header {
-        font-size: 46px;
+        font-size: 42px;
         font-family: "SUSE", sans-serif;
         font-weight: 600;
         width: 25%;
+        line-height: 1;
       }
 
       .all-books__divider {
@@ -30,216 +33,411 @@
         width: 75%;
         background-color: rgb(0, 0, 0, 0.2);
       }
+
+      @media screen and (max-width: 770px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+
+        .all-books__header {
+          width: auto;
+        }
+
+        .all-books__divider {
+          width: 100%;
+        }
+      }
     }
 
     .all-books__container {
       display: flex;
       gap: 25px;
 
-      .all-books__options {
-        width: 25%;
-        height: 500px;
+      .all-books__filters-button {
+        display: none;
+        cursor: pointer;
+
+        .all-books__filters-button-label {
+          font-weight: 600;
+          margin-left: 8px;
+        }
+
+        @media screen and (max-width: 990px) {
+          display: flex;
+        }
+      }
+
+      .all-books__container-with-books {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 20px;
+        width: 75%;
 
-        .all-books__filters-title {
-          font-size: 24px;
-          font-family: "SUSE", sans-serif;
-          font-weight: 600;
-          font-style: normal;
-          line-height: 1.6;
+        @media screen and (max-width: 990px) {
+          width: 100%;
         }
 
-        .all-books__divider {
-          height: 1px;
+        .all-books__books {
           width: 100%;
-          background-color: rgba(0, 0, 0, 0.2);
-        }
+          height: auto;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+          overflow-y: auto;
 
-        .all-books__filter {
-          width: 100%;
+          @media screen and (max-width: 990px) {
+            grid-template-columns: repeat(2, 1fr);
+            align-self: stretch;
+          }
 
-          .all-books__filter-title {
-            width: 100%;
+          @media screen and (max-width: 480px) {
+            grid-template-columns: repeat(1, 1fr);
+          }
+
+          .all-books__book {
             position: relative;
-            padding-right: 32px;
-            font-family: "Lato", sans-serif;
-            font-size: 18px;
-            font-weight: 400;
-            cursor: pointer;
-            list-style: none;
-
-            &::-webkit-details-marker {
-              display: none;
-            }
-
-            &::after {
-              content: "";
-              position: absolute;
-              top: 50%;
-              right: 8px;
-              width: 10px;
-              height: 10px;
-              border-right: 2px solid black;
-              border-bottom: 2px solid black;
-              transform: translateY(-50%) rotate(45deg);
-              transform-origin: center;
-              transition: transform 0.3s ease;
-              pointer-events: none;
-            }
-          }
-
-          &[open] .all-books__filter-title::after {
-            transform: translateY(-50%) rotate(225deg);
-          }
-
-          .all-books__filter-list {
-            list-style: none;
-            padding-left: 0;
-            margin: 15px 0 0 0;
-            font-family: "Lato", sans-serif;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 1.6;
-
-            .all-books__filter-item {
-              line-height: 2;
-            }
-          }
-
-          .all-books__price-slider {
-            margin: 25px 0 0 0;
-            height: 5px;
-            width: 95%;
-            justify-self: center;
-            background-color: black;
-            border: none;
-
-            .noUi-connect {
-              background: var(--color-primary);
-            }
-
-            .noUi-handle {
-              width: 16px;
-              height: 16px;
-              border-radius: 50%;
-              border: none;
-              background: var(--color-primary);
-              box-shadow: none;
-              cursor: pointer;
-              top: -6px;
-              transform: translateX(-50%);
-            }
-
-            .noUi-handle:before,
-            .noUi-handle:after {
-              display: none;
-            }
-          }
-
-          .all-books__price-values {
+            min-width: 0;
+            height: auto;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+            gap: 15px;
             justify-content: space-between;
-            margin: 20px 0 0 0;
 
-            .all-books__price-input {
-              height: 38px;
-              width: 80px;
-              font-size: 15px;
-              color: black;
-              background-color: rgba(41, 41, 41, 0.12);
-              border-radius: 15px;
-              border: none;
-              text-align: center;
+            .all-books__book-status {
+              position: absolute;
+              top: 8px;
+              left: 8px;
+              background-color: var(--main-lebel-name);
+              color: var(--element-of-button);
+              font-size: 14px;
+              font-weight: 600;
+              padding: 4px 8px;
+              border-radius: 4px;
+              z-index: 2;
+            }
+
+            img {
+              width: 100%;
+              height: auto;
+              object-fit: cover;
+            }
+
+            h4 {
               font-family: "Lato", sans-serif;
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 1.4;
+            }
 
-              &::-webkit-inner-spin-button,
-              &::-webkit-outer-spin-button {
-                -webkit-appearance: none;
-                margin: 0;
+            p {
+              font-family: "Lato", sans-serif;
+              font-size: 20px;
+              font-weight: 700;
+              line-height: 1.4;
+              color: var(--color-primary);
+            }
+
+            a {
+              display: inline-flex;
+              align-items: center;
+              align-self: start;
+              font-family: "Lato", sans-serif;
+              font-size: 15px;
+              font-weight: 900;
+              line-height: 1.4;
+              text-decoration: none;
+              cursor: pointer;
+              color: var(--border-color);
+
+              &:hover {
+                text-decoration: underline;
               }
 
-              &:hover,
-              &:focus {
-                border: 2px solid rgb(65, 155, 246);
-                outline: none;
+              &::after {
+                content: "";
+                display: inline-block;
+                margin-left: 12px;
+                width: 10px;
+                height: 10px;
+                border-right: 2px solid var(--color-primary);
+                border-bottom: 2px solid var(--color-primary);
+                transform: rotate(-45deg);
+                pointer-events: none;
               }
+            }
+          }
+        }
+
+        .all-books__load {
+          display: flex;
+          justify-content: center;
+          margin-top: 30px;
+
+          .all-books__load-button {
+            padding: 12px 24px;
+            font-size: 16px;
+            font-family: "Lato", sans-serif;
+            background-color: var(--element-of-button);
+            color: var(--block-title-color);
+            border: 1px solid var(--block-title-color);
+            border-radius: 18px;
+            cursor: pointer;
+            transition: 0.3s ease;
+
+            &:hover {
+              background-color: var(--block-title-color);
+              color: var(--element-of-button);
             }
           }
         }
       }
 
-      .all-books__books {
-        width: 75%;
-        height: 1000px;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
-        grid-auto-rows: auto;
-        gap: 20px;
-        overflow-y: auto;
+      @media screen and (max-width: 990px) {
+        flex-direction: column;
+      }
+    }
+  }
 
-        .all-books__book {
-          height: 415px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
+  .all-books__modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: var(--element-of-button);
 
-          img {
-            width: 272px;
-            height: 272px;
-          }
+    .all-books__modal-content {
+      padding: 18px;
 
-          h4 {
-            font-family: "Lato", sans-serif;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 1.4;
-          }
+      .all-books__modal-button-close {
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        font-size: 30px;
+        background-color: transparent;
+        border: none;
+      }
 
-          p {
-            font-family: "Lato", sans-serif;
-            font-size: 20px;
-            font-weight: 700;
-            line-height: 1.4;
-            color: var(--color-primary);
-          }
+      .all-books__options {
+        width: 100%;
+      }
 
-          a {
-            display: inline-flex;
-            align-items: center;
-            align-self: start;
-            font-family: "Lato", sans-serif;
-            font-size: 15px;
-            font-weight: 900;
-            line-height: 1.4;
-            text-decoration: none;
-            cursor: pointer;
-            color: black;
+      .all-books__modal-footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Тінь з верхнього боку */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 18px;
 
-            &:hover {
-              text-decoration: underline;
-            }
+        .all-books__modal-button-apply {
+          background-color: var(--color-primary);
+          color: var(--subscribe-button-color);
+          border: none;
+          border-radius: 15px;
+          height: 35px;
+          width: 140px;
+        }
 
-            &::after {
-              content: "";
-              display: inline-block;
-              margin-left: 12px;
-              width: 10px;
-              height: 10px;
-              border-right: 2px solid var(--color-primary);
-              border-bottom: 2px solid var(--color-primary);
-              transform: rotate(-45deg);
-              pointer-events: none;
-            }
-          }
+        .all-books__modal-button-clear {
+          background: transparent;
+          border: none;
+          text-decoration: underline;
+          font-weight: 600;
+          font-size: 16px;
+          cursor: pointer;
         }
       }
     }
   }
+}
+
+.all-books__options {
+  width: 25%;
+  min-width: 200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 20px 0;
+
+  @media screen and (max-width: 990px) {
+    display: none;
+  }
+
+  .all-books__filters-title {
+    font-size: 24px;
+    font-family: "SUSE", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.6;
+  }
+
+  .all-books__divider {
+    height: 1px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .all-books__filter {
+    width: 100%;
+
+    .all-books__filter-title {
+      width: 100%;
+      position: relative;
+      padding-right: 32px;
+      font-family: "Lato", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      cursor: pointer;
+      list-style: none;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        width: 10px;
+        height: 10px;
+        border-right: 2px solid var(--border-color);
+        border-bottom: 2px solid var(--border-color);
+        transform: translateY(-50%) rotate(45deg);
+        transform-origin: center;
+        transition: transform 0.3s ease;
+        pointer-events: none;
+      }
+    }
+
+    &[open] .all-books__filter-title::after {
+      transform: translateY(-50%) rotate(225deg);
+    }
+
+    .all-books__filter-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 15px 0 0 0;
+      font-family: "Lato", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.6;
+
+      .all-books__filter-item {
+        line-height: 2.5;
+        cursor: pointer;
+      }
+
+      .all-books__filter-item.active {
+        font-weight: bold;
+      }
+    }
+
+    .all-books__price-slider {
+      margin: 25px 0 0 0;
+      height: 5px;
+      width: 95%;
+      justify-self: center;
+      background-color: var(--border-color);
+      border: none;
+
+      .noUi-connect {
+        background: var(--color-primary);
+      }
+
+      .noUi-handle {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: none;
+        background: var(--color-primary);
+        box-shadow: none;
+        cursor: pointer;
+        top: -6px;
+        transform: translateX(-50%);
+      }
+
+      .noUi-handle:before,
+      .noUi-handle:after {
+        display: none;
+      }
+    }
+
+    .all-books__price-values {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 20px 0 0 0;
+
+      .all-books__price-input {
+        height: 38px;
+        width: 80px;
+        font-size: 15px;
+        color: var(--border-color);
+        background-color: rgba(41, 41, 41, 0.12);
+        border-radius: 15px;
+        border: none;
+        text-align: center;
+        font-family: "Lato", sans-serif;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        &:hover,
+        &:focus {
+          border: 2px solid var(--input-focus-money);
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+.price-filter-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  gap: 10px;
+  font-weight:600;
+}
+
+.price-filter-tag-container {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: white;
+  border-radius: 13px;
+  padding: 3px 9px;
+}
+
+.price-filter-tag__close {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.price-filter-tag__clear {
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 13px;
+  color: #000;
 }
 
 /*End Max Skydanchuk*/

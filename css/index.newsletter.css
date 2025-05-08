@@ -1,33 +1,47 @@
 .newsletter {
   padding-top: 90px;
   padding-bottom: 90px;
-  width: 100%;
 }
 .newsletter__inner {
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 5px;
+  padding-right: 5px;
+  flex: 1;
+  min-width: 0;
 }
 .newsletter__subscribed {
   color: var(--dark-accent-color);
   margin-top: 25px;
+  min-width: 0;
 }
 .newsletter__title {
   font-size: 12px;
   color: var(--dark-accent-color);
+  min-width: 0;
+  text-align: left;
+  font-weight: 900;
+  letter-spacing: 2.4px;
+  line-height: 16.8px;
 }
 .newsletter__stay-updated {
   color: var(--block-title-color);
   font-size: 34px;
   margin-top: 20px;
+  min-width: 0;
+  font-weight: 600;
+  line-height: 40.8px;
 }
 .newsletter__latest-news {
   color: var(--brand-color);
   font-size: 34px;
+  min-width: 0;
+  font-weight: 600;
+  line-height: 40.8px;
 }
 .newsletter__subscription-email {
+  width: 100%;
   font-size: 15px;
-  height: 40px;
-  width: 342px;
+  font-weight: 400;
+  line-height: 18px;
   text-align: left;
   background-color: var(--email-input-background-color);
   border: none;
@@ -48,12 +62,14 @@
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  min-width: 0;
 }
 .newsletter__subscribe-button {
+  width: 100%;
   font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
   text-align: center;
-  height: 40px;
-  width: 342px;
   color: var(--subscribe-button-color);
   background-color: var(--brand-color);
   border: none;
@@ -71,15 +87,123 @@
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  min-width: 0;
 }
 .newsletter__subscribe-button:hover {
   background-color: var(--dark-accent-color);
 }
 .newsletter__image {
-  max-width: 100%;
   height: auto;
   display: block;
   margin-top: 50px;
-  padding-left: 15px;
-  padding-right: 15px;
+  min-width: 0;
+  height: auto;
+  object-fit: contain;
+  flex: 1;
+  height: auto;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.newsletter__container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 800px) {
+  .newsletter {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .newsletter__inner {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+  }
+  .newsletter__subscribed {
+    margin-block-start: 25px;
+    margin-top: 25px;
+    text-align: left;
+    font-size: 19px;
+    font-weight: 700;
+  }
+  .newsletter__title {
+    font-size: 12px;
+    text-align: left;
+    font-weight: 900;
+    letter-spacing: 2.4px;
+    line-height: 16.8px;
+  }
+  .newsletter__stay-updated {
+    margin-top: 20px;
+    margin-block-start: 20px;
+    font-size: 46px;
+    font-weight: 600;
+    text-align: left;
+  }
+  .newsletter__latest-news {
+    font-size: 46px;
+    font-weight: 600;
+  }
+  .newsletter__subscription-email {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: 25px;
+    padding-block-end: 11px;
+    padding-block-start: 11px;
+    padding-bottom: 11px;
+    padding-inline-end: 22px;
+    padding-inline-start: 22px;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 11px;
+    text-align: start;
+  }
+  .newsletter__subscribe-button {
+    font-size: 15px;
+    text-align: center;
+    color: var(--subscribe-button-color);
+    background-color: var(--brand-color);
+    border: none;
+    outline: none;
+    margin-top: 24px;
+    padding-bottom: 11px;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 11px;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-top-width: 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .newsletter__subscribe-button:hover {
+    background-color: var(--dark-accent-color);
+  }
+  .newsletter__image {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 90%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .newsletter__container {
+    flex-direction: row;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
 }

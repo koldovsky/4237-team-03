@@ -1,39 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@...&family=SUSE:wght@100..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=SUSE:wght@100..800&display=swap");
+
 *,
-*::after,                /* Всі псевдоелементи ::after */
-*::before {              /* Всі псевдоелементи ::before */
+*::after,
+*::before {
   box-sizing: border-box; /* Враховує padding і border у ширині/висоті */
-  margin: 0;              /* Обнуляє зовнішні відступи */
-  padding: 0;             /* Обнуляє внутрішні відступи */
+  margin: 0; /* Обнуляє зовнішні відступи */
+  padding: 0; /* Обнуляє внутрішні відступи */
 }
 
 :root {
   scroll-behavior: smooth;
   --color-primary: #f45350;
+  --color-primary-dark:  #c00f0c; /* darker */
   --ui-block-title-color: #292929;
   --dark-accent-color: #595959;
   --block-title-color: #292929;
   --brand-color: #f45350;
+  --carousel-arrow-color: #494949;
   --subscribe-button-color: #fff;
   --email-input-background-color: rgba(41, 41, 41, 0.05);
-  --line-top-treading:#eaeaea;
-  --text-of-boxshadow:rgba(0, 0, 0, 0.05);
-  --main-lebel-name:#464c5c;
-  --element-of-button:#ffffff;
-  --list-button-element:#dddddd;
+  --coming-soon__book-description-color: rgb(89, 89, 89);
+  --line-top-treading: #eaeaea;
+  --text-of-boxshadow: rgba(0, 0, 0, 0.05);
+  --main-lebel-name: #464c5c;
+  --element-of-button: #ffffff;
+  --list-button-element: #dddddd;
+  --testimonials-james: rgb(244, 251, 243);
+  --testimonials-sarah: rgb(252, 236, 236);
+  --testimonials-kathleen: rgb(255, 248, 242);
+  --testimonials-jadis: rgb(244, 247, 253);
+  --testimonials-author: rgb(244, 83, 80);
+  --testimonials-image: rgb(244, 83, 80);
+  --testimonials-text: rgb(99, 99, 99);
+  --testimonials-arrows: rgba(71, 72, 73, 0.3);
+  --testimonials-arrows-darker: #292929;
+  --testimonials-title: #292929;
+  --input-focus-money: #419bf6;
+  --border-color: #000000;
+  --background-footer: #1e1e1e;
+  --footer-grey-text: #bbbbbb;
+  --white: #ffffff;
+  --footer-midgrey: #999;
 }
 
 img {
-  display: block;    /* Робить зображення блочним елементом, що прибирає небажані відступи (пробіли знизу), які бувають у inline-елементів */
-  width: 100%;       /* Зображення займає всю ширину батьківського контейнера — корисно для адаптивного дизайну */
-  height: auto;      /* Автоматично підлаштовує висоту відповідно до ширини, щоб зберегти правильні пропорції зображення */
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 body {
-  font-family: "Lato", sans-serif;  /* Основний шрифт для всього сайту. Lato - основний шрифт, sans-serif — резервний, якщо Lato не завантажиться */
-  color: var(--dark-accent-color);  /* Колір тексту за замовчуванням — зручно керувати через CSS-змінну */
-  background-color: #fff;         /* Білий фон сайту — можна змінити, якщо буде темна тема */
-  line-height: 1.6;                 /* Оптимальний міжрядковий інтервал для читабельності */
-  font-size: 16px;                  /* Базовий розмір шрифту */
+  font-family: "Lato", sans-serif; /* Основний шрифт для всього сайту. Lato - основний шрифт, sans-serif — резервний, якщо Lato не завантажиться */
+  background-color: #fff; /* Білий фон сайту — можна змінити, якщо буде темна тема */
+  line-height: 1.6; /* Оптимальний міжрядковий інтервал для читабельності */
+  font-size: 16px; /* Базовий розмір шрифту */
 }
