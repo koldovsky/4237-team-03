@@ -152,16 +152,15 @@
 }
 
 .hot-sale-page__book {
-  flex: 0 0 200px;
-  position: relative;
-  padding: 1rem;
-  border-radius: 1rem;
-  text-align: center;
-  background-color: #fdfdfd;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: left; /* краще для заголовків і цін */
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .hot-sale-page__content {
