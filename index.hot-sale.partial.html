@@ -45,6 +45,7 @@
       old: "$22.00USD",
       price: "$20.90USD",
       img: "img/hot-sale/midnight-shadows.png",
+      sale: true,
     },
     {
       name: "The Wild Hunt - Oliver Reid",
@@ -57,6 +58,7 @@
       old: "$39.00USD",
       price: "$35.10USD",
       img: "img/hot-sale/melody.png",
+      sale: true,
     },
     {
       name: "Tides - Marina Holt",
@@ -72,8 +74,13 @@
   let percent = 100 / visible;
 
   function createBook(item) {
+    const badge = item.sale
+      ? `<span class="hot-sale__badge">Sale</span>`
+      : "";
+
     return `
       <article class="hot-sale__book">
+        ${badge}
         <div class="hot-sale__content">
           <img src="${item.img}" alt="${item.name}" class="hot-sale__image" />
           <h3 class="hot-sale__name">${item.name}</h3>

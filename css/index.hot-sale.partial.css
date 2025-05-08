@@ -74,6 +74,22 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* важливо */
+  position: relative;
+}
+
+.hot-sale__badge {
+  position: absolute;
+  top: 20px;
+  left: 60px;
+  background-color: #595959;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  z-index: 1;
+  font-family: "Lato", sans-serif;
 }
 
 .hot-sale__content {
