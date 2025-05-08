@@ -23,6 +23,7 @@ html, body {
   color: var(--block-title-color);
   font-family: "SUSE", sans-serif;
   font-size: 46px;
+  margin: 0 90px;
 }
 
 .hot-sale__view-all-button {
@@ -36,6 +37,7 @@ html, body {
   border-radius: 2rem;
   font-weight: 600;
   text-decoration: none;
+  margin: 0 100px;
 }
 
 .hot-sale__view-all-button:hover {
@@ -47,6 +49,12 @@ html, body {
   position: relative;
   overflow: hidden;
   width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.hot-sale__viewport {
+  overflow: hidden;
   padding: 0 40px;
   box-sizing: border-box;
 }
@@ -63,15 +71,25 @@ html, body {
   padding: 1rem;
   border-radius: 1rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* важливо */
+}
+
+.hot-sale__content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .hot-sale__image {
   height: 200px;
-  width: 100%;
   max-width: 200px;
+  width: auto;
   border-radius: 0.5rem;
-  margin-bottom: 1rem;
-  display: inline-block;
+  margin: 0 auto 1rem auto; /* авто зліва/справа */
+  display: block; /* блочний, щоб працював margin auto */
   object-fit: cover;
 }
 
@@ -108,6 +126,9 @@ html, body {
   font-family: "Lato", sans-serif;
   font-size: 15px;
   color: var(--dark-accent-color);
+  align-self: center; /* центрує всередині колонки */
+  width: max-content; /* автоширина по тексту */
+  max-width: 100%; /* не виходить за межі */
 }
 
 .hot-sale__item-button:hover {

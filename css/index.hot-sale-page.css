@@ -1,5 +1,3 @@
-
-
 .header__info-bar {
   background-color: #f6f6f6 !important;
   display: flex !important;
@@ -8,7 +6,8 @@
   font-family: "Lato", sans-serif !important;
   font-color: #f45350 !important;
   justify-content: space-between !important;
-  padding: 0 60px !important;
+  padding-left: 200px !important;
+  padding-right: 220px !important;
 }
 
 .header__info-help {
@@ -28,7 +27,7 @@
 }
 
 .header__logo {
-  padding-left: 40px !important;
+  margin-left: 180px !important;
 }
 
 .header__logo p {
@@ -94,6 +93,7 @@
   justify-content: flex-end !important;
   align-items: space-around !important;
   padding-right: 40px !important;
+  margin-right: 180px !important;
 }
 
 .header__menu-icons a,
@@ -369,6 +369,10 @@
 .footer__copyright {
   font-size: 14px;
   font-weight: bolder;
+}
+
+.footer__navigation-shop-title {
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
