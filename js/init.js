@@ -5,6 +5,7 @@ function init() {
   import("./index.new-arrivals-carousel.js");
   import("./index.new-arrivals.js");
   import("./index.authors-carousel.js");
+  import("./index.featured-author.partial.js");
 }
 
 const totalPartials = document.querySelectorAll(
