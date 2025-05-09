@@ -4,25 +4,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 65px;
-  margin: 30px;
+  margin: 30px 100px 0 100px;
 }
 
 @media (min-width: 800px) {
   .new-arrivals__header {
     flex-direction: row;
     align-items: center;
+    margin-top: 90px;
   }
 }
 
 .new-arrivals__title {
   font-family: "SUSE", sans-serif;
-  font-size: 40px;
+  font-size: 34px;
   white-space: nowrap;
 }
 
 .new-arrivals__link-to-all-books {
-  color: var(--color-primary);
+  color: var(--element-of-button);
   font-family: "Lato", sans-serif;
   font-size: 16, 5px;
   background-color: var(--color-primary);
@@ -67,6 +69,22 @@
   display: flex;
   flex-direction: column;
   align-items: start;
+  position: relative;
+}
+
+.new-arrivals-carousel__new-tag {
+  position: absolute;
+  width: 45px;
+  height: 28px;
+  background-color: var(--dark-accent-color);
+  color: var(--element-of-button);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: 700;
 }
 
 @media (min-width: 460px) {
@@ -139,8 +157,3 @@
   height: 32px;
   margin: auto auto;
 }
-
-/* .new-arrivals-carousel__buttons {
-  gap: 5%;
-  display: grid
-} */

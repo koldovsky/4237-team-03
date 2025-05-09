@@ -1,35 +1,6 @@
-const newArrivals = [
-  {
-    id: 1,
-    bookImage: "img/new-arrivals/ascendant-cover.png",
-    bookName: "Ascendant - Michael Kane",
-    bookPrice: "$25,00 USD",
-  },
-  {
-    id: 2,
-    bookImage: "img/new-arrivals/broken-wings-cover.png",
-    bookName: "Broken Wings - Lili Monroe",
-    bookPrice: "$22,00 USD",
-  },
-  {
-    id: 3,
-    bookImage: "img/new-arrivals/mirage-cover.png",
-    bookName: "Mirage - Anthan Cole",
-    bookPrice: "$21,00 USD",
-  },
-  {
-    id: 4,
-    bookImage: "img/new-arrivals/phantom-cover.png",
-    bookName: "Phantom - Liam Hayes",
-    bookPrice: "$22,45 USD",
-  },
-  {
-    id: 5,
-    bookImage: "img/new-arrivals/resonance-cover.png",
-    bookName: "Resonance - Emilia Fox",
-    bookPrice: "$29,50 USD",
-  },
-];
+const response = await fatch('api/new-arrivals');
+const newArrivals = await response.json();
+renderNewArrivals(newArrivals);
 
 function renderNewArrivals(newArrivals) {
   let newArrivalsHTML = "";
@@ -58,4 +29,4 @@ function renderNewArrivals(newArrivals) {
   newArrivalsList.innerHTML = newArrivalsHTML;
 }
 
-renderNewArrivals(newArrivals);
+

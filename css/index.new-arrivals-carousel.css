@@ -2,14 +2,25 @@
   display: grid;
   grid-template-columns: 100px 1 fr 100px;
 
+  .new-arrivals-carousel__button--prev {
+    z-index: 2;
+  }
+
   .new-arrivals-carousel__slides {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    z-index: 1;
+  }
+
+  .new-arrivals-carousel__button--next {
+    z-index: 2;
   }
 
   img {
     width: 100%;
+    height: 204px;
+    object-fit: cover;
   }
 }

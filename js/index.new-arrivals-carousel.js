@@ -1,9 +1,62 @@
 const newArrivalsSlides = [
-  '<div><img src="img/new-arrivals/ascendant-cover.png" alt="Coverage of the book Ascendant"></div>',
-  '<div><img src="img/new-arrivals/broken-wings-cover.png" alt="Coverage of the book Broken Wings"></div>',
-  '<div><img src="img/new-arrivals/mirage-cover.png" alt="Coverage of the book Mirage"></div>',
-  '<div><img src="img/new-arrivals/phantom-cover.png" alt="Coverage of the book Phantom"></div>',
-  '<div><img src="img/new-arrivals/resonance-cover.png" alt="Coverage of the book Resonance"></div>',
+  `<div class="new-arrivals-carousel__item">
+      <a class="book-container__link" href="book-details.html">
+      <div>
+      <div class="new-arrivals-carousel__new-tag">New</div>
+      <img src="img/new-arrivals/ascendant-cover.png" alt="Coverage of the book Ascendant"></div>
+      </a>
+      <p class="book-container__name">Ascendant - Michael Kane</p>
+      <p class="book-container__price">$25,00 USD</p>
+      <button class="book-container__buy">Buy Now</button>
+    </div>`,
+  `<div class="new-arrivals-carousel__item">
+      <a class="book-container__link" href="book-details.html">
+        <img
+          class="book-container__image"
+          src="img/new-arrivals/broken-wings-cover.png"
+          alt="Coverage of the book Broken Wings"
+        />
+      </a>
+      <p class="book-container__name">Broken Wings - Lili Monroe</p>
+      <p class="book-container__price">$22,00 USD</p>
+      <button class="book-container__buy">Buy Now</button>
+    </div>`,
+  `<div class="new-arrivals-carousel__item">
+      <a class="book-container__link" href="book-details.html">
+        <img
+          class="book-container__image"
+          src="img/new-arrivals/mirage-cover.png"
+          alt="Coverage of the book Mirage"
+        />
+      </a>
+      <p class="book-container__name">Mirage - Anthan Cole</p>
+      <p class="book-container__price">$21,00 USD</p>
+      <button class="book-container__buy">Buy Now</button>
+    </div>`,
+  `<div class="new-arrivals-carousel__item">
+      <a class="book-container__link" href="book-details.html">
+      <div class="new-arrivals-carousel__new-tag">New</div>  
+      <img
+          src="img/new-arrivals/phantom-cover.png"
+          alt="Coverage of the book Phantom"
+        />
+      </a>
+      <p class="book-container__name">Phantom - Liam Hayes</p>
+      <p class="book-container__price">$22,45 USD</p>
+      <button class="book-container__buy">Buy Now</button>
+    </div>`,
+  ` <div class="new-arrivals-carousel__item">
+      <a class="book-container__link" href="book-details.html">
+        <img
+          class="book-container__image"
+          src="img/new-arrivals/resonance-cover.png"
+          alt="Coverage of the book Resonance"
+        />
+      </a>
+      <p class="book-container__name">Resonance - Emilia Fox</p>
+      <p class="book-container__price">$29,50 USD</p>
+      <button class="book-container__buy">Buy Now</button>
+    </div>`,
 ];
 
 let currentSlide = 0;
@@ -38,7 +91,8 @@ function nextNewArrivalsSlide() {
 }
 
 function prevNewArrivalsSlide() {
-  currentSlide = (currentSlide - 1) % newArrivalsSlides.length;
+  currentSlide =
+    (currentSlide - 1 + newArrivalsSlides.length) % newArrivalsSlides.length;
   renderNewArrivalsCarousel();
 }
 
