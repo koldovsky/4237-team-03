@@ -10,6 +10,8 @@
 
 :root {
   scroll-behavior: smooth;
+  --reading-experience__description-color: #595959;
+  --quote-color--: #F4F7FD;
   --color-primary: #f45350;
   --color-primary-dark:  #c00f0c; /* darker */
   --ui-block-title-color: #292929;
@@ -29,6 +31,7 @@
   --testimonials-sarah: rgb(252, 236, 236);
   --testimonials-kathleen: rgb(255, 248, 242);
   --testimonials-jadis: rgb(244, 247, 253);
+  --reading-expirience-author: rgb(244, 83, 80);
   --testimonials-author: rgb(244, 83, 80);
   --testimonials-image: rgb(244, 83, 80);
   --testimonials-text: rgb(99, 99, 99);

@@ -1,7 +1,7 @@
 /* === FEATURED AUTHOR SECTION === */
 
 .featured-author {
-    margin: 3rem 0; 
+  margin: 3rem 0;
 }
 
 /* Контейнер */
@@ -33,12 +33,17 @@
 
 /* Фото */
 .featured-author__image {
-  max-width: 720px;
-}
-.featured-author__image img {
+  width: 500px;
+  height: 600px;
+  flex-shrink: 0;
   border-radius: 1rem;
+  overflow: hidden;
+}
+
+.featured-author__image img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
@@ -118,7 +123,7 @@
 .featured-author__button {
   padding: 8px 25px;
   border: none;
-  /* border-radius: 25px; */
+  border-radius: 6px;
   cursor: pointer;
   text-decoration: none;
   font: 700 16px/1.2 "Lato", sans-serif;
@@ -134,7 +139,7 @@
 .products-carousel__button {
   padding: 8px 25px;
   border: none;
-  /* border-radius: 25px; */
+  border-radius: 6px;
   cursor: pointer;
   font: 700 16px/1.2 "Lato", sans-serif;
   color: var(--subscribe-button-color);
@@ -151,14 +156,13 @@
   display: grid;
   grid-template-columns: 50px 1fr 50px;
   height: 60px;
-
 }
 
 /* === Мобільна версія ≤ 992px === */
 @media (max-width: 992px) {
   .featured-author {
-    margin: 3rem 0; 
-}
+    margin: 3rem 0;
+  }
 
   .featured-author__content {
     flex-wrap: wrap;
@@ -190,15 +194,19 @@
     margin-right: auto;
   }
 
-  /* Фото врівень із текстом */
   .featured-author__image {
-    max-width: 460px;
     width: 100%;
-    display: block;
+    max-width: 420px;
+    height: 500px;
     margin: 0 auto;
+    border-radius: 1rem;
+    overflow: hidden;
   }
+
   .featured-author__image img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 }

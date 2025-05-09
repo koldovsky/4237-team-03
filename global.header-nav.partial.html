@@ -94,67 +94,6 @@
     <div class="burger-icon">
       <span class="burger" onclick="openDialog()">☰</span>
     </div>
-    <div class="burger-dialog">
-      <div class="fullscreen-dialog" id="dialog">
-        <div
-          style="padding: 30px; display: flex; justify-content: space-between"
-        >
-          <div class="header__logo">
-            <a href="index.html"
-              ><p style="font-size: 32px; font-weight: 600">
-                <span
-                  >Book<span style="color: var(--color-primary)">.</span
-                  >Land</span
-                >
-              </p></a
-            >
-          </div>
-          <div>
-            <span
-              style="cursor: pointer; font-size: 40px"
-              onclick="closeDialog()"
-              >&times;</span
-            >
-          </div>
-        </div>
-        <div class="burger-menu-list">
-          <div class="column" data-proofer-ignore>
-            <div class="item">
-              <a href="#new-arrivals" onclick="closeDialog()">New Arrivals</a>
-            </div>
-            <div class="item">
-              <a href="#trending" onclick="closeDialog()">Trending Now</a>
-            </div>
-            <div class="item">
-              <a href="#hot-sale" onclick="closeDialog()">Hot Sale</a>
-            </div>
-            <div class="item">
-              <a href="about" onclick="closeDialog()">About Us</a>
-            </div>
-            <div class="item">
-              <a href="contacts.html" onclick="closeDialog()">Contacts</a>
-            </div>
-            <div class="item">
-              <span style="color: var(--color-primary); font-weight: bold"
-                >Can we help you?</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <script>
-        function openDialog() {
-          document.getElementById("dialog").classList.add("active");
-          document.body.classList.add("no-scroll");
-        }
-
-        function closeDialog() {
-          document.getElementById("dialog").classList.remove("active");
-          document.body.classList.remove("no-scroll");
-        }
-      </script>
-    </div>
     <!-- block icons-->
     <div class="header__menu-icons">
       <!-- instagram-->
@@ -323,6 +262,117 @@
           ></a
         >
       </div>
+    </div>
+  </div>
+  <div class="header-mobile-search">
+    <div class="mobile-search">
+      <div class="search-wrapper">
+        <form
+          action="https://www.google.com/search"
+          method="GET"
+          class="search-form"
+        >
+          <span class="search-label"></span>
+          <input
+            type="text"
+            name="q"
+            class="search-input"
+            placeholder="Search products"
+          />
+          <button type="submit" class="search-button">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.5 4C9.2 4 7.96 4.38 6.89 5.1C5.82 5.81 4.99 6.82 4.49 8.01C4 9.2 3.87 10.51 4.12 11.77C4.38 13.03 5 14.19 5.9 15.1C6.81 16.01 7.97 16.62 9.23 16.88C10.49 17.13 11.8 17 12.99 16.51C14.18 16.01 15.19 15.18 15.9 14.11C16.62 13.04 17 11.79 17 10.5C17 8.78 16.32 7.12 15.1 5.9C13.88 4.68 12.22 4 10.5 4Z"
+                stroke="#000"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M15.5 15.5L20 20"
+                stroke="#000"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="main-burger-dialog">
+    <div class="burger-dialog">
+      <div class="fullscreen-dialog" id="dialog">
+        <div
+          style="
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 54px;
+            margin-right: 121px;
+          "
+        >
+          <div class="header__logo">
+            <a href="index.html"
+              ><p style="font-size: 32px; font-weight: 600">
+                <span
+                  >Book<span style="color: var(--color-primary)">.</span
+                  >Land</span
+                >
+              </p></a
+            >
+          </div>
+          <div>
+            <span
+              style="cursor: pointer; font-size: 40px"
+              onclick="closeDialog()"
+              >&times;</span
+            >
+          </div>
+        </div>
+        <div class="burger-menu-list">
+          <div class="column" data-proofer-ignore>
+            <div class="item">
+              <a href="#new-arrivals" onclick="closeDialog()">New Arrivals</a>
+            </div>
+            <div class="item">
+              <a href="#trending" onclick="closeDialog()">Trending Now</a>
+            </div>
+            <div class="item">
+              <a href="#hot-sale" onclick="closeDialog()">Hot Sale</a>
+            </div>
+            <div class="item">
+              <a href="about" onclick="closeDialog()">About Us</a>
+            </div>
+            <div class="item">
+              <a href="contacts.html" onclick="closeDialog()">Contacts</a>
+            </div>
+            <div class="item">
+              <span style="color: var(--color-primary); font-weight: bold"
+                >Can we help you?</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function openDialog() {
+          document.getElementById("dialog").classList.add("active");
+          document.body.classList.add("no-scroll");
+        }
+
+        function closeDialog() {
+          document.getElementById("dialog").classList.remove("active");
+          document.body.classList.remove("no-scroll");
+        }
+      </script>
     </div>
   </div>
   <div class="main__banner">

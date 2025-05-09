@@ -1,5 +1,3 @@
-
-
 .header__info-bar {
   background-color: #f6f6f6 !important;
   display: flex !important;
@@ -8,7 +6,8 @@
   font-family: "Lato", sans-serif !important;
   font-color: #f45350 !important;
   justify-content: space-between !important;
-  padding: 0 60px !important;
+  padding-left: 200px !important;
+  padding-right: 220px !important;
 }
 
 .header__info-help {
@@ -28,7 +27,7 @@
 }
 
 .header__logo {
-  padding-left: 40px !important;
+  margin-left: 180px !important;
 }
 
 .header__logo p {
@@ -94,6 +93,7 @@
   justify-content: flex-end !important;
   align-items: space-around !important;
   padding-right: 40px !important;
+  margin-right: 180px !important;
 }
 
 .header__menu-icons a,
@@ -152,13 +152,38 @@
 }
 
 .hot-sale-page__book {
-  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   padding: 1rem;
   border-radius: 1rem;
-  text-align: center;
+  text-align: left; /* краще для заголовків і цін */
   background-color: #fdfdfd;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.hot-sale-page__content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.hot-sale-page__badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #595959;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  padding: 3px 7px;
+  border-radius: 4px;
+  z-index: 2;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hot-sale-page__image {
@@ -175,6 +200,7 @@
   font-size: 18px;
   font-weight: 400;
   margin: 24px 0px 0px 0px;
+  text-align: left;
 }
 
 .hot-sale-page__prices {
@@ -213,6 +239,9 @@
   font-family: "Lato", sans-serif;
   font-size: 15px;
   color: #fdfdfd;
+  width: max-content;
+  max-width: 100%;
+  align-self: left;
 }
 
 .hot-sale-page__button:hover {
@@ -369,6 +398,10 @@
 .footer__copyright {
   font-size: 14px;
   font-weight: bolder;
+}
+
+.footer__navigation-shop-title {
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {

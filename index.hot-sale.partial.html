@@ -1,12 +1,21 @@
 <section class="hot-sale" id="hot-sale">
   <div class="hot-sale__header">
     <h2 class="hot-sale__title">Hot Sale</h2>
-    <a href="hot-sale-page.html" target="_blank" class="hot-sale__view-all-button">View all</a>
+    <a
+      href="hot-sale-page.html"
+      target="_blank"
+      class="hot-sale__view-all-button"
+      >View all</a
+    >
   </div>
 
   <div class="hot-sale__carousel">
     <button class="hot-sale__btn hot-sale__btn--prev">&#10094;</button>
-    <div class="hot-sale__track" id="hotSaleTrack"></div>
+
+    <div class="hot-sale__viewport">
+      <div class="hot-sale__track" id="hotSaleTrack"></div>
+    </div>
+
     <button class="hot-sale__btn hot-sale__btn--next">&#10095;</button>
   </div>
 </section>
@@ -36,6 +45,7 @@
       old: "$22.00USD",
       price: "$20.90USD",
       img: "img/hot-sale/midnight-shadows.png",
+      sale: true,
     },
     {
       name: "The Wild Hunt - Oliver Reid",
@@ -48,6 +58,7 @@
       old: "$39.00USD",
       price: "$35.10USD",
       img: "img/hot-sale/melody.png",
+      sale: true,
     },
     {
       name: "Tides - Marina Holt",
@@ -63,12 +74,19 @@
   let percent = 100 / visible;
 
   function createBook(item) {
+    const badge = item.sale
+      ? `<span class="hot-sale__badge">Sale</span>`
+      : "";
+
     return `
       <article class="hot-sale__book">
-        <img src="${item.img}" alt="${item.name}" class="hot-sale__image" />
-        <h3 class="hot-sale__name">${item.name}</h3>
-        <p class="hot-sale__price-old">${item.old}</p>
-        <p class="hot-sale__price-new">${item.price}</p>
+        ${badge}
+        <div class="hot-sale__content">
+          <img src="${item.img}" alt="${item.name}" class="hot-sale__image" />
+          <h3 class="hot-sale__name">${item.name}</h3>
+          <p class="hot-sale__price-old">${item.old}</p>
+          <p class="hot-sale__price-new">${item.price}</p>
+        </div>
         <button class="hot-sale__item-button">Buy now</button>
       </article>
     `;
@@ -81,7 +99,7 @@
     else if (window.innerWidth < 1200) visible = 4;
     else visible = 5;
 
-    document.documentElement.style.setProperty('--hot-sale-visible', visible);
+    document.documentElement.style.setProperty("--hot-sale-visible", visible);
     percent = 100 / visible;
   }
 
@@ -93,7 +111,7 @@
     const extended = [...headClones, ...hotSaleItems, ...tailClones];
 
     track.innerHTML = "";
-    extended.forEach(item => {
+    extended.forEach((item) => {
       track.innerHTML += createBook(item);
     });
 

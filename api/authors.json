@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Chloe Woods",
+    "genre": "Romance",
+    "description": "Chloe’s stories explore love, vulnerability, and self-discovery, taking readers on heartfelt journeys through the complexities of modern relationships.",
+    "photo": "img/authors/chloe-woods.png"
+  },
+  {
+    "name": "Amelia Pierce",
+    "genre": "Historical Fiction",
+    "description": "Amelia crafts rich, immersive stories set in past centuries, bringing forgotten worlds and characters to life with vivid detail and emotional depth.",
+    "photo": "img/authors/amelia-pierce.png"
+  },
+  {
+    "name": "Emilia Fox",
+    "genre": "Fantasy",
+    "description": "Emilia builds magical realms filled with mythical creatures, ancient prophecies, and brave heroes destined to change the fate of their world.",
+    "photo": "img/authors/emilia-fox.png"
+  },
+  {
+    "name": "Liam Hayes",
+    "genre": "Science Fiction",
+    "description": "Liam's futuristic novels dive deep into artificial intelligence, space exploration, and the moral dilemmas of technological advancement.",
+    "photo": "img/authors/liam-hayes.png"
+  },
+  {
+    "name": "Lily Monroe",
+    "genre": "Thriller",
+    "description": "Lily pens fast-paced thrillers with sharp twists, dark secrets, and protagonists caught in high-stakes games of survival and deception.",
+    "photo": "img/authors/lily-monroe.png"
+  },
+  {
+    "name": "Michael Kane",
+    "genre": "Crime",
+    "description": "Michael creates gritty detective stories set in urban jungles, where justice is murky and the line between right and wrong often blurs.",
+    "photo": "img/authors/michael-kane.png"
+  },
+  {
+    "name": "Nathan Cole",
+    "genre": "Adventure",
+    "description": "Nathan writes edge-of-your-seat adventure tales full of daring escapes, uncharted lands, and unforgettable heroes battling the odds.",
+    "photo": "img/authors/nathan-cole.png"
+  },
+  {
+    "name": "Sophie Lark",
+    "genre": "Drama",
+    "description": "Sophie’s emotionally intense dramas delve into family bonds, personal struggles, and the triumph of the human spirit against adversity.",
+    "photo": "img/authors/sophie-lark.png"
+  }
+]
