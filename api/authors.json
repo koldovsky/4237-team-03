@@ -1,15 +1,15 @@
 [
   {
-    "name": "Amelia Pierce",
-    "genre": "Historical Fiction",
-    "description": "Amelia crafts rich, immersive stories set in past centuries, bringing forgotten worlds and characters to life with vivid detail and emotional depth.",
-    "photo": "img/authors/amelia-pierce.png"
-  },
-  {
     "name": "Chloe Woods",
     "genre": "Romance",
     "description": "Chloe’s stories explore love, vulnerability, and self-discovery, taking readers on heartfelt journeys through the complexities of modern relationships.",
     "photo": "img/authors/chloe-woods.png"
+  },
+  {
+    "name": "Amelia Pierce",
+    "genre": "Historical Fiction",
+    "description": "Amelia crafts rich, immersive stories set in past centuries, bringing forgotten worlds and characters to life with vivid detail and emotional depth.",
+    "photo": "img/authors/amelia-pierce.png"
   },
   {
     "name": "Emilia Fox",
