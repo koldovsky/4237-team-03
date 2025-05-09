@@ -3,8 +3,8 @@
 /* Base Styles */
 .reading-experience {
   padding: 2rem 1rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+  font-family: "Lato", sans-serif;
+  color: var(--reading-experience__description-color);
   max-width: 100%;
   overflow: hidden;
 }
@@ -13,31 +13,24 @@
 .reading-experience__gallery {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 1.9rem;
   margin-bottom: 2rem;
 }
 
 .reading-experience__image {
   width: 100%;
   max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 100%;
+  border-radius: 24px;
   object-fit: cover;
-  transition: transform 0.3s ease;
   display: block;
-  margin: 0 auto;
-  
+  margin: 0;
 }
 
-.reading-experience__image:hover {
-  transform: scale(1.02);
-}
-
-/* Quote Section */
 .reading-experience__quote {
-  background-color: #f8f9fa;
+  background-color: var(--quote-color--);
   padding: 2rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 12px;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -45,32 +38,27 @@
 .reading-experience__quote-text {
   font-size: 1.2rem;
   font-style: italic;
-  color: #495057;
   margin: 0 0 1rem 0;
   line-height: 1.6;
   text-align: left;
 }
 
 .reading-experience__quote-author {
-  font-size: 0.9rem;
-  color: #ff6b6b;
-  font-weight: 600;
+  color: var(--reading-expirience-author);
+  font-weight: 700;
   display: block;
   margin-top: 1rem;
   text-align: left;
+  letter-spacing: 0.15rem;
+  font-size: 0.7rem;
 }
 
-/* Description/Text Content */
-.reading-experience__description {
-  line-height: 1.6;
-}
 
 .reading-experience__text {
   margin-bottom: 1rem;
   font-size: 1rem;
 }
 
-/* Small tablets (portrait) */
 @media (min-width: 576px) {
   .reading-experience__gallery {
     grid-template-columns: repeat(2, 1fr);
@@ -81,26 +69,20 @@
   }
 }
 
-/* Medium devices (landscape tablets) */
+/* Medium devices  */
 @media (min-width: 768px) {
   .reading-experience {
     padding: 3rem 2rem;
   }
 
   .reading-experience__gallery {
-    gap: 1rem;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
   }
-
-  /* Remove fixed width set in HTML when on larger screens */
-  .reading-experience__image {
-    width: 80%;
-    
-  }
 }
 
-/* Large devices (laptops/desktops) */
+/* Large devices  */
 @media (min-width: 992px) {
   .reading-experience {
     padding: 4rem 3rem;
@@ -116,6 +98,7 @@
     grid-area: gallery;
     grid-template-columns: repeat(2, 2fr);
     margin-bottom: 1rem;
+    padding: 0.5rem;
   }
 
   .reading-experience__quote {
