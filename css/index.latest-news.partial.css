@@ -17,12 +17,19 @@
 }
 
 .btn-view-all {
-  background: #999;
+  background: #e63c3c; /* червоний у звичайному стані */
   color: #fff;
   padding: 8px 16px;
   border-radius: 20px;
   text-decoration: none;
+  transition: background 0.3s, color 0.3s;
 }
+
+.btn-view-all:hover {
+  background: #999; /* сірий при наведенні */
+  color: #fff;
+}
+
 
 .news-content-wrap {
   display: flex;
@@ -60,9 +67,17 @@
   padding: 8px 16px;
   border-radius: 20px;
   text-decoration: none;
-  background: #999;
   color: #e63c3c;
+  background: transparent; /* немає фону спочатку */
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
+
+.btn-learn-more:hover {
+  background: #999; /* сірий фон */
+  color: #fff; /* білий текст */
+  border-color: #999; /* змінюємо бордер */
+}
+
 
 .news-right {
   flex: 1;
