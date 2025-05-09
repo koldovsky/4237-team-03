@@ -124,3 +124,17 @@
     align-self: flex-end;
   }
 }
+@media (max-width: 480px) {
+  .news-title {
+    font-size: 18px;
+  }
+
+  .news-description {
+    font-size: 14px;
+  }
+
+  .btn-learn-more {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}
